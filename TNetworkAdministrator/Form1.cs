@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace TNetworkAdministrator
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Wisder.W3Common.WMetroControl.Forms.MetroForm
     {
         public Form1()
         {
