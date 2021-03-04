@@ -14,6 +14,27 @@ namespace TNetworkAdministrator
         public Form1()
         {
             InitializeComponent();
+            this.ribbonexit.Click += (sender, e) => { this.Close(); };
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        public void Inventario_Click(object sender, EventArgs e)
+        {
+            SubFormas.Inventory newp = new SubFormas.Inventory();
+            newp.Show();
+
+        }
+
+        public void Scanner_Click(object sender, EventArgs e)
+        {
+            SubFormas.Scan newp = new SubFormas.Scan();
+            newp.Show();
+
         }
     }
 }

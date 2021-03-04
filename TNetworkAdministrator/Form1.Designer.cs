@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace TNetworkAdministrator
 {
     partial class Form1
@@ -18,6 +21,7 @@ namespace TNetworkAdministrator
             {
                 components.Dispose();
             }
+            
             base.Dispose(disposing);
         }
 
@@ -31,22 +35,22 @@ namespace TNetworkAdministrator
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbon1 = new System.Windows.Forms.Ribbon();
-            this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem2 = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem3 = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem4 = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribboninventario = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonscan = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonconfig = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonexit = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.Inventario = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.Scannear = new System.Windows.Forms.RibbonButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.Alertas = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.Relatorios = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.Configuracoes = new System.Windows.Forms.RibbonButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -61,10 +65,10 @@ namespace TNetworkAdministrator
             // 
             this.ribbon1.OrbDropDown.BorderRoundness = 8;
             this.ribbon1.OrbDropDown.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem1);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem2);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem3);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem4);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribboninventario);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonscan);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonconfig);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonexit);
             this.ribbon1.OrbDropDown.Name = "";
             this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 248);
             this.ribbon1.OrbDropDown.TabIndex = 0;
@@ -80,34 +84,37 @@ namespace TNetworkAdministrator
             this.ribbon1.Text = "ribbon1";
             this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
             // 
-            // ribbonOrbMenuItem1
+            // ribboninventario
             // 
-            this.ribbonOrbMenuItem1.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.Image")));
-            this.ribbonOrbMenuItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.SmallImage")));
-            this.ribbonOrbMenuItem1.Text = " Inventário";
+            this.ribboninventario.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribboninventario.Image = ((System.Drawing.Image)(resources.GetObject("ribboninventario.Image")));
+            this.ribboninventario.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribboninventario.SmallImage")));
+            this.ribboninventario.Text = " Inventário";
+            this.ribboninventario.Click += new System.EventHandler(this.Inventario_Click);
             // 
-            // ribbonOrbMenuItem2
+            // ribbonscan
             // 
-            this.ribbonOrbMenuItem2.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.Image")));
-            this.ribbonOrbMenuItem2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.SmallImage")));
-            this.ribbonOrbMenuItem2.Text = "Scanear Rede";
+            this.ribbonscan.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonscan.Image = ((System.Drawing.Image)(resources.GetObject("ribbonscan.Image")));
+            this.ribbonscan.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonscan.SmallImage")));
+            this.ribbonscan.Text = "Scanear Rede";
+            this.ribbonscan.Click += new System.EventHandler(this.Scanner_Click);
             // 
-            // ribbonOrbMenuItem3
+            // ribbonconfig
             // 
-            this.ribbonOrbMenuItem3.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.Image")));
-            this.ribbonOrbMenuItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.SmallImage")));
-            this.ribbonOrbMenuItem3.Text = "Configurações";
+            this.ribbonconfig.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonconfig.Image = ((System.Drawing.Image)(resources.GetObject("ribbonconfig.Image")));
+            this.ribbonconfig.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonconfig.SmallImage")));
+            this.ribbonconfig.Text = "Configurações";
             // 
-            // ribbonOrbMenuItem4
+            // ribbonexit
             // 
-            this.ribbonOrbMenuItem4.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.Image")));
-            this.ribbonOrbMenuItem4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.SmallImage")));
-            this.ribbonOrbMenuItem4.Text = "Sair";
-            // 
+            this.ribbonexit.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonexit.Image = ((System.Drawing.Image)(resources.GetObject("ribbonexit.Image")));
+            this.ribbonexit.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonexit.SmallImage")));
+            this.ribbonexit.Text = "Sair";
+           
+            //
             // ribbonTab1
             // 
             this.ribbonTab1.Panels.Add(this.ribbonPanel1);
@@ -122,21 +129,57 @@ namespace TNetworkAdministrator
             this.ribbonPanel1.Items.Add(this.Inventario);
             this.ribbonPanel1.Text = "Inventario";
             // 
+            // Inventario
+            // 
+            this.Inventario.Image = ((System.Drawing.Image)(resources.GetObject("Inventario.Image")));
+            this.Inventario.SmallImage = ((System.Drawing.Image)(resources.GetObject("Inventario.SmallImage")));
+            this.Inventario.Text = "Inventário";
+            this.Inventario.Click += new System.EventHandler(this.Inventario_Click);
+            // 
             // ribbonPanel2
             // 
             this.ribbonPanel2.Items.Add(this.Scannear);
             this.ribbonPanel2.Text = "Scanear Rede";
-            // 
-            // Inventario
-            // 
-            this.Inventario.Image = ((System.Drawing.Image)(resources.GetObject("Inventario.Image")));
-            this.Inventario.Text = "Inventário";
             // 
             // Scannear
             // 
             this.Scannear.Image = ((System.Drawing.Image)(resources.GetObject("Scannear.Image")));
             this.Scannear.SmallImage = ((System.Drawing.Image)(resources.GetObject("Scannear.SmallImage")));
             this.Scannear.Text = "Scaneamento de Rede";
+            this.Scannear.Click += new System.EventHandler(this.Scanner_Click);
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.Items.Add(this.Alertas);
+            this.ribbonPanel3.Text = "ribbonPanel3";
+            // 
+            // Alertas
+            // 
+            this.Alertas.Image = ((System.Drawing.Image)(resources.GetObject("Alertas.Image")));
+            this.Alertas.SmallImage = ((System.Drawing.Image)(resources.GetObject("Alertas.SmallImage")));
+            this.Alertas.Text = "Alertas";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.Items.Add(this.Relatorios);
+            this.ribbonPanel4.Text = "ribbonPanel4";
+            // 
+            // Relatorios
+            // 
+            this.Relatorios.Image = ((System.Drawing.Image)(resources.GetObject("Relatorios.Image")));
+            this.Relatorios.SmallImage = ((System.Drawing.Image)(resources.GetObject("Relatorios.SmallImage")));
+            this.Relatorios.Text = "Relatórios";
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.Items.Add(this.Configuracoes);
+            this.ribbonPanel5.Text = "ribbonPanel5";
+            // 
+            // Configuracoes
+            // 
+            this.Configuracoes.Image = ((System.Drawing.Image)(resources.GetObject("Configuracoes.Image")));
+            this.Configuracoes.SmallImage = ((System.Drawing.Image)(resources.GetObject("Configuracoes.SmallImage")));
+            this.Configuracoes.Text = "Configurações";
             // 
             // panel1
             // 
@@ -147,39 +190,6 @@ namespace TNetworkAdministrator
             this.panel1.Size = new System.Drawing.Size(1346, 630);
             this.panel1.TabIndex = 1;
             // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.Items.Add(this.Alertas);
-            this.ribbonPanel3.Text = "ribbonPanel3";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.Items.Add(this.Relatorios);
-            this.ribbonPanel4.Text = "ribbonPanel4";
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.Configuracoes);
-            this.ribbonPanel5.Text = "ribbonPanel5";
-            // 
-            // Alertas
-            // 
-            this.Alertas.Image = ((System.Drawing.Image)(resources.GetObject("Alertas.Image")));
-            this.Alertas.SmallImage = ((System.Drawing.Image)(resources.GetObject("Alertas.SmallImage")));
-            this.Alertas.Text = "Alertas";
-            // 
-            // Relatorios
-            // 
-            this.Relatorios.Image = ((System.Drawing.Image)(resources.GetObject("Relatorios.Image")));
-            this.Relatorios.SmallImage = ((System.Drawing.Image)(resources.GetObject("Relatorios.SmallImage")));
-            this.Relatorios.Text = "Relatórios";
-            // 
-            // Configuracoes
-            // 
-            this.Configuracoes.Image = ((System.Drawing.Image)(resources.GetObject("Configuracoes.Image")));
-            this.Configuracoes.SmallImage = ((System.Drawing.Image)(resources.GetObject("Configuracoes.SmallImage")));
-            this.Configuracoes.Text = "Configurações";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,24 +198,26 @@ namespace TNetworkAdministrator
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ribbon1);
             this.DisplayHeader = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.ShadowType = Wisder.W3Common.WMetroControl.Forms.MetroFormShadowType.SystemShadow;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+       
         private System.Windows.Forms.Ribbon ribbon1;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem1;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem2;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem3;
+        private System.Windows.Forms.RibbonOrbMenuItem ribboninventario;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonscan;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonconfig;
         private System.Windows.Forms.RibbonTab ribbonTab1;
         private System.Windows.Forms.RibbonPanel ribbonPanel1;
         private System.Windows.Forms.RibbonPanel ribbonPanel2;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem4;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonexit;
         private System.Windows.Forms.RibbonButton Inventario;
         private System.Windows.Forms.RibbonButton Scannear;
         private System.Windows.Forms.RibbonPanel ribbonPanel3;
