@@ -15,6 +15,8 @@ namespace TNetworkAdministrator
         {
             InitializeComponent();
             this.ribbonexit.Click += (sender, e) => { this.Close(); };
+            this.Alertas.Click += (sender, e) => { SubFormas.Warnings p = new SubFormas.Warnings(); p.Show(); };
+            this.Relatorios.Click += (sender, e) => { SubFormas.Reports p = new SubFormas.Reports(); p.Show(); };
 
         }
 
