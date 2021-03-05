@@ -14,29 +14,40 @@ namespace TNetworkAdministrator
         public Form1()
         {
             InitializeComponent();
+            this.Inventario.Click += (sender, e) => { ShowForm(new SubFormas.Inventory()); };
+            this.ribboninventario.Click += (sender, e) => { ShowForm(new SubFormas.Inventory()); };
+            this.Scannear.Click += (sender, e) => { ShowForm(new SubFormas.Scan()); };
+            this.ribbonscan.Click += (sender, e) => { ShowForm(new SubFormas.Scan()); };
+            this.Alertas.Click += (sender, e) => { ShowForm(new SubFormas.Warnings()); };
+            this.Relatorios.Click += (sender, e) => { ShowForm(new SubFormas.Reports()); };
+            this.Configuracoes.Click += (sender, e) => { ShowForm(new SubFormas.Configuracoes()); };
+            this.ribbonconfig.Click += (sender, e) => { ShowForm(new SubFormas.Configuracoes()); };
             this.ribbonexit.Click += (sender, e) => { this.Close(); };
-            this.Alertas.Click += (sender, e) => { SubFormas.Warnings p = new SubFormas.Warnings(); p.Show(); };
-            this.Relatorios.Click += (sender, e) => { SubFormas.Reports p = new SubFormas.Reports(); p.Show(); };
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+
         }
 
-        public void Inventario_Click(object sender, EventArgs e)
+
+        public void ShowForm(object e)
         {
-            SubFormas.Inventory newp = new SubFormas.Inventory();
-            newp.Show();
+            try { 
 
+             var newp = Activator.CreateInstance(e.GetType());
+             Wisder.W3Common.WMetroControl.Forms.MetroForm newp2 = (Wisder.W3Common.WMetroControl.Forms.MetroForm) newp;
+                newp2.Show();
+
+            }
+            catch (Exception)
+            {
+
+              
+            }
+      
         }
 
-        public void Scanner_Click(object sender, EventArgs e)
-        {
-            SubFormas.Scan newp = new SubFormas.Scan();
-            newp.Show();
-
-        }
     }
 }

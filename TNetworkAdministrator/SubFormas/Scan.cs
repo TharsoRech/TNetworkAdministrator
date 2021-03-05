@@ -90,5 +90,39 @@ namespace TNetworkAdministrator.SubFormas
 
             }
         }
+
+        private void ScaneamentoAutomatico_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(ScaneamentoAutomatico.Checked == true || ProcurarPorFaixa.Checked == false)
+                {
+                    ProcurarPorFaixa.Checked = false;
+                    IpInicial.Enabled = false;
+                    IpFinal.Enabled = false;
+                }
+            }
+            catch (Exception ex) 
+            {
+            }
+            
+
+        }
+
+        private void ProcurarPorFaixa_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ProcurarPorFaixa.Checked == true || ScaneamentoAutomatico.Checked == false)
+                {
+                    ScaneamentoAutomatico.Checked = false;
+                    IpInicial.Enabled = true;
+                    IpFinal.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // IpInicial
             // 
+            this.IpInicial.Enabled = false;
             this.IpInicial.Lines = new string[0];
             this.IpInicial.Location = new System.Drawing.Point(117, 91);
             this.IpInicial.MaxLength = 32767;
@@ -72,6 +73,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // IpFinal
             // 
+            this.IpFinal.Enabled = false;
             this.IpFinal.Lines = new string[0];
             this.IpFinal.Location = new System.Drawing.Point(410, 91);
             this.IpFinal.MaxLength = 32767;
@@ -125,6 +127,8 @@ namespace TNetworkAdministrator.SubFormas
             // ScaneamentoAutomatico
             // 
             this.ScaneamentoAutomatico.AutoSize = true;
+            this.ScaneamentoAutomatico.Checked = true;
+            this.ScaneamentoAutomatico.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ScaneamentoAutomatico.Location = new System.Drawing.Point(35, 172);
             this.ScaneamentoAutomatico.Name = "ScaneamentoAutomatico";
             this.ScaneamentoAutomatico.Size = new System.Drawing.Size(204, 15);
@@ -132,11 +136,12 @@ namespace TNetworkAdministrator.SubFormas
             this.ScaneamentoAutomatico.Text = "Scaneamento automático da Rede";
             this.ScaneamentoAutomatico.UseSelectable = true;
             this.ScaneamentoAutomatico.UseVisualStyleBackColor = true;
+            this.ScaneamentoAutomatico.CheckedChanged += new System.EventHandler(this.ScaneamentoAutomatico_CheckedChanged);
             // 
             // metroButton1
             // 
             this.metroButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton1.Location = new System.Drawing.Point(325, 282);
+            this.metroButton1.Location = new System.Drawing.Point(325, 327);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(156, 22);
             this.metroButton1.TabIndex = 18;
@@ -182,11 +187,12 @@ namespace TNetworkAdministrator.SubFormas
             this.ProcurarPorFaixa.Text = "Procurar Por Faixa de IP:";
             this.ProcurarPorFaixa.UseSelectable = true;
             this.ProcurarPorFaixa.UseVisualStyleBackColor = true;
+            this.ProcurarPorFaixa.CheckedChanged += new System.EventHandler(this.ProcurarPorFaixa_CheckedChanged);
             // 
             // metroButton5
             // 
             this.metroButton5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton5.Location = new System.Drawing.Point(325, 332);
+            this.metroButton5.Location = new System.Drawing.Point(325, 284);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(146, 22);
             this.metroButton5.TabIndex = 23;

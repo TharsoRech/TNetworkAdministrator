@@ -90,7 +90,6 @@ namespace TNetworkAdministrator
             this.ribboninventario.Image = ((System.Drawing.Image)(resources.GetObject("ribboninventario.Image")));
             this.ribboninventario.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribboninventario.SmallImage")));
             this.ribboninventario.Text = " Inventário";
-            this.ribboninventario.Click += new System.EventHandler(this.Inventario_Click);
             // 
             // ribbonscan
             // 
@@ -98,7 +97,6 @@ namespace TNetworkAdministrator
             this.ribbonscan.Image = ((System.Drawing.Image)(resources.GetObject("ribbonscan.Image")));
             this.ribbonscan.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonscan.SmallImage")));
             this.ribbonscan.Text = "Scanear Rede";
-            this.ribbonscan.Click += new System.EventHandler(this.Scanner_Click);
             // 
             // ribbonconfig
             // 
@@ -113,8 +111,7 @@ namespace TNetworkAdministrator
             this.ribbonexit.Image = ((System.Drawing.Image)(resources.GetObject("ribbonexit.Image")));
             this.ribbonexit.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonexit.SmallImage")));
             this.ribbonexit.Text = "Sair";
-           
-            //
+            // 
             // ribbonTab1
             // 
             this.ribbonTab1.Panels.Add(this.ribbonPanel1);
@@ -134,7 +131,6 @@ namespace TNetworkAdministrator
             this.Inventario.Image = ((System.Drawing.Image)(resources.GetObject("Inventario.Image")));
             this.Inventario.SmallImage = ((System.Drawing.Image)(resources.GetObject("Inventario.SmallImage")));
             this.Inventario.Text = "Inventário";
-            this.Inventario.Click += new System.EventHandler(this.Inventario_Click);
             // 
             // ribbonPanel2
             // 
@@ -146,7 +142,6 @@ namespace TNetworkAdministrator
             this.Scannear.Image = ((System.Drawing.Image)(resources.GetObject("Scannear.Image")));
             this.Scannear.SmallImage = ((System.Drawing.Image)(resources.GetObject("Scannear.SmallImage")));
             this.Scannear.Text = "Scaneamento de Rede";
-            this.Scannear.Click += new System.EventHandler(this.Scanner_Click);
             // 
             // ribbonPanel3
             // 
@@ -209,7 +204,7 @@ namespace TNetworkAdministrator
         }
 
         #endregion
-       
+
         private System.Windows.Forms.Ribbon ribbon1;
         private System.Windows.Forms.RibbonOrbMenuItem ribboninventario;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonscan;

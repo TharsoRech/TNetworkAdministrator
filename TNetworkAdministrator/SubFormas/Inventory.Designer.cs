@@ -34,24 +34,34 @@ namespace TNetworkAdministrator.SubFormas
             this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTabControl1 = new Wisder.W3Common.WMetroControl.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.NameChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.IpChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ProrityChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.ListofDevices = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.metroComboBox4 = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
-            this.metroComboBox3 = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
-            this.metroComboBox2 = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.ManufactuerChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.StatusChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroComboBox1 = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.GroupsChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.Texto = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Scaneados = new System.Windows.Forms.TreeView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Prioridades = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.PrioridadePadrao = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.InfoText = new System.Windows.Forms.Label();
+            this.Descricaotext = new System.Windows.Forms.Label();
+            this.Descricao = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.metroButton5 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton4 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Scaneados = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -111,18 +121,22 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.NameChoose);
+            this.tabPage1.Controls.Add(this.IpChoose);
             this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.ProrityChoose);
+            this.tabPage1.Controls.Add(this.ListofDevices);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.metroComboBox4);
-            this.tabPage1.Controls.Add(this.metroComboBox3);
-            this.tabPage1.Controls.Add(this.metroComboBox2);
+            this.tabPage1.Controls.Add(this.ManufactuerChoose);
+            this.tabPage1.Controls.Add(this.StatusChoose);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.metroComboBox1);
+            this.tabPage1.Controls.Add(this.GroupsChoose);
             this.tabPage1.Controls.Add(this.Texto);
             this.tabPage1.Controls.Add(this.metroButton1);
-            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -131,49 +145,105 @@ namespace TNetworkAdministrator.SubFormas
             this.tabPage1.Text = "Dispostivos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // label8
             // 
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.metroButton5);
-            this.tabPage2.Controls.Add(this.metroButton4);
-            this.tabPage2.Controls.Add(this.metroButton3);
-            this.tabPage2.Controls.Add(this.Scaneados);
-            this.tabPage2.Location = new System.Drawing.Point(4, 38);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(990, 595);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Grupos";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(339, 72);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 23);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Nome:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(123, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 23);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Ip:";
+            // 
+            // NameChoose
+            // 
+            this.NameChoose.FormattingEnabled = true;
+            this.NameChoose.ItemHeight = 23;
+            this.NameChoose.Items.AddRange(new object[] {
+            "Crescente\t",
+            "Decrescente"});
+            this.NameChoose.Location = new System.Drawing.Point(406, 66);
+            this.NameChoose.Name = "NameChoose";
+            this.NameChoose.Size = new System.Drawing.Size(121, 29);
+            this.NameChoose.TabIndex = 28;
+            this.NameChoose.UseSelectable = true;
+            // 
+            // IpChoose
+            // 
+            this.IpChoose.FormattingEnabled = true;
+            this.IpChoose.ItemHeight = 23;
+            this.IpChoose.Items.AddRange(new object[] {
+            "Crescente\t",
+            "Decrescente"});
+            this.IpChoose.Location = new System.Drawing.Point(160, 66);
+            this.IpChoose.Name = "IpChoose";
+            this.IpChoose.Size = new System.Drawing.Size(121, 29);
+            this.IpChoose.TabIndex = 27;
+            this.IpChoose.UseSelectable = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(311, 64);
+            this.label5.Location = new System.Drawing.Point(753, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 23);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Ip:";
+            this.label5.Size = new System.Drawing.Size(95, 23);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Prioridade:";
+            // 
+            // ProrityChoose
+            // 
+            this.ProrityChoose.FormattingEnabled = true;
+            this.ProrityChoose.ItemHeight = 23;
+            this.ProrityChoose.Items.AddRange(new object[] {
+            "Baixa",
+            "Média",
+            "Alta",
+            "Critica"});
+            this.ProrityChoose.Location = new System.Drawing.Point(854, 13);
+            this.ProrityChoose.Name = "ProrityChoose";
+            this.ProrityChoose.Size = new System.Drawing.Size(121, 29);
+            this.ProrityChoose.TabIndex = 25;
+            this.ProrityChoose.UseSelectable = true;
+            // 
+            // ListofDevices
+            // 
+            this.ListofDevices.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ListofDevices.Location = new System.Drawing.Point(3, 119);
+            this.ListofDevices.Name = "ListofDevices";
+            this.ListofDevices.Size = new System.Drawing.Size(984, 473);
+            this.ListofDevices.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(311, 16);
+            this.label4.Location = new System.Drawing.Point(305, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 23);
+            this.label4.Size = new System.Drawing.Size(95, 23);
             this.label4.TabIndex = 23;
-            this.label4.Text = "Data:";
+            this.label4.Text = "Fabricante:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(91, 64);
+            this.label3.Location = new System.Drawing.Point(548, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 23);
             this.label3.TabIndex = 22;
@@ -190,41 +260,29 @@ namespace TNetworkAdministrator.SubFormas
             this.label2.TabIndex = 21;
             this.label2.Text = "Grupo:";
             // 
-            // metroComboBox4
+            // ManufactuerChoose
             // 
-            this.metroComboBox4.FormattingEnabled = true;
-            this.metroComboBox4.ItemHeight = 23;
-            this.metroComboBox4.Items.AddRange(new object[] {
-            "Crescente\t",
-            "Decrescente"});
-            this.metroComboBox4.Location = new System.Drawing.Point(368, 64);
-            this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox4.TabIndex = 20;
-            this.metroComboBox4.UseSelectable = true;
+            this.ManufactuerChoose.FormattingEnabled = true;
+            this.ManufactuerChoose.ItemHeight = 23;
+            this.ManufactuerChoose.Location = new System.Drawing.Point(406, 13);
+            this.ManufactuerChoose.Name = "ManufactuerChoose";
+            this.ManufactuerChoose.Size = new System.Drawing.Size(121, 29);
+            this.ManufactuerChoose.TabIndex = 19;
+            this.ManufactuerChoose.UseSelectable = true;
             // 
-            // metroComboBox3
+            // StatusChoose
             // 
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Items.AddRange(new object[] {
-            "Crescente\t",
-            "Decrescente"});
-            this.metroComboBox3.Location = new System.Drawing.Point(368, 10);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox3.TabIndex = 19;
-            this.metroComboBox3.UseSelectable = true;
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(160, 64);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox2.TabIndex = 18;
-            this.metroComboBox2.UseSelectable = true;
+            this.StatusChoose.FormattingEnabled = true;
+            this.StatusChoose.ItemHeight = 23;
+            this.StatusChoose.Items.AddRange(new object[] {
+            "OK",
+            "Alerta",
+            "Critico"});
+            this.StatusChoose.Location = new System.Drawing.Point(617, 13);
+            this.StatusChoose.Name = "StatusChoose";
+            this.StatusChoose.Size = new System.Drawing.Size(121, 29);
+            this.StatusChoose.TabIndex = 18;
+            this.StatusChoose.UseSelectable = true;
             // 
             // label1
             // 
@@ -236,20 +294,20 @@ namespace TNetworkAdministrator.SubFormas
             this.label1.TabIndex = 17;
             this.label1.Text = "Filtros:";
             // 
-            // metroComboBox1
+            // GroupsChoose
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(160, 13);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 16;
-            this.metroComboBox1.UseSelectable = true;
+            this.GroupsChoose.FormattingEnabled = true;
+            this.GroupsChoose.ItemHeight = 23;
+            this.GroupsChoose.Location = new System.Drawing.Point(160, 13);
+            this.GroupsChoose.Name = "GroupsChoose";
+            this.GroupsChoose.Size = new System.Drawing.Size(121, 29);
+            this.GroupsChoose.TabIndex = 16;
+            this.GroupsChoose.UseSelectable = true;
             // 
             // Texto
             // 
             this.Texto.Lines = new string[0];
-            this.Texto.Location = new System.Drawing.Point(14, 110);
+            this.Texto.Location = new System.Drawing.Point(594, 60);
             this.Texto.MaxLength = 32767;
             this.Texto.Name = "Texto";
             this.Texto.PasswordChar = '\0';
@@ -262,7 +320,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton1
             // 
             this.metroButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton1.Location = new System.Drawing.Point(411, 110);
+            this.metroButton1.Location = new System.Drawing.Point(873, 91);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(100, 22);
             this.metroButton1.TabIndex = 14;
@@ -271,21 +329,109 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton1.UseSelectable = true;
             this.metroButton1.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // tabPage2
             // 
-            this.panel1.ContextMenuStrip = this.contextMenuStrip1;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 148);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 444);
-            this.panel1.TabIndex = 13;
+            this.tabPage2.Controls.Add(this.Prioridades);
+            this.tabPage2.Controls.Add(this.metroButton2);
+            this.tabPage2.Controls.Add(this.PrioridadePadrao);
+            this.tabPage2.Controls.Add(this.InfoText);
+            this.tabPage2.Controls.Add(this.Descricaotext);
+            this.tabPage2.Controls.Add(this.Descricao);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.metroButton5);
+            this.tabPage2.Controls.Add(this.metroButton4);
+            this.tabPage2.Controls.Add(this.metroButton3);
+            this.tabPage2.Controls.Add(this.Scaneados);
+            this.tabPage2.Location = new System.Drawing.Point(4, 38);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(990, 595);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Grupos";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Scaneados
+            // Prioridades
             // 
-            this.Scaneados.Location = new System.Drawing.Point(15, 46);
-            this.Scaneados.Name = "Scaneados";
-            this.Scaneados.Size = new System.Drawing.Size(291, 515);
-            this.Scaneados.TabIndex = 13;
+            this.Prioridades.FormattingEnabled = true;
+            this.Prioridades.ItemHeight = 23;
+            this.Prioridades.Items.AddRange(new object[] {
+            "Baixa",
+            "Média",
+            "Alta",
+            "Critica"});
+            this.Prioridades.Location = new System.Drawing.Point(837, 107);
+            this.Prioridades.Name = "Prioridades";
+            this.Prioridades.Size = new System.Drawing.Size(132, 29);
+            this.Prioridades.TabIndex = 33;
+            this.Prioridades.UseSelectable = true;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton2.Location = new System.Drawing.Point(864, 152);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(105, 22);
+            this.metroButton2.TabIndex = 32;
+            this.metroButton2.Text = "Salvar Alterações";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.UseVisualStyleBackColor = false;
+            // 
+            // PrioridadePadrao
+            // 
+            this.PrioridadePadrao.AutoSize = true;
+            this.PrioridadePadrao.Location = new System.Drawing.Point(543, 114);
+            this.PrioridadePadrao.Name = "PrioridadePadrao";
+            this.PrioridadePadrao.Size = new System.Drawing.Size(286, 15);
+            this.PrioridadePadrao.TabIndex = 31;
+            this.PrioridadePadrao.Text = "Usar Prioridade padrão para todos itens do Grupo:";
+            this.PrioridadePadrao.UseSelectable = true;
+            this.PrioridadePadrao.UseVisualStyleBackColor = true;
+            // 
+            // InfoText
+            // 
+            this.InfoText.AutoSize = true;
+            this.InfoText.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoText.Location = new System.Drawing.Point(540, 14);
+            this.InfoText.Name = "InfoText";
+            this.InfoText.Size = new System.Drawing.Size(221, 25);
+            this.InfoText.TabIndex = 30;
+            this.InfoText.Text = "Informações Do Grupo:";
+            // 
+            // Descricaotext
+            // 
+            this.Descricaotext.AutoSize = true;
+            this.Descricaotext.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descricaotext.ForeColor = System.Drawing.Color.Black;
+            this.Descricaotext.Location = new System.Drawing.Point(541, 58);
+            this.Descricaotext.Name = "Descricaotext";
+            this.Descricaotext.Size = new System.Drawing.Size(90, 23);
+            this.Descricaotext.TabIndex = 29;
+            this.Descricaotext.Text = "Descrição:";
+            // 
+            // Descricao
+            // 
+            this.Descricao.Lines = new string[0];
+            this.Descricao.Location = new System.Drawing.Point(641, 60);
+            this.Descricao.MaxLength = 32767;
+            this.Descricao.Multiline = true;
+            this.Descricao.Name = "Descricao";
+            this.Descricao.PasswordChar = '\0';
+            this.Descricao.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Descricao.SelectedText = "";
+            this.Descricao.Size = new System.Drawing.Size(328, 41);
+            this.Descricao.TabIndex = 28;
+            this.Descricao.UseSelectable = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(88, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 25);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Grupos:";
             // 
             // metroButton5
             // 
@@ -323,15 +469,12 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton3.UseSelectable = true;
             this.metroButton3.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // Scaneados
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(88, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 25);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Grupos:";
+            this.Scaneados.Location = new System.Drawing.Point(15, 46);
+            this.Scaneados.Name = "Scaneados";
+            this.Scaneados.Size = new System.Drawing.Size(291, 515);
+            this.Scaneados.TabIndex = 13;
             // 
             // Inventory
             // 
@@ -363,22 +506,32 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroTabControl metroTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox metroComboBox4;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox metroComboBox3;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox metroComboBox2;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox ManufactuerChoose;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox StatusChoose;
         private System.Windows.Forms.Label label1;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox metroComboBox1;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox GroupsChoose;
         private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Texto;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TreeView Scaneados;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton5;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton4;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label InfoText;
+        private System.Windows.Forms.Label Descricaotext;
+        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Descricao;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox PrioridadePadrao;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox Prioridades;
+        private System.Windows.Forms.FlowLayoutPanel ListofDevices;
+        private System.Windows.Forms.Label label5;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox ProrityChoose;
+        private System.Windows.Forms.Label label7;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox NameChoose;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox IpChoose;
+        private System.Windows.Forms.Label label8;
     }
 }
