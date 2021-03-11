@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,7 +12,7 @@ namespace TNetworkAdministrator.SubFormas
 {
     public partial class Scan : Wisder.W3Common.WMetroControl.Forms.MetroForm
     {
-        public Scan()
+        public  Scan()
         {
             InitializeComponent();
         }
@@ -29,8 +30,8 @@ namespace TNetworkAdministrator.SubFormas
             }
             catch (Exception ex)
             {
-              
 
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -49,7 +50,7 @@ namespace TNetworkAdministrator.SubFormas
             catch (Exception ex)
             {
 
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -57,16 +58,14 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                string resultado = Classes.InputBox.ShowDialog("Ip", "Coloque o valor");
-                if (resultado != "")
-                {
-                    Scaneados.Nodes.Add(resultado);
-                }
+               
+                SubFormas.DeviceEdit newp = new SubFormas.DeviceEdit();
+                newp.Show();
             }
 
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
            
         }
@@ -80,48 +79,262 @@ namespace TNetworkAdministrator.SubFormas
             {
                 foreach(TreeNode tr in Scaneados.Nodes)
                 {
-                    if (tr.Checked = true) {
+                    if (tr.Checked == true) {
                         
                     }
                 }
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
-        private void ScaneamentoAutomatico_CheckedChanged(object sender, EventArgs e)
+
+
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+            this.ScanWorker.DoWork += (senderr,eer) => { searchingips(); };
+            ScanWorker.RunWorkerAsync();
+        }
+
+        public bool Pinghost(string host)
+        {
+            bool ping1 = false;
+            try
+            {
+                System.Net.NetworkInformation.Ping p = new System.Net.NetworkInformation.Ping();
+                System.Net.NetworkInformation.PingReply rep = p.Send(host);
+                if (rep.Status == System.Net.NetworkInformation.IPStatus.Success)
+                {
+                    ping1 = true;
+                        return ping1;
+                }
+                return ping1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return ping1;
+            }
+        }
+
+        private void SearchForGateway_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
-                if(ScaneamentoAutomatico.Checked == true || ProcurarPorFaixa.Checked == false)
+                if(SearchForGateway.Checked == true)
                 {
-                    ProcurarPorFaixa.Checked = false;
+                    SearchForIP.Checked = false;
+                    Gateway.Enabled = true;
                     IpInicial.Enabled = false;
-                    IpFinal.Enabled = false;
                 }
             }
-            catch (Exception ex) 
+            catch (Exception)
             {
-            }
-            
 
+                throw;
+            }
         }
 
-        private void ProcurarPorFaixa_CheckedChanged(object sender, EventArgs e)
+        public static string Before(string value, string a)
+        {
+            int posA = value.IndexOf(a);
+            if (posA == -1)
+            {
+                return "";
+            }
+            return value.Substring(0, posA);
+        }
+        private void SearchForIP_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
-                if (ProcurarPorFaixa.Checked == true || ScaneamentoAutomatico.Checked == false)
+                if (SearchForIP.Checked == true)
                 {
-                    ScaneamentoAutomatico.Checked = false;
+                    SearchForGateway.Checked = false;
                     IpInicial.Enabled = true;
-                    IpFinal.Enabled = true;
+                    Gateway.Enabled = false;
+                    
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public  void searchingips()
+        {
+            try
+            {
+                if (Gateway.Text == "" && SearchForGateway.Checked==true)
+                {
+                    MessageBox.Show("Está faltado informação de Gateway,favor digitar");
+                    return;
+                }
+                if (IpInicial.Text == "" && SearchForIP.Checked == true)
+                {
+                    MessageBox.Show("Está faltado informaçãode IP ,favor digitar");
+                    return;
+                }
+                string ping_var = "";
+                string First = "";
+                string Second = "";
+                string Thirt = "";
+                string value = "";
+                if (SearchForGateway.Checked == true)
+                {
+                    value = Gateway.Text.ToString();
+                }
+                if (SearchForIP.Checked == true)
+                {
+                    value = IpInicial.Text.ToString();
+                }
+                int maxindex = 0;
+                string value2 = "";
+                int k = 0;
+                while (k < value.Length)
+                {
+                    if (value[k].ToString() == ".")
+                    {
+                        maxindex += 1;
+                        if (maxindex == 1 || First == "")
+                        {
+                            First = value2;
+                            value2 = "";
+                        }
+                        if (maxindex == 2 || Second == "")
+                        {
+                            Second = value2;
+                            value2 = "";
+                        }
+                        if (maxindex == 3 || Thirt == "" )
+                        {
+                            Thirt = value2;
+                            value2 = "";
+                        }
+                    }
+                    else
+                    {
+                        value2 = value2 + value[k].ToString();
+
+                    }
+
+                    k++;
+                }
+                this.Invoke(new MethodInvoker(delegate { Status.Visible=true; }));
+                this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneando..."; }));
+                
+                if (SearchForGateway.Checked == true)
+
+                {
+
+                    this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value = 0; }));
+                    this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Maximum = 253; }));
+
+
+                
+                       
+                    for (int i = 2; i <= 255; i++)
+                    {
+                    if(ScanWorker.CancellationPending == true)
+                        {
+                           
+                            this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneamento cancelado"; }));
+                            this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value = 0; }));
+                            return;
+                        }
+                        this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value += 1; }));
+                        ping_var = First + "." + Second + "." + Thirt + "." + i;
+                          if (Pinghost(ping_var) == true)
+                         {
+
+                        this.Invoke(new MethodInvoker(delegate { Scaneados.Nodes.Add(ping_var); }));
+                        this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
+
+                         }
+                    }
+                }
+                else
+                {
+                    this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value = 0; }));
+                    this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Maximum = 64009; }));
+                    for (int i = 2; i <= 255; i++)
+                    {
+                        if (ScanWorker.CancellationPending == true)
+                        {
+
+                            this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneamento cancelado"; }));
+                            this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value = 0; }));
+                            return;
+                        }
+                        for (int j = 2; j <= 255; j++)
+                        {
+                            if (ScanWorker.CancellationPending == true)
+                            {
+
+                                this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneamento cancelado"; }));
+                                this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value = 0; }));
+                                return;
+                            }
+                            this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value += 1; }));
+                            ping_var = First + "." + Second + "." + i + "." + j;
+                            if (Pinghost(ping_var) == true)
+                             {
+                            this.Invoke(new MethodInvoker(delegate { Scaneados.Nodes.Add(ping_var); }));
+                            this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
+                          
+                               
+                            }
+                        }
+                    }
+                }
+                this.Invoke(new MethodInvoker(delegate { Status.Text = "Scanemento concluido"; }));
+            }
+         
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void metroButton6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Status.Text = "Cancelando...";
+                ScanWorker.CancelAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void metroButton8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach(TreeNode tr in Scaneados.Nodes)
+                {
+                    if (tr.Checked == false)
+                    {
+                        tr.Checked = true;
+                    }
+                    else
+                    {
+                        tr.Checked = false;
+                    }
                 }
             }
             catch (Exception ex)
             {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
     }

@@ -20,5 +20,14 @@ namespace TNetworkAdministrator.SubFormas
         {
 
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            for(int i =0;i<10;i++  )
+            {
+                Controls.Device dev1 = new Controls.Device();
+                ListofDevices.Controls.Add(dev1);
+            }
+        }
     }
 }

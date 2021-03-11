@@ -14,5 +14,10 @@ namespace TNetworkAdministrator.SubFormas
         {
 
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

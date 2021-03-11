@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 
@@ -21,8 +22,12 @@ namespace TNetworkAdministrator.Classes
 
         public Group Group { get; set; }
 
-        public bool LostingPackages { get; set; }
+   
+       public DateTime AddIn { get; private set; }
 
-       public DateTime AddIn { get; set; }
+
+        public TimeSpan TimeToCheck { get; set; }
+
+        public List<Classes.WarningType> WarningTypes { get;set ;}
     }
 }

@@ -43,5 +43,19 @@ namespace TNetworkAdministrator.SubFormas
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ImageChoose imp = new ImageChoose();
+                imp.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

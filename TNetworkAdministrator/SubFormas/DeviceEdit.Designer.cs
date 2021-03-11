@@ -46,11 +46,18 @@ namespace TNetworkAdministrator.SubFormas
             this.PriorityChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.ImageText = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.SaveButton = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
-            this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton4 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.AddIn = new System.Windows.Forms.Label();
+            this.ProcessorUseCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.NetworkUseCheckl = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.LostPackageCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.StatusCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -66,7 +73,6 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // NameText
             // 
-            this.NameText.Enabled = false;
             this.NameText.Lines = new string[0];
             this.NameText.Location = new System.Drawing.Point(128, 89);
             this.NameText.MaxLength = 32767;
@@ -91,7 +97,6 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // Ip
             // 
-            this.Ip.Enabled = false;
             this.Ip.Lines = new string[0];
             this.Ip.Location = new System.Drawing.Point(128, 135);
             this.Ip.MaxLength = 32767;
@@ -116,7 +121,6 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // Manufacturer
             // 
-            this.Manufacturer.Enabled = false;
             this.Manufacturer.Lines = new string[0];
             this.Manufacturer.Location = new System.Drawing.Point(128, 185);
             this.Manufacturer.MaxLength = 32767;
@@ -141,9 +145,8 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // Description
             // 
-            this.Description.Enabled = false;
             this.Description.Lines = new string[0];
-            this.Description.Location = new System.Drawing.Point(440, 88);
+            this.Description.Location = new System.Drawing.Point(438, 89);
             this.Description.MaxLength = 32767;
             this.Description.Name = "Description";
             this.Description.PasswordChar = '\0';
@@ -167,7 +170,6 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // Status
             // 
-            this.Status.Enabled = false;
             this.Status.Lines = new string[0];
             this.Status.Location = new System.Drawing.Point(128, 228);
             this.Status.MaxLength = 32767;
@@ -215,6 +217,11 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.PriorityChoose.FormattingEnabled = true;
             this.PriorityChoose.ItemHeight = 23;
+            this.PriorityChoose.Items.AddRange(new object[] {
+            "Baixa",
+            "Média",
+            "Alta",
+            "Critica"});
             this.PriorityChoose.Location = new System.Drawing.Point(128, 318);
             this.PriorityChoose.Name = "PriorityChoose";
             this.PriorityChoose.Size = new System.Drawing.Size(189, 29);
@@ -225,7 +232,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.ImageText.Enabled = false;
             this.ImageText.Lines = new string[0];
-            this.ImageText.Location = new System.Drawing.Point(440, 185);
+            this.ImageText.Location = new System.Drawing.Point(440, 385);
             this.ImageText.MaxLength = 32767;
             this.ImageText.Name = "ImageText";
             this.ImageText.PasswordChar = '\0';
@@ -240,29 +247,29 @@ namespace TNetworkAdministrator.SubFormas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(344, 185);
+            this.label8.Location = new System.Drawing.Point(344, 385);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 23);
             this.label8.TabIndex = 27;
             this.label8.Text = "Imagem:";
             // 
-            // metroButton1
+            // SaveButton
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton1.Location = new System.Drawing.Point(642, 268);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(100, 22);
-            this.metroButton1.TabIndex = 28;
-            this.metroButton1.Text = "Salvar";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.UseVisualStyleBackColor = false;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.SaveButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.SaveButton.Location = new System.Drawing.Point(642, 457);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(100, 22);
+            this.SaveButton.TabIndex = 28;
+            this.SaveButton.Text = "Salvar";
+            this.SaveButton.UseCustomBackColor = true;
+            this.SaveButton.UseSelectable = true;
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 
             this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton2.Location = new System.Drawing.Point(525, 268);
+            this.metroButton2.Location = new System.Drawing.Point(536, 457);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(100, 22);
             this.metroButton2.TabIndex = 29;
@@ -272,52 +279,125 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton2.UseVisualStyleBackColor = false;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
-            // metroButton3
-            // 
-            this.metroButton3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton3.Location = new System.Drawing.Point(613, 215);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(129, 22);
-            this.metroButton3.TabIndex = 30;
-            this.metroButton3.Text = "Anexar Nova Imagem";
-            this.metroButton3.UseCustomBackColor = true;
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.UseVisualStyleBackColor = false;
-            // 
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton4.Location = new System.Drawing.Point(467, 215);
+            this.metroButton4.Location = new System.Drawing.Point(611, 415);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(129, 22);
             this.metroButton4.TabIndex = 31;
-            this.metroButton4.Text = "Escolher Imagens";
+            this.metroButton4.Text = "Escolher Imagem";
             this.metroButton4.UseCustomBackColor = true;
             this.metroButton4.UseSelectable = true;
             this.metroButton4.UseVisualStyleBackColor = false;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             // 
             // AddIn
             // 
             this.AddIn.AutoSize = true;
             this.AddIn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddIn.ForeColor = System.Drawing.Color.Black;
-            this.AddIn.Location = new System.Drawing.Point(344, 324);
+            this.AddIn.Location = new System.Drawing.Point(29, 439);
             this.AddIn.Name = "AddIn";
             this.AddIn.Size = new System.Drawing.Size(169, 23);
             this.AddIn.TabIndex = 32;
             this.AddIn.Text = "Item Adicionado Em:";
             this.AddIn.Visible = false;
             // 
+            // ProcessorUseCheck
+            // 
+            this.ProcessorUseCheck.AutoSize = true;
+            this.ProcessorUseCheck.Location = new System.Drawing.Point(613, 284);
+            this.ProcessorUseCheck.Name = "ProcessorUseCheck";
+            this.ProcessorUseCheck.Size = new System.Drawing.Size(127, 15);
+            this.ProcessorUseCheck.TabIndex = 42;
+            this.ProcessorUseCheck.Text = "Uso do Processador";
+            this.ProcessorUseCheck.UseSelectable = true;
+            this.ProcessorUseCheck.UseVisualStyleBackColor = true;
+            // 
+            // NetworkUseCheckl
+            // 
+            this.NetworkUseCheckl.AutoSize = true;
+            this.NetworkUseCheckl.Location = new System.Drawing.Point(411, 284);
+            this.NetworkUseCheckl.Name = "NetworkUseCheckl";
+            this.NetworkUseCheckl.Size = new System.Drawing.Size(88, 15);
+            this.NetworkUseCheckl.TabIndex = 41;
+            this.NetworkUseCheckl.Text = "Uso da Rede";
+            this.NetworkUseCheckl.UseSelectable = true;
+            this.NetworkUseCheckl.UseVisualStyleBackColor = true;
+            // 
+            // LostPackageCheck
+            // 
+            this.LostPackageCheck.AutoSize = true;
+            this.LostPackageCheck.Location = new System.Drawing.Point(613, 246);
+            this.LostPackageCheck.Name = "LostPackageCheck";
+            this.LostPackageCheck.Size = new System.Drawing.Size(107, 15);
+            this.LostPackageCheck.TabIndex = 40;
+            this.LostPackageCheck.Text = "Perca de Pacote";
+            this.LostPackageCheck.UseSelectable = true;
+            this.LostPackageCheck.UseVisualStyleBackColor = true;
+            // 
+            // StatusCheck
+            // 
+            this.StatusCheck.AutoSize = true;
+            this.StatusCheck.Location = new System.Drawing.Point(411, 246);
+            this.StatusCheck.Name = "StatusCheck";
+            this.StatusCheck.Size = new System.Drawing.Size(178, 15);
+            this.StatusCheck.TabIndex = 39;
+            this.StatusCheck.Text = "Verificar Status do Dispositivo";
+            this.StatusCheck.UseSelectable = true;
+            this.StatusCheck.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(407, 176);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(303, 46);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "Assinale os tipos de Monitoramento \r\nque você deseja para esse dispositivo:";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(659, 330);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(27, 20);
+            this.numericUpDown2.TabIndex = 58;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(407, 328);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(246, 19);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "Verificar erros e alertas a cada(Min):";
+            // 
             // DeviceEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 391);
+            this.ClientSize = new System.Drawing.Size(765, 494);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.ProcessorUseCheck);
+            this.Controls.Add(this.NetworkUseCheckl);
+            this.Controls.Add(this.LostPackageCheck);
+            this.Controls.Add(this.StatusCheck);
             this.Controls.Add(this.AddIn);
             this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ImageText);
             this.Controls.Add(this.label7);
@@ -338,6 +418,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Name = "DeviceEdit";
             this.Text = "Editar Dispositivo";
             this.Load += new System.EventHandler(this.DeviceEdit_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,25 +427,31 @@ namespace TNetworkAdministrator.SubFormas
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox NameText;
         private System.Windows.Forms.Label label1;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Ip;
         private System.Windows.Forms.Label label3;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Manufacturer;
         private System.Windows.Forms.Label label4;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Description;
         private System.Windows.Forms.Label label6;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Status;
         private System.Windows.Forms.Label label5;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox GroupsChoose;
         private System.Windows.Forms.Label label7;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox PriorityChoose;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox ImageText;
         private System.Windows.Forms.Label label8;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton1;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton4;
-        private System.Windows.Forms.Label AddIn;
+        public Wisder.W3Common.WMetroControl.Controls.MetroTextBox NameText;
+        public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Ip;
+        public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Manufacturer;
+        public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Description;
+        public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Status;
+        public Wisder.W3Common.WMetroControl.Controls.MetroComboBox GroupsChoose;
+        public Wisder.W3Common.WMetroControl.Controls.MetroComboBox PriorityChoose;
+        public Wisder.W3Common.WMetroControl.Controls.MetroTextBox ImageText;
+        public Wisder.W3Common.WMetroControl.Controls.MetroButton SaveButton;
+        public System.Windows.Forms.Label AddIn;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox ProcessorUseCheck;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox NetworkUseCheckl;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox LostPackageCheck;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox StatusCheck;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        public System.Windows.Forms.Label label11;
     }
 }

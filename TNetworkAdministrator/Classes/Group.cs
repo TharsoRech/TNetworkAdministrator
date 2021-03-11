@@ -16,5 +16,8 @@ namespace TNetworkAdministrator.Classes
         public Priority Priority { get; set; }
 
         public List<Device>  Devices { get; set; }
+
+        public List<Classes.WarningType> WarningTypes { get; set; }
+
     }
 }

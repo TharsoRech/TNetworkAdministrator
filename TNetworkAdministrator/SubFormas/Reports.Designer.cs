@@ -29,6 +29,7 @@ namespace TNetworkAdministrator.SubFormas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
             this.Scaneados = new System.Windows.Forms.TreeView();
             this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
@@ -75,6 +76,7 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton2.UseCustomBackColor = true;
             this.metroButton2.UseSelectable = true;
             this.metroButton2.UseVisualStyleBackColor = false;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // label1
             // 
@@ -217,6 +219,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.Scaneados);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reports";
             this.Text = "Relatórios";
             this.Load += new System.EventHandler(this.Reports_Load);

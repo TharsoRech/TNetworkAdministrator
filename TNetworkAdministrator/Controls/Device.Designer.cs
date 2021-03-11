@@ -61,7 +61,7 @@ namespace TNetworkAdministrator.Controls
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 38);
+            this.button1.Size = new System.Drawing.Size(47, 38);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -70,7 +70,7 @@ namespace TNetworkAdministrator.Controls
             this.DeviceText.AutoSize = true;
             this.DeviceText.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeviceText.ForeColor = System.Drawing.Color.Black;
-            this.DeviceText.Location = new System.Drawing.Point(268, 6);
+            this.DeviceText.Location = new System.Drawing.Point(328, 6);
             this.DeviceText.Name = "DeviceText";
             this.DeviceText.Size = new System.Drawing.Size(93, 23);
             this.DeviceText.TabIndex = 12;
@@ -81,7 +81,7 @@ namespace TNetworkAdministrator.Controls
             this.Grouptext.AutoSize = true;
             this.Grouptext.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grouptext.ForeColor = System.Drawing.Color.Black;
-            this.Grouptext.Location = new System.Drawing.Point(647, 6);
+            this.Grouptext.Location = new System.Drawing.Point(670, 6);
             this.Grouptext.Name = "Grouptext";
             this.Grouptext.Size = new System.Drawing.Size(64, 23);
             this.Grouptext.TabIndex = 14;
@@ -94,9 +94,9 @@ namespace TNetworkAdministrator.Controls
             this.button2.Dock = System.Windows.Forms.DockStyle.Right;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(939, 0);
+            this.button2.Location = new System.Drawing.Point(959, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
+            this.button2.Size = new System.Drawing.Size(55, 38);
             this.button2.TabIndex = 15;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -107,9 +107,9 @@ namespace TNetworkAdministrator.Controls
             this.button3.Dock = System.Windows.Forms.DockStyle.Right;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(876, 0);
+            this.button3.Location = new System.Drawing.Point(909, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 38);
+            this.button3.Size = new System.Drawing.Size(50, 38);
             this.button3.TabIndex = 16;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -119,7 +119,7 @@ namespace TNetworkAdministrator.Controls
             this.Ip.AutoSize = true;
             this.Ip.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ip.ForeColor = System.Drawing.Color.Black;
-            this.Ip.Location = new System.Drawing.Point(81, 6);
+            this.Ip.Location = new System.Drawing.Point(53, 6);
             this.Ip.Name = "Ip";
             this.Ip.Size = new System.Drawing.Size(31, 23);
             this.Ip.TabIndex = 17;

@@ -31,7 +31,7 @@ namespace TNetworkAdministrator.SubFormas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Warnings));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ListOfAlert = new System.Windows.Forms.FlowLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exibirAlertaDetalhadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,14 +42,14 @@ namespace TNetworkAdministrator.SubFormas
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // ListOfAlert
             // 
-            this.flowLayoutPanel1.ContextMenuStrip = this.contextMenuStrip1;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 140);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(805, 547);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.ListOfAlert.ContextMenuStrip = this.contextMenuStrip1;
+            this.ListOfAlert.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ListOfAlert.Location = new System.Drawing.Point(20, 127);
+            this.ListOfAlert.Name = "ListOfAlert";
+            this.ListOfAlert.Size = new System.Drawing.Size(1025, 655);
+            this.ListOfAlert.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
@@ -119,10 +119,11 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 707);
+            this.ClientSize = new System.Drawing.Size(1065, 802);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.ListOfAlert);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Warnings";
             this.Text = "Alertas";
             this.Load += new System.EventHandler(this.Warnings_Load);
@@ -133,7 +134,7 @@ namespace TNetworkAdministrator.SubFormas
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel ListOfAlert;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exibirAlertaDetalhadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarRelatórioToolStripMenuItem;

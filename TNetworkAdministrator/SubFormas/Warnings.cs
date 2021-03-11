@@ -34,7 +34,7 @@ namespace TNetworkAdministrator.SubFormas
 
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -42,12 +42,16 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-          
+                for (int i = 0; i < 10; i++)
+                {
+                    Controls.Warning dev1 = new Controls.Warning();
+                    ListOfAlert.Controls.Add(dev1);
+                }
             }
 
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
     }
