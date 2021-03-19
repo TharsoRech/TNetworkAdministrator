@@ -1,11 +1,6 @@
-﻿using System;
+﻿using SnmpSharpNet;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
 using System.Windows.Forms;
 
 namespace TNetworkAdministrator.SubFormas
@@ -22,38 +17,9 @@ namespace TNetworkAdministrator.SubFormas
 
         }
 
-        private void metroButton4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Scaneados.Nodes.Clear();
-            }
-            catch (Exception ex)
-            {
+    
 
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void metroButton3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-               foreach (TreeNode tr in Scaneados.Nodes)
-                {
-                    if (tr.Checked == true)
-                    {
-                        Scaneados.Nodes.Remove(tr);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
+   
         private void metroButton5_Click(object sender, EventArgs e)
         {
             try
@@ -72,26 +38,6 @@ namespace TNetworkAdministrator.SubFormas
 
 
   
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach(TreeNode tr in Scaneados.Nodes)
-                {
-                    if (tr.Checked == true) {
-                        
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-
-
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
@@ -250,10 +196,12 @@ namespace TNetworkAdministrator.SubFormas
                         }
                         this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value += 1; }));
                         ping_var = First + "." + Second + "." + Thirt + "." + i;
-                          if (Pinghost(ping_var) == true)
+                        this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneando IP:"+ ping_var; }));
+                        if (Pinghost(ping_var) == true)
                          {
-
-                        this.Invoke(new MethodInvoker(delegate { Scaneados.Nodes.Add(ping_var); }));
+                            Controls.DeviceScan newc = new Controls.DeviceScan();
+                            newc.Ip.Text = ping_var;
+                        this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
                         this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
 
                          }
@@ -283,10 +231,13 @@ namespace TNetworkAdministrator.SubFormas
                             }
                             this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value += 1; }));
                             ping_var = First + "." + Second + "." + i + "." + j;
+                            this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneando IP:" + ping_var; }));
                             if (Pinghost(ping_var) == true)
                              {
-                            this.Invoke(new MethodInvoker(delegate { Scaneados.Nodes.Add(ping_var); }));
-                            this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
+                                Controls.DeviceScan newc = new Controls.DeviceScan();
+                            newc.Ip.Text = ping_var;
+                                this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
+                                this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
                           
                                
                             }
@@ -315,21 +266,12 @@ namespace TNetworkAdministrator.SubFormas
             }
         }
 
-        private void metroButton8_Click(object sender, EventArgs e)
+        private void metroButton1_Click(object sender, EventArgs e)
         {
             try
             {
-                foreach(TreeNode tr in Scaneados.Nodes)
-                {
-                    if (tr.Checked == false)
-                    {
-                        tr.Checked = true;
-                    }
-                    else
-                    {
-                        tr.Checked = false;
-                    }
-                }
+                
+               
             }
             catch (Exception ex)
             {
@@ -337,5 +279,9 @@ namespace TNetworkAdministrator.SubFormas
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
+  
+
+
     }
 }

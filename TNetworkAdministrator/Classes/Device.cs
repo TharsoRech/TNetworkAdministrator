@@ -26,7 +26,9 @@ namespace TNetworkAdministrator.Classes
        public DateTime AddIn { get; private set; }
 
 
-        public TimeSpan TimeToCheck { get; set; }
+        public TimeSpan CheckEvery { get; set; }
+
+        public List<string> Log { get; set; }
 
         public List<Classes.WarningType> WarningTypes { get;set ;}
     }

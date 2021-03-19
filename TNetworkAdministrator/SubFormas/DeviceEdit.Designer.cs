@@ -55,9 +55,23 @@ namespace TNetworkAdministrator.SubFormas
             this.LostPackageCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.StatusCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.MonitoringCheck = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Sunday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.Monday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.Tuesday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.Fryday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.Thursday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.Wednesday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.Saturday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.TimeON = new System.Windows.Forms.DateTimePicker();
+            this.TimeOff = new System.Windows.Forms.DateTimePicker();
+            this.metroCheckBox1 = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -175,6 +189,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Status.MaxLength = 32767;
             this.Status.Name = "Status";
             this.Status.PasswordChar = '\0';
+            this.Status.ReadOnly = true;
             this.Status.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Status.SelectedText = "";
             this.Status.Size = new System.Drawing.Size(189, 24);
@@ -186,7 +201,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(59, 273);
+            this.label5.Location = new System.Drawing.Point(59, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 23);
             this.label5.TabIndex = 23;
@@ -196,7 +211,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.GroupsChoose.FormattingEnabled = true;
             this.GroupsChoose.ItemHeight = 23;
-            this.GroupsChoose.Location = new System.Drawing.Point(128, 270);
+            this.GroupsChoose.Location = new System.Drawing.Point(128, 341);
             this.GroupsChoose.Name = "GroupsChoose";
             this.GroupsChoose.Size = new System.Drawing.Size(189, 29);
             this.GroupsChoose.TabIndex = 22;
@@ -207,7 +222,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(29, 318);
+            this.label7.Location = new System.Drawing.Point(29, 279);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 23);
             this.label7.TabIndex = 25;
@@ -222,7 +237,7 @@ namespace TNetworkAdministrator.SubFormas
             "Média",
             "Alta",
             "Critica"});
-            this.PriorityChoose.Location = new System.Drawing.Point(128, 318);
+            this.PriorityChoose.Location = new System.Drawing.Point(128, 279);
             this.PriorityChoose.Name = "PriorityChoose";
             this.PriorityChoose.Size = new System.Drawing.Size(189, 29);
             this.PriorityChoose.TabIndex = 24;
@@ -232,13 +247,13 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.ImageText.Enabled = false;
             this.ImageText.Lines = new string[0];
-            this.ImageText.Location = new System.Drawing.Point(440, 385);
+            this.ImageText.Location = new System.Drawing.Point(120, 446);
             this.ImageText.MaxLength = 32767;
             this.ImageText.Name = "ImageText";
             this.ImageText.PasswordChar = '\0';
             this.ImageText.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.ImageText.SelectedText = "";
-            this.ImageText.Size = new System.Drawing.Size(302, 24);
+            this.ImageText.Size = new System.Drawing.Size(197, 24);
             this.ImageText.TabIndex = 26;
             this.ImageText.UseSelectable = true;
             // 
@@ -247,7 +262,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(344, 385);
+            this.label8.Location = new System.Drawing.Point(24, 446);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 23);
             this.label8.TabIndex = 27;
@@ -256,7 +271,7 @@ namespace TNetworkAdministrator.SubFormas
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.SaveButton.Location = new System.Drawing.Point(642, 457);
+            this.SaveButton.Location = new System.Drawing.Point(615, 531);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(100, 22);
             this.SaveButton.TabIndex = 28;
@@ -269,7 +284,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton2
             // 
             this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton2.Location = new System.Drawing.Point(536, 457);
+            this.metroButton2.Location = new System.Drawing.Point(500, 531);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(100, 22);
             this.metroButton2.TabIndex = 29;
@@ -282,7 +297,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton4.Location = new System.Drawing.Point(611, 415);
+            this.metroButton4.Location = new System.Drawing.Point(188, 476);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(129, 22);
             this.metroButton4.TabIndex = 31;
@@ -297,7 +312,7 @@ namespace TNetworkAdministrator.SubFormas
             this.AddIn.AutoSize = true;
             this.AddIn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddIn.ForeColor = System.Drawing.Color.Black;
-            this.AddIn.Location = new System.Drawing.Point(29, 439);
+            this.AddIn.Location = new System.Drawing.Point(39, 397);
             this.AddIn.Name = "AddIn";
             this.AddIn.Size = new System.Drawing.Size(169, 23);
             this.AddIn.TabIndex = 32;
@@ -307,7 +322,7 @@ namespace TNetworkAdministrator.SubFormas
             // ProcessorUseCheck
             // 
             this.ProcessorUseCheck.AutoSize = true;
-            this.ProcessorUseCheck.Location = new System.Drawing.Point(613, 284);
+            this.ProcessorUseCheck.Location = new System.Drawing.Point(589, 321);
             this.ProcessorUseCheck.Name = "ProcessorUseCheck";
             this.ProcessorUseCheck.Size = new System.Drawing.Size(127, 15);
             this.ProcessorUseCheck.TabIndex = 42;
@@ -318,7 +333,7 @@ namespace TNetworkAdministrator.SubFormas
             // NetworkUseCheckl
             // 
             this.NetworkUseCheckl.AutoSize = true;
-            this.NetworkUseCheckl.Location = new System.Drawing.Point(411, 284);
+            this.NetworkUseCheckl.Location = new System.Drawing.Point(387, 321);
             this.NetworkUseCheckl.Name = "NetworkUseCheckl";
             this.NetworkUseCheckl.Size = new System.Drawing.Size(88, 15);
             this.NetworkUseCheckl.TabIndex = 41;
@@ -329,7 +344,7 @@ namespace TNetworkAdministrator.SubFormas
             // LostPackageCheck
             // 
             this.LostPackageCheck.AutoSize = true;
-            this.LostPackageCheck.Location = new System.Drawing.Point(613, 246);
+            this.LostPackageCheck.Location = new System.Drawing.Point(589, 283);
             this.LostPackageCheck.Name = "LostPackageCheck";
             this.LostPackageCheck.Size = new System.Drawing.Size(107, 15);
             this.LostPackageCheck.TabIndex = 40;
@@ -340,7 +355,7 @@ namespace TNetworkAdministrator.SubFormas
             // StatusCheck
             // 
             this.StatusCheck.AutoSize = true;
-            this.StatusCheck.Location = new System.Drawing.Point(411, 246);
+            this.StatusCheck.Location = new System.Drawing.Point(387, 283);
             this.StatusCheck.Name = "StatusCheck";
             this.StatusCheck.Size = new System.Drawing.Size(178, 15);
             this.StatusCheck.TabIndex = 39;
@@ -353,19 +368,19 @@ namespace TNetworkAdministrator.SubFormas
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(407, 176);
+            this.label9.Location = new System.Drawing.Point(383, 228);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(303, 46);
             this.label9.TabIndex = 43;
             this.label9.Text = "Assinale os tipos de Monitoramento \r\nque você deseja para esse dispositivo:";
             // 
-            // numericUpDown2
+            // MonitoringCheck
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(659, 330);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(27, 20);
-            this.numericUpDown2.TabIndex = 58;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.MonitoringCheck.Location = new System.Drawing.Point(586, 351);
+            this.MonitoringCheck.Name = "MonitoringCheck";
+            this.MonitoringCheck.Size = new System.Drawing.Size(27, 20);
+            this.MonitoringCheck.TabIndex = 58;
+            this.MonitoringCheck.Value = new decimal(new int[] {
             5,
             0,
             0,
@@ -376,19 +391,196 @@ namespace TNetworkAdministrator.SubFormas
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(407, 328);
+            this.label11.Location = new System.Drawing.Point(383, 352);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(246, 19);
+            this.label11.Size = new System.Drawing.Size(195, 19);
             this.label11.TabIndex = 60;
-            this.label11.Text = "Verificar erros e alertas a cada(Min):";
+            this.label11.Text = "Monitoramento a cada(Min):";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(376, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(202, 31);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "Monitoramento:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(383, 385);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(209, 19);
+            this.label12.TabIndex = 63;
+            this.label12.Text = "Fazer Monitoramento nos dias:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(380, 493);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 19);
+            this.label13.TabIndex = 64;
+            this.label13.Text = "Da hora:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(501, 492);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 19);
+            this.label14.TabIndex = 65;
+            this.label14.Text = "Até a Hora:";
+            // 
+            // Sunday
+            // 
+            this.Sunday.AutoSize = true;
+            this.Sunday.Checked = true;
+            this.Sunday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Sunday.Location = new System.Drawing.Point(598, 389);
+            this.Sunday.Name = "Sunday";
+            this.Sunday.Size = new System.Drawing.Size(73, 15);
+            this.Sunday.TabIndex = 67;
+            this.Sunday.Text = "Domingo";
+            this.Sunday.UseSelectable = true;
+            this.Sunday.UseVisualStyleBackColor = true;
+            // 
+            // Monday
+            // 
+            this.Monday.AutoSize = true;
+            this.Monday.Checked = true;
+            this.Monday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Monday.Location = new System.Drawing.Point(384, 421);
+            this.Monday.Name = "Monday";
+            this.Monday.Size = new System.Drawing.Size(99, 15);
+            this.Monday.TabIndex = 68;
+            this.Monday.Text = "Segunda-Feira";
+            this.Monday.UseSelectable = true;
+            this.Monday.UseVisualStyleBackColor = true;
+            // 
+            // Tuesday
+            // 
+            this.Tuesday.AutoSize = true;
+            this.Tuesday.Checked = true;
+            this.Tuesday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Tuesday.Location = new System.Drawing.Point(488, 421);
+            this.Tuesday.Name = "Tuesday";
+            this.Tuesday.Size = new System.Drawing.Size(80, 15);
+            this.Tuesday.TabIndex = 69;
+            this.Tuesday.Text = "Terça-Feira";
+            this.Tuesday.UseSelectable = true;
+            this.Tuesday.UseVisualStyleBackColor = true;
+            // 
+            // Fryday
+            // 
+            this.Fryday.AutoSize = true;
+            this.Fryday.Checked = true;
+            this.Fryday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Fryday.Location = new System.Drawing.Point(487, 455);
+            this.Fryday.Name = "Fryday";
+            this.Fryday.Size = new System.Drawing.Size(81, 15);
+            this.Fryday.TabIndex = 72;
+            this.Fryday.Text = "Sexta-Feira";
+            this.Fryday.UseSelectable = true;
+            this.Fryday.UseVisualStyleBackColor = true;
+            // 
+            // Thursday
+            // 
+            this.Thursday.AutoSize = true;
+            this.Thursday.Checked = true;
+            this.Thursday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Thursday.Location = new System.Drawing.Point(384, 453);
+            this.Thursday.Name = "Thursday";
+            this.Thursday.Size = new System.Drawing.Size(89, 15);
+            this.Thursday.TabIndex = 71;
+            this.Thursday.Text = "Quinta-Feira";
+            this.Thursday.UseSelectable = true;
+            this.Thursday.UseVisualStyleBackColor = true;
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.AutoSize = true;
+            this.Wednesday.Checked = true;
+            this.Wednesday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Wednesday.Location = new System.Drawing.Point(594, 421);
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.Size = new System.Drawing.Size(89, 15);
+            this.Wednesday.TabIndex = 70;
+            this.Wednesday.Text = "Quarta-Feira";
+            this.Wednesday.UseSelectable = true;
+            this.Wednesday.UseVisualStyleBackColor = true;
+            // 
+            // Saturday
+            // 
+            this.Saturday.AutoSize = true;
+            this.Saturday.Checked = true;
+            this.Saturday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Saturday.Location = new System.Drawing.Point(598, 455);
+            this.Saturday.Name = "Saturday";
+            this.Saturday.Size = new System.Drawing.Size(62, 15);
+            this.Saturday.TabIndex = 73;
+            this.Saturday.Text = "Sábado";
+            this.Saturday.UseSelectable = true;
+            this.Saturday.UseVisualStyleBackColor = true;
+            // 
+            // TimeON
+            // 
+            this.TimeON.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.TimeON.Location = new System.Drawing.Point(442, 494);
+            this.TimeON.Name = "TimeON";
+            this.TimeON.Size = new System.Drawing.Size(48, 20);
+            this.TimeON.TabIndex = 74;
+            // 
+            // TimeOff
+            // 
+            this.TimeOff.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.TimeOff.Location = new System.Drawing.Point(589, 493);
+            this.TimeOff.Name = "TimeOff";
+            this.TimeOff.Size = new System.Drawing.Size(48, 20);
+            this.TimeOff.TabIndex = 75;
+            // 
+            // metroCheckBox1
+            // 
+            this.metroCheckBox1.AutoSize = true;
+            this.metroCheckBox1.Location = new System.Drawing.Point(384, 201);
+            this.metroCheckBox1.Name = "metroCheckBox1";
+            this.metroCheckBox1.Size = new System.Drawing.Size(355, 15);
+            this.metroCheckBox1.TabIndex = 123;
+            this.metroCheckBox1.Text = "Usar Monitoramento padrão obedecendo ao grupo pertecente:";
+            this.metroCheckBox1.UseSelectable = true;
+            this.metroCheckBox1.UseVisualStyleBackColor = true;
+            this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
             // 
             // DeviceEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 494);
+            this.ClientSize = new System.Drawing.Size(765, 576);
+            this.Controls.Add(this.metroCheckBox1);
+            this.Controls.Add(this.TimeOff);
+            this.Controls.Add(this.TimeON);
+            this.Controls.Add(this.Saturday);
+            this.Controls.Add(this.Fryday);
+            this.Controls.Add(this.Thursday);
+            this.Controls.Add(this.Wednesday);
+            this.Controls.Add(this.Tuesday);
+            this.Controls.Add(this.Monday);
+            this.Controls.Add(this.Sunday);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.MonitoringCheck);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ProcessorUseCheck);
             this.Controls.Add(this.NetworkUseCheckl);
@@ -418,7 +610,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Name = "DeviceEdit";
             this.Text = "Editar Dispositivo";
             this.Load += new System.EventHandler(this.DeviceEdit_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,7 +643,21 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox LostPackageCheck;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox StatusCheck;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown MonitoringCheck;
         public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label14;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Sunday;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Monday;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Tuesday;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Fryday;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Thursday;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Wednesday;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Saturday;
+        private System.Windows.Forms.DateTimePicker TimeON;
+        private System.Windows.Forms.DateTimePicker TimeOff;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox metroCheckBox1;
     }
 }

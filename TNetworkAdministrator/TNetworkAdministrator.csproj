@@ -68,8 +68,12 @@
     <Reference Include="SelectPdf.Samples">
       <HintPath>bin\SelectPdf.Samples.dll</HintPath>
     </Reference>
+    <Reference Include="SnmpSharpNet">
+      <HintPath>bin\SnmpSharpNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms.Ribbon35">
       <HintPath>bin\System.Windows.Forms.Ribbon35.dll</HintPath>
     </Reference>
@@ -99,6 +103,12 @@
     <Compile Include="Controls\Device.Designer.cs">
       <DependentUpon>Device.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DeviceScan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DeviceScan.Designer.cs">
+      <DependentUpon>DeviceScan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Warning.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +134,12 @@
     </Compile>
     <Compile Include="SubFormas\DeviceEdit.Designer.cs">
       <DependentUpon>DeviceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormas\GroupEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormas\GroupEdit.Designer.cs">
+      <DependentUpon>GroupEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="SubFormas\ImageChoose.cs">
       <SubType>Form</SubType>
@@ -158,6 +174,9 @@
     <EmbeddedResource Include="Controls\Device.resx">
       <DependentUpon>Device.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DeviceScan.resx">
+      <DependentUpon>DeviceScan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Warning.resx">
       <DependentUpon>Warning.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\DeviceEdit.resx">
       <DependentUpon>DeviceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormas\GroupEdit.resx">
+      <DependentUpon>GroupEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\ImageChoose.resx">
       <DependentUpon>ImageChoose.cs</DependentUpon>

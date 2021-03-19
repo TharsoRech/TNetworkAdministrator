@@ -57,5 +57,21 @@ namespace TNetworkAdministrator.SubFormas
                 throw;
             }
         }
+
+        private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(metroCheckBox1.Checked == true)
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

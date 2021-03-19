@@ -51,22 +51,12 @@ namespace TNetworkAdministrator.SubFormas
             this.Texto = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ProcessorUseCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.NetworkUseCheckl = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.LostPackageCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.StatusCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.UseDefaultWarningType = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.Prioridades = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
-            this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
-            this.PrioridadePadrao = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.InfoText = new System.Windows.Forms.Label();
-            this.Descricaotext = new System.Windows.Forms.Label();
-            this.Descricao = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.metroButton5 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton4 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.Scaneados = new System.Windows.Forms.TreeView();
+            this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.contextMenuStrip1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -338,17 +328,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.ProcessorUseCheck);
-            this.tabPage2.Controls.Add(this.NetworkUseCheckl);
-            this.tabPage2.Controls.Add(this.LostPackageCheck);
-            this.tabPage2.Controls.Add(this.StatusCheck);
-            this.tabPage2.Controls.Add(this.UseDefaultWarningType);
-            this.tabPage2.Controls.Add(this.Prioridades);
             this.tabPage2.Controls.Add(this.metroButton2);
-            this.tabPage2.Controls.Add(this.PrioridadePadrao);
-            this.tabPage2.Controls.Add(this.InfoText);
-            this.tabPage2.Controls.Add(this.Descricaotext);
-            this.tabPage2.Controls.Add(this.Descricao);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.metroButton5);
             this.tabPage2.Controls.Add(this.metroButton4);
@@ -361,134 +341,6 @@ namespace TNetworkAdministrator.SubFormas
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Grupos";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // ProcessorUseCheck
-            // 
-            this.ProcessorUseCheck.AutoSize = true;
-            this.ProcessorUseCheck.Location = new System.Drawing.Point(785, 222);
-            this.ProcessorUseCheck.Name = "ProcessorUseCheck";
-            this.ProcessorUseCheck.Size = new System.Drawing.Size(127, 15);
-            this.ProcessorUseCheck.TabIndex = 38;
-            this.ProcessorUseCheck.Text = "Uso do Processador";
-            this.ProcessorUseCheck.UseSelectable = true;
-            this.ProcessorUseCheck.UseVisualStyleBackColor = true;
-            // 
-            // NetworkUseCheckl
-            // 
-            this.NetworkUseCheckl.AutoSize = true;
-            this.NetworkUseCheckl.Location = new System.Drawing.Point(583, 222);
-            this.NetworkUseCheckl.Name = "NetworkUseCheckl";
-            this.NetworkUseCheckl.Size = new System.Drawing.Size(88, 15);
-            this.NetworkUseCheckl.TabIndex = 37;
-            this.NetworkUseCheckl.Text = "Uso da Rede";
-            this.NetworkUseCheckl.UseSelectable = true;
-            this.NetworkUseCheckl.UseVisualStyleBackColor = true;
-            // 
-            // LostPackageCheck
-            // 
-            this.LostPackageCheck.AutoSize = true;
-            this.LostPackageCheck.Location = new System.Drawing.Point(785, 184);
-            this.LostPackageCheck.Name = "LostPackageCheck";
-            this.LostPackageCheck.Size = new System.Drawing.Size(107, 15);
-            this.LostPackageCheck.TabIndex = 36;
-            this.LostPackageCheck.Text = "Perca de Pacote";
-            this.LostPackageCheck.UseSelectable = true;
-            this.LostPackageCheck.UseVisualStyleBackColor = true;
-            // 
-            // StatusCheck
-            // 
-            this.StatusCheck.AutoSize = true;
-            this.StatusCheck.Location = new System.Drawing.Point(583, 184);
-            this.StatusCheck.Name = "StatusCheck";
-            this.StatusCheck.Size = new System.Drawing.Size(178, 15);
-            this.StatusCheck.TabIndex = 35;
-            this.StatusCheck.Text = "Verificar Status do Dispositivo";
-            this.StatusCheck.UseSelectable = true;
-            this.StatusCheck.UseVisualStyleBackColor = true;
-            // 
-            // UseDefaultWarningType
-            // 
-            this.UseDefaultWarningType.AutoSize = true;
-            this.UseDefaultWarningType.Location = new System.Drawing.Point(543, 153);
-            this.UseDefaultWarningType.Name = "UseDefaultWarningType";
-            this.UseDefaultWarningType.Size = new System.Drawing.Size(358, 15);
-            this.UseDefaultWarningType.TabIndex = 34;
-            this.UseDefaultWarningType.Text = "Usar Tipo de Monitoramento padrão para todos itens do Grupo:";
-            this.UseDefaultWarningType.UseSelectable = true;
-            this.UseDefaultWarningType.UseVisualStyleBackColor = true;
-            // 
-            // Prioridades
-            // 
-            this.Prioridades.FormattingEnabled = true;
-            this.Prioridades.ItemHeight = 23;
-            this.Prioridades.Items.AddRange(new object[] {
-            "Baixa",
-            "Média",
-            "Alta",
-            "Critica"});
-            this.Prioridades.Location = new System.Drawing.Point(837, 107);
-            this.Prioridades.Name = "Prioridades";
-            this.Prioridades.Size = new System.Drawing.Size(132, 29);
-            this.Prioridades.TabIndex = 33;
-            this.Prioridades.UseSelectable = true;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton2.Location = new System.Drawing.Point(864, 259);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(105, 22);
-            this.metroButton2.TabIndex = 32;
-            this.metroButton2.Text = "Salvar Alterações";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.UseVisualStyleBackColor = false;
-            // 
-            // PrioridadePadrao
-            // 
-            this.PrioridadePadrao.AutoSize = true;
-            this.PrioridadePadrao.Location = new System.Drawing.Point(543, 114);
-            this.PrioridadePadrao.Name = "PrioridadePadrao";
-            this.PrioridadePadrao.Size = new System.Drawing.Size(286, 15);
-            this.PrioridadePadrao.TabIndex = 31;
-            this.PrioridadePadrao.Text = "Usar Prioridade padrão para todos itens do Grupo:";
-            this.PrioridadePadrao.UseSelectable = true;
-            this.PrioridadePadrao.UseVisualStyleBackColor = true;
-            // 
-            // InfoText
-            // 
-            this.InfoText.AutoSize = true;
-            this.InfoText.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoText.Location = new System.Drawing.Point(540, 14);
-            this.InfoText.Name = "InfoText";
-            this.InfoText.Size = new System.Drawing.Size(221, 25);
-            this.InfoText.TabIndex = 30;
-            this.InfoText.Text = "Informações Do Grupo:";
-            // 
-            // Descricaotext
-            // 
-            this.Descricaotext.AutoSize = true;
-            this.Descricaotext.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descricaotext.ForeColor = System.Drawing.Color.Black;
-            this.Descricaotext.Location = new System.Drawing.Point(541, 58);
-            this.Descricaotext.Name = "Descricaotext";
-            this.Descricaotext.Size = new System.Drawing.Size(90, 23);
-            this.Descricaotext.TabIndex = 29;
-            this.Descricaotext.Text = "Descrição:";
-            // 
-            // Descricao
-            // 
-            this.Descricao.Lines = new string[0];
-            this.Descricao.Location = new System.Drawing.Point(641, 60);
-            this.Descricao.MaxLength = 32767;
-            this.Descricao.Multiline = true;
-            this.Descricao.Name = "Descricao";
-            this.Descricao.PasswordChar = '\0';
-            this.Descricao.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Descricao.SelectedText = "";
-            this.Descricao.Size = new System.Drawing.Size(328, 41);
-            this.Descricao.TabIndex = 28;
-            this.Descricao.UseSelectable = true;
             // 
             // label6
             // 
@@ -515,7 +367,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton4.Location = new System.Drawing.Point(324, 130);
+            this.metroButton4.Location = new System.Drawing.Point(324, 151);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(105, 22);
             this.metroButton4.TabIndex = 25;
@@ -527,7 +379,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton3
             // 
             this.metroButton3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton3.Location = new System.Drawing.Point(324, 90);
+            this.metroButton3.Location = new System.Drawing.Point(324, 114);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(105, 22);
             this.metroButton3.TabIndex = 24;
@@ -542,6 +394,18 @@ namespace TNetworkAdministrator.SubFormas
             this.Scaneados.Name = "Scaneados";
             this.Scaneados.Size = new System.Drawing.Size(291, 515);
             this.Scaneados.TabIndex = 13;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton2.Location = new System.Drawing.Point(324, 79);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(105, 22);
+            this.metroButton2.TabIndex = 97;
+            this.metroButton2.Text = "Editar";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.UseVisualStyleBackColor = false;
             // 
             // Inventory
             // 
@@ -588,12 +452,6 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton4;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label InfoText;
-        private System.Windows.Forms.Label Descricaotext;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Descricao;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox PrioridadePadrao;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox Prioridades;
         private System.Windows.Forms.FlowLayoutPanel ListofDevices;
         private System.Windows.Forms.Label label5;
         private Wisder.W3Common.WMetroControl.Controls.MetroComboBox ProrityChoose;
@@ -601,10 +459,6 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroComboBox NameChoose;
         private Wisder.W3Common.WMetroControl.Controls.MetroComboBox IpChoose;
         private System.Windows.Forms.Label label8;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox UseDefaultWarningType;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox ProcessorUseCheck;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox NetworkUseCheckl;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox LostPackageCheck;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox StatusCheck;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
     }
 }

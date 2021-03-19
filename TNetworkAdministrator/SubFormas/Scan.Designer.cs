@@ -35,11 +35,6 @@ namespace TNetworkAdministrator.SubFormas
             this.IpInicial = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Scaneados = new System.Windows.Forms.TreeView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
-            this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
-            this.metroButton4 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton5 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroProgressBar1 = new Wisder.W3Common.WMetroControl.Controls.MetroProgressBar();
             this.SearchForGateway = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
@@ -48,9 +43,9 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton6 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.ScanWorker = new System.ComponentModel.BackgroundWorker();
             this.Status = new System.Windows.Forms.Label();
-            this.ListToScan = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroButton7 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
-            this.metroButton8 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.Scaneados = new System.Windows.Forms.FlowLayoutPanel();
+            this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // Gateway
@@ -70,7 +65,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton2
             // 
             this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton2.Location = new System.Drawing.Point(260, 171);
+            this.metroButton2.Location = new System.Drawing.Point(420, 158);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(146, 22);
             this.metroButton2.TabIndex = 7;
@@ -116,68 +111,10 @@ namespace TNetworkAdministrator.SubFormas
             this.label1.TabIndex = 11;
             this.label1.Text = "Ip Inicial:\r\n";
             // 
-            // Scaneados
-            // 
-            this.Scaneados.CheckBoxes = true;
-            this.Scaneados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Scaneados.Location = new System.Drawing.Point(23, 264);
-            this.Scaneados.Name = "Scaneados";
-            this.Scaneados.Size = new System.Drawing.Size(291, 374);
-            this.Scaneados.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(663, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 25);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Coletar Informações de:";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton1.Location = new System.Drawing.Point(320, 304);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(156, 22);
-            this.metroButton1.TabIndex = 18;
-            this.metroButton1.Text = "Adicionar Selecionados";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.UseVisualStyleBackColor = false;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton3.Location = new System.Drawing.Point(320, 376);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(105, 22);
-            this.metroButton3.TabIndex = 19;
-            this.metroButton3.Text = "Remover";
-            this.metroButton3.UseCustomBackColor = true;
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.UseVisualStyleBackColor = false;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton4.Location = new System.Drawing.Point(320, 415);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(105, 22);
-            this.metroButton4.TabIndex = 20;
-            this.metroButton4.Text = "Limpar Lista";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.UseVisualStyleBackColor = false;
-            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
-            // 
             // metroButton5
             // 
             this.metroButton5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton5.Location = new System.Drawing.Point(320, 264);
+            this.metroButton5.Location = new System.Drawing.Point(990, 225);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(146, 22);
             this.metroButton5.TabIndex = 23;
@@ -189,9 +126,9 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // metroProgressBar1
             // 
-            this.metroProgressBar1.Location = new System.Drawing.Point(23, 234);
+            this.metroProgressBar1.Location = new System.Drawing.Point(23, 196);
             this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(291, 23);
+            this.metroProgressBar1.Size = new System.Drawing.Size(1110, 23);
             this.metroProgressBar1.TabIndex = 24;
             this.metroProgressBar1.Value = 100;
             // 
@@ -233,7 +170,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton6
             // 
             this.metroButton6.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton6.Location = new System.Drawing.Point(171, 171);
+            this.metroButton6.Location = new System.Drawing.Point(1059, 168);
             this.metroButton6.Name = "metroButton6";
             this.metroButton6.Size = new System.Drawing.Size(74, 22);
             this.metroButton6.TabIndex = 27;
@@ -252,54 +189,55 @@ namespace TNetworkAdministrator.SubFormas
             this.Status.AutoSize = true;
             this.Status.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status.ForeColor = System.Drawing.Color.Black;
-            this.Status.Location = new System.Drawing.Point(107, 212);
+            this.Status.Location = new System.Drawing.Point(809, 171);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(117, 19);
             this.Status.TabIndex = 28;
             this.Status.Text = "Status Da Coleta";
             // 
-            // ListToScan
+            // Scaneados
             // 
-            this.ListToScan.AutoScroll = true;
-            this.ListToScan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ListToScan.Location = new System.Drawing.Point(521, 171);
-            this.ListToScan.Name = "ListToScan";
-            this.ListToScan.Size = new System.Drawing.Size(474, 467);
-            this.ListToScan.TabIndex = 29;
+            this.Scaneados.AutoScroll = true;
+            this.Scaneados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Scaneados.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Scaneados.Location = new System.Drawing.Point(20, 261);
+            this.Scaneados.Name = "Scaneados";
+            this.Scaneados.Size = new System.Drawing.Size(1116, 432);
+            this.Scaneados.TabIndex = 29;
             // 
-            // metroButton7
+            // metroButton1
             // 
-            this.metroButton7.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton7.Location = new System.Drawing.Point(596, 128);
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(367, 22);
-            this.metroButton7.TabIndex = 30;
-            this.metroButton7.Text = "Iniciar Coletação de Informações e Adicionar ao Inventário:";
-            this.metroButton7.UseCustomBackColor = true;
-            this.metroButton7.UseSelectable = true;
-            this.metroButton7.UseVisualStyleBackColor = false;
+            this.metroButton1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton1.Location = new System.Drawing.Point(838, 225);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(146, 22);
+            this.metroButton1.TabIndex = 30;
+            this.metroButton1.Text = "Adicionar Selecionados";
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.UseVisualStyleBackColor = false;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // metroButton8
+            // metroButton3
             // 
-            this.metroButton8.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton8.Location = new System.Drawing.Point(321, 339);
-            this.metroButton8.Name = "metroButton8";
-            this.metroButton8.Size = new System.Drawing.Size(118, 22);
-            this.metroButton8.TabIndex = 31;
-            this.metroButton8.Text = "Selecionar Todos";
-            this.metroButton8.UseCustomBackColor = true;
-            this.metroButton8.UseSelectable = true;
-            this.metroButton8.UseVisualStyleBackColor = false;
-            this.metroButton8.Click += new System.EventHandler(this.metroButton8_Click);
+            this.metroButton3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton3.Location = new System.Drawing.Point(686, 225);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(146, 22);
+            this.metroButton3.TabIndex = 31;
+            this.metroButton3.Text = "Selecionar Todos";
+            this.metroButton3.UseCustomBackColor = true;
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.UseVisualStyleBackColor = false;
             // 
             // Scan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 661);
-            this.Controls.Add(this.metroButton8);
-            this.Controls.Add(this.metroButton7);
-            this.Controls.Add(this.ListToScan);
+            this.ClientSize = new System.Drawing.Size(1156, 713);
+            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.Scaneados);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.metroButton6);
             this.Controls.Add(this.label4);
@@ -307,11 +245,6 @@ namespace TNetworkAdministrator.SubFormas
             this.Controls.Add(this.metroProgressBar1);
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.SearchForGateway);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Scaneados);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.IpInicial);
@@ -333,11 +266,6 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroTextBox IpInicial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TreeView Scaneados;
-        private System.Windows.Forms.Label label3;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton1;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton4;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton5;
         private Wisder.W3Common.WMetroControl.Controls.MetroProgressBar metroProgressBar1;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox SearchForGateway;
@@ -346,8 +274,8 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton6;
         private System.ComponentModel.BackgroundWorker ScanWorker;
         private System.Windows.Forms.Label Status;
-        private System.Windows.Forms.FlowLayoutPanel ListToScan;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton7;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton8;
+        private System.Windows.Forms.FlowLayoutPanel Scaneados;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton1;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
     }
 }
