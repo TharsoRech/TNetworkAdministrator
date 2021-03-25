@@ -51,12 +51,17 @@ namespace TNetworkAdministrator.SubFormas
             this.Texto = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.label6 = new System.Windows.Forms.Label();
             this.metroButton5 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton4 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.Scaneados = new System.Windows.Forms.TreeView();
-            this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.metroButton6 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.metroButton7 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.metroButton8 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.contextMenuStrip1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -328,6 +333,11 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.metroButton8);
+            this.tabPage2.Controls.Add(this.metroButton7);
+            this.tabPage2.Controls.Add(this.metroButton6);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.treeView1);
             this.tabPage2.Controls.Add(this.metroButton2);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.metroButton5);
@@ -341,6 +351,18 @@ namespace TNetworkAdministrator.SubFormas
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Grupos";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton2.Location = new System.Drawing.Point(324, 79);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(105, 22);
+            this.metroButton2.TabIndex = 97;
+            this.metroButton2.Text = "Editar";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -359,10 +381,11 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(105, 22);
             this.metroButton5.TabIndex = 26;
-            this.metroButton5.Text = "Adicionar";
+            this.metroButton5.Text = "Adicionar Novo";
             this.metroButton5.UseCustomBackColor = true;
             this.metroButton5.UseSelectable = true;
             this.metroButton5.UseVisualStyleBackColor = false;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
             // metroButton4
             // 
@@ -395,17 +418,58 @@ namespace TNetworkAdministrator.SubFormas
             this.Scaneados.Size = new System.Drawing.Size(291, 515);
             this.Scaneados.TabIndex = 13;
             // 
-            // metroButton2
+            // treeView1
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton2.Location = new System.Drawing.Point(324, 79);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(105, 22);
-            this.metroButton2.TabIndex = 97;
-            this.metroButton2.Text = "Editar";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.UseVisualStyleBackColor = false;
+            this.treeView1.Location = new System.Drawing.Point(585, 46);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(293, 515);
+            this.treeView1.TabIndex = 98;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(645, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 25);
+            this.label9.TabIndex = 99;
+            this.label9.Text = "Dispositivos:";
+            // 
+            // metroButton6
+            // 
+            this.metroButton6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton6.Location = new System.Drawing.Point(442, 199);
+            this.metroButton6.Name = "metroButton6";
+            this.metroButton6.Size = new System.Drawing.Size(137, 22);
+            this.metroButton6.TabIndex = 100;
+            this.metroButton6.Text = "Inserir Selecinado";
+            this.metroButton6.UseCustomBackColor = true;
+            this.metroButton6.UseSelectable = true;
+            this.metroButton6.UseVisualStyleBackColor = false;
+            // 
+            // metroButton7
+            // 
+            this.metroButton7.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton7.Location = new System.Drawing.Point(442, 282);
+            this.metroButton7.Name = "metroButton7";
+            this.metroButton7.Size = new System.Drawing.Size(137, 22);
+            this.metroButton7.TabIndex = 101;
+            this.metroButton7.Text = "Limpar Dispositivos";
+            this.metroButton7.UseCustomBackColor = true;
+            this.metroButton7.UseSelectable = true;
+            this.metroButton7.UseVisualStyleBackColor = false;
+            // 
+            // metroButton8
+            // 
+            this.metroButton8.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton8.Location = new System.Drawing.Point(442, 241);
+            this.metroButton8.Name = "metroButton8";
+            this.metroButton8.Size = new System.Drawing.Size(137, 22);
+            this.metroButton8.TabIndex = 102;
+            this.metroButton8.Text = "Remover Dispositivo";
+            this.metroButton8.UseCustomBackColor = true;
+            this.metroButton8.UseSelectable = true;
+            this.metroButton8.UseVisualStyleBackColor = false;
             // 
             // Inventory
             // 
@@ -460,5 +524,10 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroComboBox IpChoose;
         private System.Windows.Forms.Label label8;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TreeView treeView1;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton8;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton7;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton6;
     }
 }

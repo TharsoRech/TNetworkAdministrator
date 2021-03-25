@@ -29,6 +29,7 @@ namespace TNetworkAdministrator.SubFormas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupEdit));
             this.metroCheckBox1 = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.TimeOff = new System.Windows.Forms.DateTimePicker();
             this.TimeON = new System.Windows.Forms.DateTimePicker();
@@ -216,11 +217,11 @@ namespace TNetworkAdministrator.SubFormas
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(29, 289);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(202, 31);
+            this.label10.Size = new System.Drawing.Size(180, 29);
             this.label10.TabIndex = 109;
             this.label10.Text = "Monitoramento:";
             // 
@@ -331,10 +332,10 @@ namespace TNetworkAdministrator.SubFormas
             // InfoText
             // 
             this.InfoText.AutoSize = true;
-            this.InfoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.InfoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.InfoText.Location = new System.Drawing.Point(27, 60);
             this.InfoText.Name = "InfoText";
-            this.InfoText.Size = new System.Drawing.Size(296, 31);
+            this.InfoText.Size = new System.Drawing.Size(261, 29);
             this.InfoText.TabIndex = 99;
             this.InfoText.Text = "Informações Do Grupo:";
             // 
@@ -447,6 +448,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Controls.Add(this.InfoText);
             this.Controls.Add(this.Descricaotext);
             this.Controls.Add(this.Descricao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GroupEdit";
             this.Text = "Grupo";
             this.Load += new System.EventHandler(this.GroupEdit_Load);

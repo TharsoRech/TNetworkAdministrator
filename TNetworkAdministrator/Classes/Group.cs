@@ -17,6 +17,13 @@ namespace TNetworkAdministrator.Classes
 
         public List<Device>  Devices { get; set; }
 
+        public DateTime TimeOn { get; set; }
+        public DateTime TimeOF { get; set; }
+
+        public List<DayOfWeek> DaystoCheck { get; set; }
+
+        public TimeSpan CheckEvery { get; set; }
+
         public List<Classes.WarningType> WarningTypes { get; set; }
 
     }

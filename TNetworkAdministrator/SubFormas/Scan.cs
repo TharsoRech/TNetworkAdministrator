@@ -270,8 +270,10 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                
-               
+               // MessageBox.Show(CheckifisSwitchHP("192.168.1.239"));
+                MessageBox.Show(CheckifisSwitchHP("192.168.1.247"));
+
+
             }
             catch (Exception ex)
             {
@@ -280,7 +282,38 @@ namespace TNetworkAdministrator.SubFormas
             }
         }
 
-  
+        public string CheckifisSwitchHP(string ip)
+        {
+            string pc1 = "";
+            try
+            {
+                String snmpAgent = ip;
+                String snmpCommunity = "public";
+                SimpleSnmp snmp = new SimpleSnmp(snmpAgent, snmpCommunity);
+                Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, ".1.3.6.1.4.1.11.2.14.11.15.2.6.1.1.1.1.6");
+                if (result == null)
+                {
+                    pc1 =   "Request failed.";
+                }
+                else
+                {
+                    foreach (KeyValuePair<Oid, AsnType> entry in result)
+                    {
+                        pc1 = pc1 + entry.Value.ToString();
+                    }
+
+                }
+                return pc1;
+            }
+            catch (Exception ex)
+            {
+                pc1 = ex.Message + ex.StackTrace;
+                return pc1;
+
+            }
+
+
+        }
 
 
     }

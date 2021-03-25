@@ -25,6 +25,10 @@ namespace TNetworkAdministrator.Classes
    
        public DateTime AddIn { get; private set; }
 
+        public DateTime TimeOn { get;  set; }
+        public DateTime TimeOF { get; set; }
+
+       public List<DayOfWeek> DaystoCheck { get; set; }
 
         public TimeSpan CheckEvery { get; set; }
 

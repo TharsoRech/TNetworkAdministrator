@@ -35,7 +35,7 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-
+                
             }
             catch (Exception ex)
             {
@@ -62,9 +62,86 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                if(metroCheckBox1.Checked == true)
+            
+                if (UseDefaultGroup.Checked == true)
                 {
+                    StatusCheck.Enabled = false;
+                    LostPackageCheck.Enabled = false;
+                    NetworkUseCheckl.Enabled = false;
+                    ProcessorUseCheck.Enabled = false;
+                    MonitoringCheck.Enabled = false;
+                    TimeON.Enabled = false;
+                    TimeOff.Enabled = false;
+                    Sunday.Enabled = false;
+                    Monday.Enabled = false;
+                    Tuesday.Enabled = false;
+                    Wednesday.Enabled = false;
+                    Thursday.Enabled = false;
+                    Fryday.Enabled = false;
+                    Saturday.Enabled = false;
+                    GroupsChoose.Enabled = false;
+                }
+                else
+                {
+                    StatusCheck.Enabled = true;
+                    LostPackageCheck.Enabled = true;
+                    NetworkUseCheckl.Enabled = true;
+                    ProcessorUseCheck.Enabled = true;
+                    MonitoringCheck.Enabled = true;
+                    TimeON.Enabled = true;
+                    TimeOff.Enabled = true;
+                    Sunday.Enabled = true;
+                    Monday.Enabled = true;
+                    Tuesday.Enabled = true;
+                    Wednesday.Enabled = true;
+                    Thursday.Enabled = true;
+                    Fryday.Enabled = true;
+                    Saturday.Enabled = true;
+                    GroupsChoose.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SubFormas.GroupEdit newp = new GroupEdit();
+                newp.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SubFormas.GroupEdit newp = new GroupEdit();
+                newp.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void GroupsChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(GroupsChoose.Text != "")
+                {
+                    UseDefaultGroup.Enabled = true;
                 }
             }
             catch (Exception)

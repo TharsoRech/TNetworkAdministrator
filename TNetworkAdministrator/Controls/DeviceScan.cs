@@ -52,6 +52,14 @@ namespace TNetworkAdministrator.Controls
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
+                string Switch1 = CheckifisSwitch(ip1);
+                if (Printer1 != "")
+                {
+                    this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Switch:" + Switch1; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[3]; }));
+                    this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
+                    return;
+                }
                 this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Dispositivo desconhecido"; }));
                 this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
             }
@@ -101,7 +109,7 @@ namespace TNetworkAdministrator.Controls
                 string community = "public";
                 string[] requestOid;
                 Dictionary<Oid, AsnType> result;
-                requestOid = new string[] {".1.3.6.1.2.1.25.3.2.1.3.1"};
+                requestOid = new string[] { ".1.3.6.1.2.1.25.3.2.1.3.1" };
                 SimpleSnmp snmp = new SimpleSnmp(ip, community);
                 if (!snmp.Valid)
                 {
@@ -110,12 +118,12 @@ namespace TNetworkAdministrator.Controls
                 }
                 result = snmp.Get(SnmpVersion.Ver2, requestOid);
                 if (result != null)
-                   
-              {
+
+                {
                     foreach (KeyValuePair<Oid, AsnType> kvp in result)
                         pc1 = kvp.Value.ToString();
                 }
-      
+
 
                 return pc1;
             }
@@ -128,5 +136,54 @@ namespace TNetworkAdministrator.Controls
 
         }
 
+        public string CheckifisSwitch(string ip)
+        {
+            string pc1 = "";
+            try
+            {
+                String snmpAgent = ip;
+                String snmpCommunity = "public";
+                SimpleSnmp snmp = new SimpleSnmp(snmpAgent, snmpCommunity);
+                Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, "1.3.6.1.2.1.1");
+                if (result == null)
+                {
+                    pc1 = "";
+                }
+                else
+                {
+                    foreach (KeyValuePair<Oid, AsnType> entry in result)
+                    {
+                        pc1 = pc1 + entry.Value.ToString();
+                    }
+
+                }
+                return pc1;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return pc1;
+
+            }
+
+
+        }
+
+      
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+          
+             
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                throw;
+            }
+        }
     }
-}
+    }

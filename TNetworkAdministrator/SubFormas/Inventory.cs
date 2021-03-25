@@ -29,5 +29,19 @@ namespace TNetworkAdministrator.SubFormas
                 ListofDevices.Controls.Add(dev1);
             }
         }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SubFormas.GroupEdit newp = new GroupEdit();
+                newp.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

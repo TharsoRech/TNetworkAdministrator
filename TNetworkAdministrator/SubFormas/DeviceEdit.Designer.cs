@@ -70,7 +70,9 @@ namespace TNetworkAdministrator.SubFormas
             this.Saturday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.TimeON = new System.Windows.Forms.DateTimePicker();
             this.TimeOff = new System.Windows.Forms.DateTimePicker();
-            this.metroCheckBox1 = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.UseDefaultGroup = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,7 +203,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(59, 344);
+            this.label5.Location = new System.Drawing.Point(58, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 23);
             this.label5.TabIndex = 23;
@@ -211,11 +213,14 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.GroupsChoose.FormattingEnabled = true;
             this.GroupsChoose.ItemHeight = 23;
-            this.GroupsChoose.Location = new System.Drawing.Point(128, 341);
+            this.GroupsChoose.Items.AddRange(new object[] {
+            "teste"});
+            this.GroupsChoose.Location = new System.Drawing.Point(128, 321);
             this.GroupsChoose.Name = "GroupsChoose";
             this.GroupsChoose.Size = new System.Drawing.Size(189, 29);
             this.GroupsChoose.TabIndex = 22;
             this.GroupsChoose.UseSelectable = true;
+            this.GroupsChoose.SelectedIndexChanged += new System.EventHandler(this.GroupsChoose_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -247,7 +252,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.ImageText.Enabled = false;
             this.ImageText.Lines = new string[0];
-            this.ImageText.Location = new System.Drawing.Point(120, 446);
+            this.ImageText.Location = new System.Drawing.Point(120, 403);
             this.ImageText.MaxLength = 32767;
             this.ImageText.Name = "ImageText";
             this.ImageText.PasswordChar = '\0';
@@ -262,7 +267,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(24, 446);
+            this.label8.Location = new System.Drawing.Point(24, 403);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 23);
             this.label8.TabIndex = 27;
@@ -297,7 +302,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton4.Location = new System.Drawing.Point(188, 476);
+            this.metroButton4.Location = new System.Drawing.Point(188, 433);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(129, 22);
             this.metroButton4.TabIndex = 31;
@@ -312,7 +317,7 @@ namespace TNetworkAdministrator.SubFormas
             this.AddIn.AutoSize = true;
             this.AddIn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddIn.ForeColor = System.Drawing.Color.Black;
-            this.AddIn.Location = new System.Drawing.Point(39, 397);
+            this.AddIn.Location = new System.Drawing.Point(29, 529);
             this.AddIn.Name = "AddIn";
             this.AddIn.Size = new System.Drawing.Size(169, 23);
             this.AddIn.TabIndex = 32;
@@ -402,7 +407,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(376, 162);
+            this.label10.Location = new System.Drawing.Point(381, 162);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(202, 31);
             this.label10.TabIndex = 61;
@@ -548,24 +553,55 @@ namespace TNetworkAdministrator.SubFormas
             this.TimeOff.Size = new System.Drawing.Size(48, 20);
             this.TimeOff.TabIndex = 75;
             // 
-            // metroCheckBox1
+            // UseDefaultGroup
             // 
-            this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(384, 201);
-            this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.Size = new System.Drawing.Size(355, 15);
-            this.metroCheckBox1.TabIndex = 123;
-            this.metroCheckBox1.Text = "Usar Monitoramento padrão obedecendo ao grupo pertecente:";
-            this.metroCheckBox1.UseSelectable = true;
-            this.metroCheckBox1.UseVisualStyleBackColor = true;
-            this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            this.UseDefaultGroup.AutoSize = true;
+            this.UseDefaultGroup.Enabled = false;
+            this.UseDefaultGroup.Location = new System.Drawing.Point(387, 210);
+            this.UseDefaultGroup.Name = "UseDefaultGroup";
+            this.UseDefaultGroup.Size = new System.Drawing.Size(355, 15);
+            this.UseDefaultGroup.TabIndex = 123;
+            this.UseDefaultGroup.Text = "Usar Monitoramento padrão obedecendo ao grupo pertecente:";
+            this.UseDefaultGroup.UseSelectable = true;
+            this.UseDefaultGroup.UseVisualStyleBackColor = true;
+            this.UseDefaultGroup.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(279, 356);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(38, 30);
+            this.button1.TabIndex = 124;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(235, 356);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 30);
+            this.button2.TabIndex = 125;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DeviceEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 576);
-            this.Controls.Add(this.metroCheckBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.UseDefaultGroup);
             this.Controls.Add(this.TimeOff);
             this.Controls.Add(this.TimeON);
             this.Controls.Add(this.Saturday);
@@ -658,6 +694,8 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Saturday;
         private System.Windows.Forms.DateTimePicker TimeON;
         private System.Windows.Forms.DateTimePicker TimeOff;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox metroCheckBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        public Wisder.W3Common.WMetroControl.Controls.MetroCheckBox UseDefaultGroup;
     }
 }
