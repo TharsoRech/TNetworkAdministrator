@@ -29,6 +29,9 @@ namespace TNetworkAdministrator.SubFormas
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupEdit));
             this.metroCheckBox1 = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.TimeOff = new System.Windows.Forms.DateTimePicker();
@@ -51,8 +54,6 @@ namespace TNetworkAdministrator.SubFormas
             this.NetworkUseCheckl = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.LostPackageCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.StatusCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.Prioridades = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
-            this.PrioridadePadrao = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.InfoText = new System.Windows.Forms.Label();
             this.Descricaotext = new System.Windows.Forms.Label();
             this.Descricao = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
@@ -60,7 +61,13 @@ namespace TNetworkAdministrator.SubFormas
             this.SaveButton = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.label1 = new System.Windows.Forms.Label();
             this.NameText = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
+            this.DevicesList = new Wisder.W3Common.WMetroControl.Controls.MetroGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Prioridades = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DevicesList)).BeginInit();
             this.SuspendLayout();
             // 
             // metroCheckBox1
@@ -77,7 +84,7 @@ namespace TNetworkAdministrator.SubFormas
             // TimeOff
             // 
             this.TimeOff.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.TimeOff.Location = new System.Drawing.Point(240, 610);
+            this.TimeOff.Location = new System.Drawing.Point(236, 610);
             this.TimeOff.Name = "TimeOff";
             this.TimeOff.Size = new System.Drawing.Size(48, 20);
             this.TimeOff.TabIndex = 121;
@@ -85,7 +92,7 @@ namespace TNetworkAdministrator.SubFormas
             // TimeON
             // 
             this.TimeON.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.TimeON.Location = new System.Drawing.Point(93, 611);
+            this.TimeON.Location = new System.Drawing.Point(97, 611);
             this.TimeON.Name = "TimeON";
             this.TimeON.Size = new System.Drawing.Size(48, 20);
             this.TimeON.TabIndex = 120;
@@ -95,7 +102,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Saturday.AutoSize = true;
             this.Saturday.Checked = true;
             this.Saturday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Saturday.Location = new System.Drawing.Point(249, 572);
+            this.Saturday.Location = new System.Drawing.Point(246, 544);
             this.Saturday.Name = "Saturday";
             this.Saturday.Size = new System.Drawing.Size(62, 15);
             this.Saturday.TabIndex = 119;
@@ -108,7 +115,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Fryday.AutoSize = true;
             this.Fryday.Checked = true;
             this.Fryday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Fryday.Location = new System.Drawing.Point(138, 572);
+            this.Fryday.Location = new System.Drawing.Point(135, 544);
             this.Fryday.Name = "Fryday";
             this.Fryday.Size = new System.Drawing.Size(81, 15);
             this.Fryday.TabIndex = 118;
@@ -121,7 +128,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Thursday.AutoSize = true;
             this.Thursday.Checked = true;
             this.Thursday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Thursday.Location = new System.Drawing.Point(35, 570);
+            this.Thursday.Location = new System.Drawing.Point(32, 542);
             this.Thursday.Name = "Thursday";
             this.Thursday.Size = new System.Drawing.Size(89, 15);
             this.Thursday.TabIndex = 117;
@@ -134,7 +141,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Wednesday.AutoSize = true;
             this.Wednesday.Checked = true;
             this.Wednesday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Wednesday.Location = new System.Drawing.Point(245, 538);
+            this.Wednesday.Location = new System.Drawing.Point(242, 510);
             this.Wednesday.Name = "Wednesday";
             this.Wednesday.Size = new System.Drawing.Size(89, 15);
             this.Wednesday.TabIndex = 116;
@@ -147,7 +154,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Tuesday.AutoSize = true;
             this.Tuesday.Checked = true;
             this.Tuesday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Tuesday.Location = new System.Drawing.Point(139, 538);
+            this.Tuesday.Location = new System.Drawing.Point(136, 510);
             this.Tuesday.Name = "Tuesday";
             this.Tuesday.Size = new System.Drawing.Size(80, 15);
             this.Tuesday.TabIndex = 115;
@@ -160,7 +167,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Monday.AutoSize = true;
             this.Monday.Checked = true;
             this.Monday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Monday.Location = new System.Drawing.Point(35, 538);
+            this.Monday.Location = new System.Drawing.Point(32, 510);
             this.Monday.Name = "Monday";
             this.Monday.Size = new System.Drawing.Size(99, 15);
             this.Monday.TabIndex = 114;
@@ -173,7 +180,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Sunday.AutoSize = true;
             this.Sunday.Checked = true;
             this.Sunday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Sunday.Location = new System.Drawing.Point(249, 506);
+            this.Sunday.Location = new System.Drawing.Point(246, 478);
             this.Sunday.Name = "Sunday";
             this.Sunday.Size = new System.Drawing.Size(73, 15);
             this.Sunday.TabIndex = 113;
@@ -208,7 +215,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(34, 502);
+            this.label12.Location = new System.Drawing.Point(31, 474);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(209, 19);
             this.label12.TabIndex = 110;
@@ -230,7 +237,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(34, 469);
+            this.label11.Location = new System.Drawing.Point(37, 576);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(195, 19);
             this.label11.TabIndex = 108;
@@ -238,9 +245,9 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // MonitoringCheck
             // 
-            this.MonitoringCheck.Location = new System.Drawing.Point(237, 468);
+            this.MonitoringCheck.Location = new System.Drawing.Point(240, 575);
             this.MonitoringCheck.Name = "MonitoringCheck";
-            this.MonitoringCheck.Size = new System.Drawing.Size(27, 20);
+            this.MonitoringCheck.Size = new System.Drawing.Size(33, 20);
             this.MonitoringCheck.TabIndex = 107;
             this.MonitoringCheck.Value = new decimal(new int[] {
             5,
@@ -303,32 +310,6 @@ namespace TNetworkAdministrator.SubFormas
             this.StatusCheck.UseSelectable = true;
             this.StatusCheck.UseVisualStyleBackColor = true;
             // 
-            // Prioridades
-            // 
-            this.Prioridades.FormattingEnabled = true;
-            this.Prioridades.ItemHeight = 23;
-            this.Prioridades.Items.AddRange(new object[] {
-            "Baixa",
-            "Média",
-            "Alta",
-            "Critica"});
-            this.Prioridades.Location = new System.Drawing.Point(327, 207);
-            this.Prioridades.Name = "Prioridades";
-            this.Prioridades.Size = new System.Drawing.Size(132, 29);
-            this.Prioridades.TabIndex = 101;
-            this.Prioridades.UseSelectable = true;
-            // 
-            // PrioridadePadrao
-            // 
-            this.PrioridadePadrao.AutoSize = true;
-            this.PrioridadePadrao.Location = new System.Drawing.Point(33, 214);
-            this.PrioridadePadrao.Name = "PrioridadePadrao";
-            this.PrioridadePadrao.Size = new System.Drawing.Size(286, 15);
-            this.PrioridadePadrao.TabIndex = 100;
-            this.PrioridadePadrao.Text = "Usar Prioridade padrão para todos itens do Grupo:";
-            this.PrioridadePadrao.UseSelectable = true;
-            this.PrioridadePadrao.UseVisualStyleBackColor = true;
-            // 
             // InfoText
             // 
             this.InfoText.AutoSize = true;
@@ -367,7 +348,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton2
             // 
             this.metroButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton2.Location = new System.Drawing.Point(309, 611);
+            this.metroButton2.Location = new System.Drawing.Point(428, 612);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(100, 22);
             this.metroButton2.TabIndex = 124;
@@ -380,7 +361,7 @@ namespace TNetworkAdministrator.SubFormas
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.SaveButton.Location = new System.Drawing.Point(415, 612);
+            this.SaveButton.Location = new System.Drawing.Point(556, 612);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(100, 22);
             this.SaveButton.TabIndex = 123;
@@ -413,11 +394,102 @@ namespace TNetworkAdministrator.SubFormas
             this.NameText.TabIndex = 126;
             this.NameText.UseSelectable = true;
             // 
+            // DevicesList
+            // 
+            this.DevicesList.AllowUserToResizeRows = false;
+            this.DevicesList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DevicesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DevicesList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DevicesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DevicesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DevicesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DevicesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DevicesList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DevicesList.EnableHeadersVisualStyles = false;
+            this.DevicesList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DevicesList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DevicesList.Location = new System.Drawing.Point(388, 336);
+            this.DevicesList.Name = "DevicesList";
+            this.DevicesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DevicesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DevicesList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DevicesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DevicesList.Size = new System.Drawing.Size(304, 257);
+            this.DevicesList.TabIndex = 127;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Dispositivo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(383, 289);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(256, 29);
+            this.label2.TabIndex = 128;
+            this.label2.Text = "Dispositivos do Grupo:";
+            // 
+            // Prioridades
+            // 
+            this.Prioridades.FormattingEnabled = true;
+            this.Prioridades.ItemHeight = 23;
+            this.Prioridades.Items.AddRange(new object[] {
+            "Baixa",
+            "Média",
+            "Alta",
+            "Critica"});
+            this.Prioridades.Location = new System.Drawing.Point(131, 211);
+            this.Prioridades.Name = "Prioridades";
+            this.Prioridades.Size = new System.Drawing.Size(132, 29);
+            this.Prioridades.TabIndex = 101;
+            this.Prioridades.UseSelectable = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(34, 213);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 23);
+            this.label3.TabIndex = 129;
+            this.label3.Text = "Prioridade:";
+            // 
             // GroupEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 651);
+            this.ClientSize = new System.Drawing.Size(715, 651);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DevicesList);
             this.Controls.Add(this.NameText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.metroButton2);
@@ -444,7 +516,6 @@ namespace TNetworkAdministrator.SubFormas
             this.Controls.Add(this.LostPackageCheck);
             this.Controls.Add(this.StatusCheck);
             this.Controls.Add(this.Prioridades);
-            this.Controls.Add(this.PrioridadePadrao);
             this.Controls.Add(this.InfoText);
             this.Controls.Add(this.Descricaotext);
             this.Controls.Add(this.Descricao);
@@ -453,6 +524,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Text = "Grupo";
             this.Load += new System.EventHandler(this.GroupEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DevicesList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,8 +553,6 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox NetworkUseCheckl;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox LostPackageCheck;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox StatusCheck;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox Prioridades;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox PrioridadePadrao;
         private System.Windows.Forms.Label InfoText;
         private System.Windows.Forms.Label Descricaotext;
         private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Descricao;
@@ -490,5 +560,10 @@ namespace TNetworkAdministrator.SubFormas
         public Wisder.W3Common.WMetroControl.Controls.MetroButton SaveButton;
         private System.Windows.Forms.Label label1;
         public Wisder.W3Common.WMetroControl.Controls.MetroTextBox NameText;
+        private Wisder.W3Common.WMetroControl.Controls.MetroGrid DevicesList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        public System.Windows.Forms.Label label2;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox Prioridades;
+        private System.Windows.Forms.Label label3;
     }
 }

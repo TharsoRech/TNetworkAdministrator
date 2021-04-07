@@ -11,5 +11,6 @@ namespace TNetworkAdministrator.Classes
         LostingPackage,
         NetworkUsingExtreme,
         ProcessUsingExtreme,
+        DiskUtilization,
     }
 }

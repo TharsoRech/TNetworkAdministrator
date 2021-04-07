@@ -1,6 +1,9 @@
 ﻿using SnmpSharpNet;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Text;
 using System.Windows.Forms;
 
 namespace TNetworkAdministrator.SubFormas
@@ -270,9 +273,17 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-               // MessageBox.Show(CheckifisSwitchHP("192.168.1.239"));
-                MessageBox.Show(CheckifisSwitchHP("192.168.1.247"));
-
+               // MessageBox.Show(CheckifIscameraIP("http://172.16.17.100/").ToString()) ;
+              //  MessageBox.Show(CheckifIscameraIP("http://192.168.1.239/").ToString());
+               // MessageBox.Show(CheckifIscameraIP("http://172.16.5.125/").ToString());
+                //MessageBox.Show(GetSystemName("192.168.1.239") + GetDescription("192.168.1.239"));
+                //   MessageBox.Show(CheckifisSwitch2("172.16.17.100"));
+                //   MessageBox.Show(CheckifisSwitch2("172.16.5.125"));
+                  MessageBox.Show(CheckifisSwitchHP("192.168.1.247"));
+                //  Controls.DeviceScan newc = new Controls.DeviceScan();
+               //   newc.Ip.Text = "172.16.17.100";
+                //  this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
+               //  this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
 
             }
             catch (Exception ex)
@@ -290,7 +301,7 @@ namespace TNetworkAdministrator.SubFormas
                 String snmpAgent = ip;
                 String snmpCommunity = "public";
                 SimpleSnmp snmp = new SimpleSnmp(snmpAgent, snmpCommunity);
-                Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, ".1.3.6.1.4.1.11.2.14.11.15.2.6.1.1.1.1.6");
+                Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, ".1.3.6.1.2.1");
                 if (result == null)
                 {
                     pc1 =   "Request failed.";
@@ -299,6 +310,7 @@ namespace TNetworkAdministrator.SubFormas
                 {
                     foreach (KeyValuePair<Oid, AsnType> entry in result)
                     {
+                
                         pc1 = pc1 + entry.Value.ToString();
                     }
 
@@ -315,6 +327,7 @@ namespace TNetworkAdministrator.SubFormas
 
         }
 
+    
 
     }
 }

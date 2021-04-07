@@ -50,7 +50,8 @@ namespace TNetworkAdministrator.Controls
             this.imageList1.Images.SetKeyName(1, "ComputerImage.png");
             this.imageList1.Images.SetKeyName(2, "PrinterImage.png");
             this.imageList1.Images.SetKeyName(3, "Switch.png");
-            this.imageList1.Images.SetKeyName(4, "LinkImage.png");
+            this.imageList1.Images.SetKeyName(4, "Security-Camera-icon.png");
+            this.imageList1.Images.SetKeyName(5, "LinkImage.png");
             // 
             // Ip
             // 
@@ -75,7 +76,6 @@ namespace TNetworkAdministrator.Controls
             this.button2.Size = new System.Drawing.Size(55, 35);
             this.button2.TabIndex = 20;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DeviceText
             // 

@@ -9,6 +9,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using SnmpSharpNet;
+using System.Net;
+using System.IO;
 
 namespace TNetworkAdministrator.Controls
 {
@@ -37,7 +39,7 @@ namespace TNetworkAdministrator.Controls
                 this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletando Informações..."; }));
                 this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
                 string pc = CheckifisComputer(ip1);
-                if (pc != "")
+                if (pc != "" && pc != "Null")
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Computador:" + pc; }));
                     this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[1]; }));
@@ -45,18 +47,27 @@ namespace TNetworkAdministrator.Controls
                     return;
                 }
                 string Printer1 = CheckifisPrinter(ip1);
-                if (Printer1 != "")
+                if (Printer1 != ""  && Printer1 != "Null")
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Impressora:" + Printer1; }));
                     this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[2]; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
-                string Switch1 = CheckifisSwitch(ip1);
-                if (Printer1 != "")
+                //  string Switch1 = CheckifisSwitch(ip1);
+                 string Switch1 = CheckifisSwitch(ip1);
+                if (Switch1 != "" && Switch1 != "Null")
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Switch:" + Switch1; }));
                     this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[3]; }));
+                    this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
+                    return;
+                }
+ 
+                if (CheckifIscameraIP("http://" + ip1 + "/") == true)
+                {
+                    this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Camera:" + ip1; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[4]; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
@@ -122,7 +133,13 @@ namespace TNetworkAdministrator.Controls
                 {
                     foreach (KeyValuePair<Oid, AsnType> kvp in result)
                         pc1 = kvp.Value.ToString();
+            
                 }
+                else
+                {
+                    return pc1;
+                }
+
 
 
                 return pc1;
@@ -141,10 +158,30 @@ namespace TNetworkAdministrator.Controls
             string pc1 = "";
             try
             {
+
+                pc1 = GetSystemName(ip);
+                return pc1;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return pc1;
+
+            }
+
+
+        }
+
+        public string GetSystemName(string ip)
+        {
+            string pc1 = "";
+            try
+            {
                 String snmpAgent = ip;
                 String snmpCommunity = "public";
                 SimpleSnmp snmp = new SimpleSnmp(snmpAgent, snmpCommunity);
-                Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, "1.3.6.1.2.1.1");
+                Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, "1.3.6.1.2.1.1.5");
                 if (result == null)
                 {
                     pc1 = "";
@@ -153,37 +190,101 @@ namespace TNetworkAdministrator.Controls
                 {
                     foreach (KeyValuePair<Oid, AsnType> entry in result)
                     {
+
                         pc1 = pc1 + entry.Value.ToString();
                     }
 
                 }
                 return pc1;
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                pc1 = ex.Message + ex.StackTrace;
                 return pc1;
 
             }
 
 
+
         }
-
-      
-
-        private void button2_Click(object sender, EventArgs e)
+        public string GetDescription(string ip)
         {
+            string pc1 = "";
             try
             {
-          
-             
+                String snmpAgent = ip;
+                String snmpCommunity = "public";
+                SimpleSnmp snmp = new SimpleSnmp(snmpAgent, snmpCommunity);
+                Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, "1.3.6.1.2.1.1.1");
+                if (result == null)
+                {
+                    pc1 = "";
+                }
+                else
+                {
+                    foreach (KeyValuePair<Oid, AsnType> entry in result)
+                    {
+
+                        pc1 = pc1 + entry.Value.ToString();
+                    }
+
+                }
+                return pc1;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-                throw;
+                pc1 = ex.Message + ex.StackTrace;
+                return pc1;
+
             }
         }
+        public bool CheckifIscameraIP(string IP)
+        {
+            {
+                string urlAddress = IP;
+                bool iscamera = false;
+                try
+                {
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        Stream receiveStream = response.GetResponseStream();
+                        StreamReader readStream = null;
+
+                        if (String.IsNullOrWhiteSpace(response.CharacterSet))
+                            readStream = new StreamReader(receiveStream);
+                        else
+                            readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+
+                        string data = readStream.ReadToEnd();
+
+                        response.Close();
+                        readStream.Close();
+                        if (data.Contains("Channel"))
+                        {
+                            iscamera = true;
+                        }
+
+                    }
+                    return iscamera;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+
+                    return iscamera;
+
+                }
+            }
+
+
+        }
+
+
+
     }
+
     }
+    
