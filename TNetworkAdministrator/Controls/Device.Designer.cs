@@ -29,7 +29,6 @@ namespace TNetworkAdministrator.Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Device));
             this.button1 = new System.Windows.Forms.Button();
             this.DeviceText = new System.Windows.Forms.Label();
@@ -37,7 +36,6 @@ namespace TNetworkAdministrator.Controls
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Ip = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -114,17 +112,6 @@ namespace TNetworkAdministrator.Controls
             this.Ip.TabIndex = 17;
             this.Ip.Text = "Ip:";
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "DefaultDevice.png");
-            this.imageList1.Images.SetKeyName(1, "ComputerImage.png");
-            this.imageList1.Images.SetKeyName(2, "PrinterImage.png");
-            this.imageList1.Images.SetKeyName(3, "Switch.png");
-            this.imageList1.Images.SetKeyName(4, "Security-Camera-icon.png");
-            this.imageList1.Images.SetKeyName(5, "LinkImage.png");
-            // 
             // Device
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +137,5 @@ namespace TNetworkAdministrator.Controls
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label Ip;
-        public System.Windows.Forms.ImageList imageList1;
     }
 }

@@ -63,9 +63,9 @@ namespace TNetworkAdministrator.SubFormas
                 }
                 return ping1;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.Message);
+               // MessageBox.Show(ex.Message);
                 return ping1;
             }
         }

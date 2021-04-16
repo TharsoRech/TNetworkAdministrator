@@ -28,7 +28,31 @@ namespace TNetworkAdministrator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                //   ChartStatus.Series[0].Points[0].SetValueXY(100, 1);
+                //  ChartStatus.Series[0].Points[1].SetValueXY(10, 5);
+                //   ChartStatus.Series[0].Points[1].SetValueXY(10, 3);
+                //   ChartStatus.Series[0].Points[1].SetValueXY(10,2);
+                for (int i = 1; i <= 20; i++)
+                {
+                    TNetworkAdministrator.Controls.DeviceStatusControl p = new Controls.DeviceStatusControl();
+                    p.Ip.Text = "172.16.1" + i;
+                    p.SystemName.Text = "Nome" +  i;
+                    if (i == 5)
+                    {
+                        p.Status.Text = "Offline";
+                    }
+                    p.Status.Text = "Online";
+                    StatusList.Controls.Add(p);
+                   // PingList.Controls.Add(p);
+                  //  LastOnline.Controls.Add(p);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
 
@@ -49,5 +73,14 @@ namespace TNetworkAdministrator
       
         }
 
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
