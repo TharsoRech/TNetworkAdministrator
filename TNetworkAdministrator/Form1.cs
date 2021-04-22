@@ -36,18 +36,80 @@ namespace TNetworkAdministrator
                 //   ChartStatus.Series[0].Points[1].SetValueXY(10,2);
                 for (int i = 1; i <= 20; i++)
                 {
-                    TNetworkAdministrator.Controls.DeviceStatusControl p = new Controls.DeviceStatusControl();
-                    p.Ip.Text = "172.16.1" + i;
-                    p.SystemName.Text = "Nome" +  i;
+                    TNetworkAdministrator.Controls.DeviceStatusControl p;
                     if (i == 5)
                     {
-                        p.Status.Text = "Offline";
+                      p = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, "Offline");
                     }
-                    p.Status.Text = "Online";
+                    else
+                    {
+                      p = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, "Online");
+                    }
                     StatusList.Controls.Add(p);
-                   // PingList.Controls.Add(p);
-                  //  LastOnline.Controls.Add(p);
+
+                    //  
+                    TNetworkAdministrator.Controls.DeviceStatusControl p1;
+                    if (i == 5)
+                    {
+
+                        p1 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, "Offline");
+                    }
+                    else
+                    {
+                        p1 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, "Online");
+                    }
+                    PingList.Controls.Add(p1);
+                    //  
+                    TNetworkAdministrator.Controls.DeviceStatusControl p2;
+                    if (i == 5)
+                    {
+
+                        p2 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, "Offline");
+                    }
+                    else
+                    {
+                        p2 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, "Online");
+                    }
+                    LastOnline.Controls.Add(p2);
+                    //  
+
+                    TNetworkAdministrator.Controls.DeviceStatusControl p3;
+                    if (i == 5)
+                    {
+
+                        p3 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, 50);
+                    }
+                    else
+                    {
+                        p3 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, 100);
+                    }
+                    CpuList.Controls.Add(p3);
+
+
+                    //  DiskList.Controls.Add(p4);
+                    TNetworkAdministrator.Controls.DeviceStatusControl p4;
+                    if (i == 5)
+                    {
+
+                        p4 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, 50);
+                    }
+                    else
+                    {
+                        p4 = new Controls.DeviceStatusControl("172.16.1" + i, "Nome" + i, 100);
+                    }
+                    DiskList.Controls.Add(p4);
+                    
                 }
+                TNetworkAdministrator.Controls.DeviceControl p5= new Controls.DeviceControl("172.16.1.1", Classes.Status.Good);
+                TNetworkAdministrator.Controls.DeviceControl p6 = new Controls.DeviceControl("172.16.1.1", Classes.Status.Disconnected);
+                TNetworkAdministrator.Controls.DeviceControl p7 = new Controls.DeviceControl("172.16.1.1", Classes.Status.Slow);
+                TNetworkAdministrator.Controls.DeviceControl p8 = new Controls.DeviceControl("172.16.1.1", Classes.Status.Unreacheable);
+                TNetworkAdministrator.Controls.DeviceControl p9 = new Controls.DeviceControl("172.16.1.1", Classes.Status.NotTested);
+                ConectivityStatus.Controls.Add(p5);
+                ConectivityStatus.Controls.Add(p6);
+                ConectivityStatus.Controls.Add(p7);
+                ConectivityStatus.Controls.Add(p8);
+                ConectivityStatus.Controls.Add(p9);
             }
             catch (Exception ex)
             {

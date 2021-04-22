@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TNetworkAdministrator.Classes
 {
-    enum Priority
+    public enum Priority
     {
         Low,
         Medium,

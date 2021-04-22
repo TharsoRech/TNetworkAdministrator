@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TNetworkAdministrator.Classes
 {
-    class Warning
+     class Warning
     {
         public Device Device { get; set; }
 

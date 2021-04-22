@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TNetworkAdministrator.Classes
 {
-    enum WarningType
+   public  enum WarningType
     {
         Offline,
         LostingPackage,
