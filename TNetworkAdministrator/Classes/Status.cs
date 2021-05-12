@@ -8,7 +8,6 @@ namespace TNetworkAdministrator.Classes
     public enum Status
     {
         Good,
-        Disconnected,
         Slow,
         Unreacheable,
         NotTested,

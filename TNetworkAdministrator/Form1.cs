@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Linq;
+
 
 namespace TNetworkAdministrator
 {
@@ -101,15 +104,19 @@ namespace TNetworkAdministrator
                     
                 }
                 TNetworkAdministrator.Controls.DeviceControl p5= new Controls.DeviceControl("172.16.1.1", Classes.Status.Good);
-                TNetworkAdministrator.Controls.DeviceControl p6 = new Controls.DeviceControl("172.16.1.1", Classes.Status.Disconnected);
                 TNetworkAdministrator.Controls.DeviceControl p7 = new Controls.DeviceControl("172.16.1.1", Classes.Status.Slow);
                 TNetworkAdministrator.Controls.DeviceControl p8 = new Controls.DeviceControl("172.16.1.1", Classes.Status.Unreacheable);
                 TNetworkAdministrator.Controls.DeviceControl p9 = new Controls.DeviceControl("172.16.1.1", Classes.Status.NotTested);
                 ConectivityStatus.Controls.Add(p5);
-                ConectivityStatus.Controls.Add(p6);
                 ConectivityStatus.Controls.Add(p7);
                 ConectivityStatus.Controls.Add(p8);
                 ConectivityStatus.Controls.Add(p9);
+              //  ChartStatus.Series[0].Points[0].SetValueXY(200, 70);
+             // ChartStatus.Series[0].Points[1].SetValueXY(200, 50);
+           //  ChartStatus.Series[0].Points[2].SetValueXY(200, 35);
+             // ChartStatus.Series[0].Points[3].SetValueXY(200, 35);
+
+
             }
             catch (Exception ex)
             {

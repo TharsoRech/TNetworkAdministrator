@@ -24,29 +24,28 @@ namespace TNetworkAdministrator.Controls
             if (status == Classes.Status.Slow)
             {
                 BackColor = Color.Goldenrod;
-               Image1.Image= imageList1.Images[1];
-                return;
-            }
-            if (status == Classes.Status.Disconnected)
-            {
-                BackColor = Color.DarkRed;
-                Image1.Image = imageList1.Images[2];
+              Image1.Image = imageList1.Images[1];
+
                 return;
             }
             if (status == Classes.Status.Unreacheable)
             {
-                BackColor = Color.IndianRed;
-                Image1.Image = imageList1.Images[3];
+                BackColor = Color.DarkRed;
+               Image1.Image = imageList1.Images[2];
                 return;
             }
             if (status == Classes.Status.NotTested)
             {
                 BackColor = Color.Gray;
-                Image1.Image = imageList1.Images[4];
+                Image1.Image = imageList1.Images[3];
                 return;
             }
 
         }
 
+        private void Image1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,13 +40,15 @@ namespace TNetworkAdministrator.Controls
             // Image1
             // 
             this.Image1.BackColor = System.Drawing.Color.Transparent;
-            this.Image1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Image1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Image1.Image = ((System.Drawing.Image)(resources.GetObject("Image1.Image")));
             this.Image1.Location = new System.Drawing.Point(19, 10);
             this.Image1.Name = "Image1";
-            this.Image1.Size = new System.Drawing.Size(37, 40);
+            this.Image1.Size = new System.Drawing.Size(32, 32);
+            this.Image1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Image1.TabIndex = 0;
             this.Image1.TabStop = false;
+            this.Image1.Click += new System.EventHandler(this.Image1_Click);
             // 
             // StatusText
             // 
@@ -63,10 +65,9 @@ namespace TNetworkAdministrator.Controls
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Accept-icon.png");
-            this.imageList1.Images.SetKeyName(1, "warning-icon.png");
-            this.imageList1.Images.SetKeyName(2, "warning-icon (1).png");
-            this.imageList1.Images.SetKeyName(3, "Alarm-Error-icon.png");
-            this.imageList1.Images.SetKeyName(4, "iconfinder_question-outline_3017956.png");
+            this.imageList1.Images.SetKeyName(1, "2735421_warning-symbol-warning-icon-png-transparent-png.png");
+            this.imageList1.Images.SetKeyName(2, "PngItem_3638770.png");
+            this.imageList1.Images.SetKeyName(3, "qmwskqgpny cópia.png");
             // 
             // DeviceControl
             // 
@@ -84,8 +85,8 @@ namespace TNetworkAdministrator.Controls
         }
 
         #endregion
-        private System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.PictureBox Image1;
         public System.Windows.Forms.Label StatusText;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
