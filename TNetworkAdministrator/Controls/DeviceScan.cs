@@ -42,7 +42,7 @@ namespace TNetworkAdministrator.Controls
                 if (pc != "" && pc != "Null")
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Computador:" + pc; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[1]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[1]; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
@@ -50,7 +50,7 @@ namespace TNetworkAdministrator.Controls
                 if (Printer1 != ""  && Printer1 != "Null")
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Impressora:" + Printer1; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[2]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[2]; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
@@ -59,7 +59,7 @@ namespace TNetworkAdministrator.Controls
                 if (Switch1 != "" && Switch1 != "Null")
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Switch:" + Switch1; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[3]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[3]; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
@@ -67,7 +67,7 @@ namespace TNetworkAdministrator.Controls
                 if (CheckifIscameraIP("http://" + ip1 + "/") == true)
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Camera:" + ip1; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.BackgroundImage = this.imageList1.Images[4]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[4]; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
@@ -272,7 +272,6 @@ namespace TNetworkAdministrator.Controls
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + ex.StackTrace);
 
                     return iscamera;
 

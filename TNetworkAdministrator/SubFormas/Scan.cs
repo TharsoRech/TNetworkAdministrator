@@ -252,7 +252,7 @@ namespace TNetworkAdministrator.SubFormas
          
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+              
             }
         }
 
@@ -279,10 +279,10 @@ namespace TNetworkAdministrator.SubFormas
                 //MessageBox.Show(GetSystemName("192.168.1.239") + GetDescription("192.168.1.239"));
                 //   MessageBox.Show(CheckifisSwitch2("172.16.17.100"));
                 //   MessageBox.Show(CheckifisSwitch2("172.16.5.125"));
-                  MessageBox.Show(CheckifisSwitchHP("192.168.1.247"));
-                //  Controls.DeviceScan newc = new Controls.DeviceScan();
-               //   newc.Ip.Text = "172.16.17.100";
-                //  this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
+                 // MessageBox.Show(CheckifisSwitchHP("192.168.1.247"));
+                 // Controls.DeviceScan newc = new Controls.DeviceScan();
+              //    newc.Ip.Text = "172.16.17.100";
+               //   this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
                //  this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
 
             }
@@ -327,7 +327,6 @@ namespace TNetworkAdministrator.SubFormas
 
         }
 
-    
-
+     
     }
 }

@@ -35,11 +35,12 @@ namespace TNetworkAdministrator.Controls
             this.Ip = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.DeviceText = new System.Windows.Forms.Label();
-            this.DeviceImage = new System.Windows.Forms.Button();
             this.Status = new System.Windows.Forms.Label();
             this.ScanDeviceWork = new System.ComponentModel.BackgroundWorker();
             this.button3 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.DeviceImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DeviceImage)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -47,11 +48,11 @@ namespace TNetworkAdministrator.Controls
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "DefaultDevice.png");
-            this.imageList1.Images.SetKeyName(1, "ComputerImage.png");
-            this.imageList1.Images.SetKeyName(2, "PrinterImage.png");
-            this.imageList1.Images.SetKeyName(3, "Switch.png");
-            this.imageList1.Images.SetKeyName(4, "Security-Camera-icon.png");
-            this.imageList1.Images.SetKeyName(5, "LinkImage.png");
+            this.imageList1.Images.SetKeyName(1, "Device-computer-icon.png");
+            this.imageList1.Images.SetKeyName(2, "printer.png");
+            this.imageList1.Images.SetKeyName(3, "CameraIP.png");
+            this.imageList1.Images.SetKeyName(4, "Switch.png");
+            this.imageList1.Images.SetKeyName(5, "wireless-access-point-icon-29.jpg");
             // 
             // Ip
             // 
@@ -87,21 +88,6 @@ namespace TNetworkAdministrator.Controls
             this.DeviceText.Size = new System.Drawing.Size(78, 19);
             this.DeviceText.TabIndex = 19;
             this.DeviceText.Text = "Dipositivo:";
-            // 
-            // DeviceImage
-            // 
-            this.DeviceImage.BackColor = System.Drawing.Color.Transparent;
-            this.DeviceImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeviceImage.BackgroundImage")));
-            this.DeviceImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DeviceImage.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DeviceImage.FlatAppearance.BorderSize = 0;
-            this.DeviceImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeviceImage.ImageList = this.imageList1;
-            this.DeviceImage.Location = new System.Drawing.Point(0, 0);
-            this.DeviceImage.Name = "DeviceImage";
-            this.DeviceImage.Size = new System.Drawing.Size(47, 35);
-            this.DeviceImage.TabIndex = 18;
-            this.DeviceImage.UseVisualStyleBackColor = false;
             // 
             // Status
             // 
@@ -141,6 +127,19 @@ namespace TNetworkAdministrator.Controls
             this.checkBox1.TabIndex = 24;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // DeviceImage
+            // 
+            this.DeviceImage.BackColor = System.Drawing.Color.Transparent;
+            this.DeviceImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DeviceImage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.DeviceImage.Image = ((System.Drawing.Image)(resources.GetObject("DeviceImage.Image")));
+            this.DeviceImage.Location = new System.Drawing.Point(0, 0);
+            this.DeviceImage.Name = "DeviceImage";
+            this.DeviceImage.Size = new System.Drawing.Size(32, 35);
+            this.DeviceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DeviceImage.TabIndex = 25;
+            this.DeviceImage.TabStop = false;
+            // 
             // DeviceScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +153,7 @@ namespace TNetworkAdministrator.Controls
             this.Controls.Add(this.DeviceImage);
             this.Name = "DeviceScan";
             this.Size = new System.Drawing.Size(1087, 35);
+            ((System.ComponentModel.ISupportInitialize)(this.DeviceImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,12 +163,12 @@ namespace TNetworkAdministrator.Controls
 
         public System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button DeviceImage;
         public System.Windows.Forms.Label Ip;
         public System.Windows.Forms.Label DeviceText;
         public System.Windows.Forms.Label Status;
         public System.ComponentModel.BackgroundWorker ScanDeviceWork;
         private System.Windows.Forms.Button button3;
         public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.PictureBox DeviceImage;
     }
 }
