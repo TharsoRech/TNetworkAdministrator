@@ -50,8 +50,8 @@ namespace TNetworkAdministrator.Controls
             this.imageList1.Images.SetKeyName(0, "DefaultDevice.png");
             this.imageList1.Images.SetKeyName(1, "Device-computer-icon.png");
             this.imageList1.Images.SetKeyName(2, "printer.png");
-            this.imageList1.Images.SetKeyName(3, "CameraIP.png");
-            this.imageList1.Images.SetKeyName(4, "Switch.png");
+            this.imageList1.Images.SetKeyName(3, "Switch.png");
+            this.imageList1.Images.SetKeyName(4, "e14894d1b443ee21cbb0e6f94eb71b71.png");
             this.imageList1.Images.SetKeyName(5, "wireless-access-point-icon-29.jpg");
             // 
             // Ip
@@ -168,7 +168,7 @@ namespace TNetworkAdministrator.Controls
         public System.Windows.Forms.Label Status;
         public System.ComponentModel.BackgroundWorker ScanDeviceWork;
         private System.Windows.Forms.Button button3;
-        public System.Windows.Forms.CheckBox checkBox1;
         public System.Windows.Forms.PictureBox DeviceImage;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

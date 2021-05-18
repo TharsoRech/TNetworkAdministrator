@@ -229,6 +229,7 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton3.UseCustomBackColor = true;
             this.metroButton3.UseSelectable = true;
             this.metroButton3.UseVisualStyleBackColor = false;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // Scan
             // 

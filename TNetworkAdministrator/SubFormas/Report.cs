@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TNetworkAdministrator.Controls
+namespace TNetworkAdministrator.SubFormas
 {
-    public partial class Warning : UserControl
+    public partial class Report : Wisder.W3Common.WMetroControl.Forms.MetroForm
     {
-        public Warning()
+        public Report()
         {
             InitializeComponent();
+        }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -44,8 +44,8 @@ namespace TNetworkAdministrator.SubFormas
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    Controls.Warning dev1 = new Controls.Warning();
-                    ListOfAlert.Controls.Add(dev1);
+     
+
                 }
             }
 

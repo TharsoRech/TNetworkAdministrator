@@ -17,7 +17,16 @@ namespace TNetworkAdministrator.SubFormas
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SubFormas.Report rp = new Report();
+                rp.Show();
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
         }
     }
 }

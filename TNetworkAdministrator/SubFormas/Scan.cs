@@ -273,18 +273,24 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-               // MessageBox.Show(CheckifIscameraIP("http://172.16.17.100/").ToString()) ;
-              //  MessageBox.Show(CheckifIscameraIP("http://192.168.1.239/").ToString());
-               // MessageBox.Show(CheckifIscameraIP("http://172.16.5.125/").ToString());
+                // MessageBox.Show(CheckifIscameraIP("http://172.16.17.100/").ToString()) ;
+                //  MessageBox.Show(CheckifIscameraIP("http://192.168.1.239/").ToString());
+                // MessageBox.Show(CheckifIscameraIP("http://172.16.5.125/").ToString());
                 //MessageBox.Show(GetSystemName("192.168.1.239") + GetDescription("192.168.1.239"));
                 //   MessageBox.Show(CheckifisSwitch2("172.16.17.100"));
                 //   MessageBox.Show(CheckifisSwitch2("172.16.5.125"));
-                 // MessageBox.Show(CheckifisSwitchHP("192.168.1.247"));
-                 // Controls.DeviceScan newc = new Controls.DeviceScan();
-              //    newc.Ip.Text = "172.16.17.100";
-               //   this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
-               //  this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
+                // MessageBox.Show(CheckifisSwitchHP("192.168.1.247"));
+                // Controls.DeviceScan newc = new Controls.DeviceScan();
+                //    newc.Ip.Text = "172.16.17.100";
+                //   this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
+                //  this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
+                foreach (TNetworkAdministrator.Controls.DeviceScan n1 in Scaneados.Controls)
+                {
+                    if (n1.check() == true)
+                    {
 
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -327,6 +333,28 @@ namespace TNetworkAdministrator.SubFormas
 
         }
 
-     
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach(TNetworkAdministrator.Controls.DeviceScan n1 in Scaneados.Controls)
+                {
+                    if (n1.check() == true)
+                    {
+                        n1.check(false);
+                    }
+                    else
+                    {
+                        n1.check(true);
+                    }
+                   
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

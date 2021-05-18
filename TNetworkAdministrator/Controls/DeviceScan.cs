@@ -16,6 +16,21 @@ namespace TNetworkAdministrator.Controls
 {
     public partial class DeviceScan : UserControl
     {
+
+        private bool Checked { get; set; }
+
+        public bool check()
+        {
+
+            return Checked;
+        }
+        public bool check(bool ch)
+        {
+            checkBox1.Checked = ch;
+            Checked = ch;
+            return checkBox1.Checked;
+        }
+
         public DeviceScan()
         {
             InitializeComponent();
