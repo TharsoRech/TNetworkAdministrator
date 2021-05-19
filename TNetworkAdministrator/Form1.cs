@@ -14,6 +14,7 @@ namespace TNetworkAdministrator
 {
     public partial class Form1 : Wisder.W3Common.WMetroControl.Forms.MetroForm
     {
+        public static Form1 instance;
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace TNetworkAdministrator
             this.Configuracoes.Click += (sender, e) => { ShowForm(new SubFormas.Configuracoes()); };
             this.ribbonconfig.Click += (sender, e) => { ShowForm(new SubFormas.Configuracoes()); };
             this.ribbonexit.Click += (sender, e) => { this.Close(); };
+            instance = this;
 
         }
 
@@ -142,6 +144,20 @@ namespace TNetworkAdministrator
       
         }
 
+        public Image GetImage(int n)
+        {
+            try
+            {
+
+                return ListImage.Images[n];
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
@@ -151,5 +167,6 @@ namespace TNetworkAdministrator
         {
 
         }
+      
     }
 }

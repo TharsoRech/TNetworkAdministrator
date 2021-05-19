@@ -108,6 +108,7 @@
     <Compile Include="Classes\InputBox.cs" />
     <Compile Include="Classes\Priority.cs" />
     <Compile Include="Classes\Status.cs" />
+    <Compile Include="Classes\Type.cs" />
     <Compile Include="Classes\Warning.cs" />
     <Compile Include="Classes\WarningType.cs" />
     <Compile Include="Controls\Device.cs">

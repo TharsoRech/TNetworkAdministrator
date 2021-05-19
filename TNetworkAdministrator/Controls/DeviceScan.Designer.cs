@@ -29,9 +29,7 @@ namespace TNetworkAdministrator.Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceScan));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Ip = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.DeviceText = new System.Windows.Forms.Label();
@@ -42,17 +40,6 @@ namespace TNetworkAdministrator.Controls
             this.DeviceImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DeviceImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "DefaultDevice.png");
-            this.imageList1.Images.SetKeyName(1, "Device-computer-icon.png");
-            this.imageList1.Images.SetKeyName(2, "printer.png");
-            this.imageList1.Images.SetKeyName(3, "Switch.png");
-            this.imageList1.Images.SetKeyName(4, "e14894d1b443ee21cbb0e6f94eb71b71.png");
-            this.imageList1.Images.SetKeyName(5, "wireless-access-point-icon-29.jpg");
             // 
             // Ip
             // 
@@ -160,8 +147,6 @@ namespace TNetworkAdministrator.Controls
         }
 
         #endregion
-
-        public System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label Ip;
         public System.Windows.Forms.Label DeviceText;

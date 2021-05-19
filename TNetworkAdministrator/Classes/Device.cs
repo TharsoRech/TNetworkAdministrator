@@ -22,8 +22,8 @@ namespace TNetworkAdministrator.Classes
 
         public Group Group { get; set; }
 
-   
-       public DateTime AddIn { get; private set; }
+        public Type type { get; set; }
+    public DateTime AddIn { get; private set; }
 
         public DateTime TimeOn { get;  set; }
         public DateTime TimeOF { get; set; }

@@ -57,15 +57,16 @@ namespace TNetworkAdministrator.Controls
                 if (pc != "" && pc != "Null")
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Computador:" + pc; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[1]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(1); }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
                 string Printer1 = CheckifisPrinter(ip1);
                 if (Printer1 != ""  && Printer1 != "Null")
-                {
+                {   
+                    
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Impressora:" + Printer1; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[2]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(2); }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
@@ -73,8 +74,9 @@ namespace TNetworkAdministrator.Controls
                  string Switch1 = CheckifisSwitch(ip1);
                 if (Switch1 != "" && Switch1 != "Null")
                 {
+
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Switch:" + Switch1; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[3]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(3); ; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
@@ -82,7 +84,7 @@ namespace TNetworkAdministrator.Controls
                 if (CheckifIscameraIP("http://" + ip1 + "/") == true)
                 {
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Camera:" + ip1; }));
-                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = this.imageList1.Images[4]; }));
+                    this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(4); ; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
                     return;
                 }
