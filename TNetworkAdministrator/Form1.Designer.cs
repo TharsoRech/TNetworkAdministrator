@@ -31,34 +31,34 @@ namespace TNetworkAdministrator
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 5D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 6D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint28 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint29 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint30 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint31 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint32 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 5D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 6D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.ribboninventario = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonscan = new System.Windows.Forms.RibbonOrbMenuItem();
@@ -104,10 +104,6 @@ namespace TNetworkAdministrator
             this.SystemName = new System.Windows.Forms.Label();
             this.Ip = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.LastOnline = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -145,6 +141,8 @@ namespace TNetworkAdministrator
             this.label12 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
             this.ListImage = new System.Windows.Forms.ImageList(this.components);
+            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
+            this.MapButton = new System.Windows.Forms.RibbonButton();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CharProblemas)).BeginInit();
@@ -156,8 +154,6 @@ namespace TNetworkAdministrator
             this.StatusList.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.LastOnline.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -236,6 +232,7 @@ namespace TNetworkAdministrator
             this.ribbonTab1.Panels.Add(this.ribbonPanel1);
             this.ribbonTab1.Panels.Add(this.ribbonPanel2);
             this.ribbonTab1.Panels.Add(this.ribbonPanel3);
+            this.ribbonTab1.Panels.Add(this.ribbonPanel6);
             this.ribbonTab1.Panels.Add(this.ribbonPanel4);
             this.ribbonTab1.Panels.Add(this.ribbonPanel5);
             this.ribbonTab1.Text = "Gerenciamento";
@@ -302,7 +299,6 @@ namespace TNetworkAdministrator
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.ConectivityStatus);
             this.panel1.Controls.Add(this.StatusList);
-            this.panel1.Controls.Add(this.flowLayoutPanel6);
             this.panel1.Controls.Add(this.LastOnline);
             this.panel1.Controls.Add(this.PingList);
             this.panel1.Controls.Add(this.DiskList);
@@ -312,6 +308,7 @@ namespace TNetworkAdministrator
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1420, 630);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel7
             // 
@@ -327,126 +324,126 @@ namespace TNetworkAdministrator
             // 
             // CharProblemas
             // 
-            chartArea4.Name = "ChartArea1";
-            this.CharProblemas.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.CharProblemas.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.CharProblemas.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.CharProblemas.Legends.Add(legend1);
             this.CharProblemas.Location = new System.Drawing.Point(893, 66);
             this.CharProblemas.Name = "CharProblemas";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.IsValueShownAsLabel = true;
-            series4.Legend = "Legend1";
-            series4.Name = "Problems";
-            dataPoint17.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataPoint17.LegendText = "Perca de Pacote";
-            dataPoint18.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataPoint18.LegendText = "Offline";
-            dataPoint19.Color = System.Drawing.Color.SlateBlue;
-            dataPoint19.LegendText = "Uso da Rede Extremo";
-            dataPoint20.LegendText = "Uso da Cpu Extremo";
-            dataPoint21.LegendText = "Espaço em Disco";
-            series4.Points.Add(dataPoint17);
-            series4.Points.Add(dataPoint18);
-            series4.Points.Add(dataPoint19);
-            series4.Points.Add(dataPoint20);
-            series4.Points.Add(dataPoint21);
-            this.CharProblemas.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Problems";
+            dataPoint1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataPoint1.LegendText = "Perca de Pacote";
+            dataPoint2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataPoint2.LegendText = "Offline";
+            dataPoint3.Color = System.Drawing.Color.SlateBlue;
+            dataPoint3.LegendText = "Uso da Rede Extremo";
+            dataPoint4.LegendText = "Uso da Cpu Extremo";
+            dataPoint5.LegendText = "Espaço em Disco";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.Points.Add(dataPoint4);
+            series1.Points.Add(dataPoint5);
+            this.CharProblemas.Series.Add(series1);
             this.CharProblemas.Size = new System.Drawing.Size(454, 336);
             this.CharProblemas.TabIndex = 9;
             this.CharProblemas.Text = "chart3";
-            title4.Name = "Principais Problemas";
-            title4.Text = "Principais Problemas";
-            this.CharProblemas.Titles.Add(title4);
+            title1.Name = "Principais Problemas";
+            title1.Text = "Principais Problemas";
+            this.CharProblemas.Titles.Add(title1);
             // 
             // ChartMonitorados
             // 
-            chartArea5.Name = "ChartArea1";
-            this.ChartMonitorados.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.ChartMonitorados.Legends.Add(legend5);
+            chartArea2.Name = "ChartArea1";
+            this.ChartMonitorados.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ChartMonitorados.Legends.Add(legend2);
             this.ChartMonitorados.Location = new System.Drawing.Point(453, 67);
             this.ChartMonitorados.Name = "ChartMonitorados";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series5.IsValueShownAsLabel = true;
-            series5.Legend = "Legend1";
-            series5.Name = "DeviceMonitor";
-            dataPoint22.Color = System.Drawing.Color.SteelBlue;
-            dataPoint22.LegendText = "Computadores";
-            dataPoint23.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataPoint23.LabelForeColor = System.Drawing.Color.Black;
-            dataPoint23.LegendText = "Impressora";
-            dataPoint24.Color = System.Drawing.Color.Maroon;
-            dataPoint24.LegendText = "Servidores";
-            dataPoint25.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataPoint25.LegendText = "Switchs";
-            dataPoint26.Color = System.Drawing.Color.Green;
-            dataPoint26.LegendText = "Cameras";
-            dataPoint27.Color = System.Drawing.Color.MediumAquamarine;
-            dataPoint27.LegendText = "Wifi";
-            dataPoint28.Color = System.Drawing.Color.SeaGreen;
-            dataPoint28.LabelForeColor = System.Drawing.Color.Black;
-            dataPoint28.LegendText = "Ips";
-            series5.Points.Add(dataPoint22);
-            series5.Points.Add(dataPoint23);
-            series5.Points.Add(dataPoint24);
-            series5.Points.Add(dataPoint25);
-            series5.Points.Add(dataPoint26);
-            series5.Points.Add(dataPoint27);
-            series5.Points.Add(dataPoint28);
-            this.ChartMonitorados.Series.Add(series5);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "DeviceMonitor";
+            dataPoint6.Color = System.Drawing.Color.SteelBlue;
+            dataPoint6.LegendText = "Computadores";
+            dataPoint7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataPoint7.LabelForeColor = System.Drawing.Color.Black;
+            dataPoint7.LegendText = "Impressora";
+            dataPoint8.Color = System.Drawing.Color.Maroon;
+            dataPoint8.LegendText = "Servidores";
+            dataPoint9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataPoint9.LegendText = "Switchs";
+            dataPoint10.Color = System.Drawing.Color.Green;
+            dataPoint10.LegendText = "Cameras";
+            dataPoint11.Color = System.Drawing.Color.MediumAquamarine;
+            dataPoint11.LegendText = "Wifi";
+            dataPoint12.Color = System.Drawing.Color.SeaGreen;
+            dataPoint12.LabelForeColor = System.Drawing.Color.Black;
+            dataPoint12.LegendText = "Ips";
+            series2.Points.Add(dataPoint6);
+            series2.Points.Add(dataPoint7);
+            series2.Points.Add(dataPoint8);
+            series2.Points.Add(dataPoint9);
+            series2.Points.Add(dataPoint10);
+            series2.Points.Add(dataPoint11);
+            series2.Points.Add(dataPoint12);
+            this.ChartMonitorados.Series.Add(series2);
             this.ChartMonitorados.Size = new System.Drawing.Size(434, 325);
             this.ChartMonitorados.TabIndex = 8;
             this.ChartMonitorados.Text = "chart2";
-            title5.Name = "Title1";
-            title5.Text = "Dispositivos Monitorados";
-            this.ChartMonitorados.Titles.Add(title5);
+            title2.Name = "Title1";
+            title2.Text = "Dispositivos Monitorados";
+            this.ChartMonitorados.Titles.Add(title2);
             // 
             // ChartStatus
             // 
-            chartArea6.Name = "ChartArea1";
-            this.ChartStatus.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.ChartStatus.Legends.Add(legend6);
+            chartArea3.Name = "ChartArea1";
+            this.ChartStatus.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.ChartStatus.Legends.Add(legend3);
             this.ChartStatus.Location = new System.Drawing.Point(3, 68);
             this.ChartStatus.Name = "ChartStatus";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series6.Legend = "Legend1";
-            series6.Name = "Online";
-            dataPoint29.Color = System.Drawing.Color.Green;
-            dataPoint29.IsValueShownAsLabel = true;
-            dataPoint29.Label = "";
-            dataPoint29.LegendText = "Online";
-            dataPoint30.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataPoint30.IsValueShownAsLabel = true;
-            dataPoint30.IsVisibleInLegend = true;
-            dataPoint30.Label = "";
-            dataPoint30.LegendText = "Offline";
-            dataPoint31.Color = System.Drawing.Color.Yellow;
-            dataPoint31.IsValueShownAsLabel = true;
-            dataPoint31.Label = "";
-            dataPoint31.LegendText = "Desconhecido";
-            dataPoint32.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataPoint32.IsValueShownAsLabel = true;
-            dataPoint32.Label = "";
-            dataPoint32.LegendText = "Não Testado";
-            series6.Points.Add(dataPoint29);
-            series6.Points.Add(dataPoint30);
-            series6.Points.Add(dataPoint31);
-            series6.Points.Add(dataPoint32);
-            series6.YValuesPerPoint = 3;
-            this.ChartStatus.Series.Add(series6);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.Legend = "Legend1";
+            series3.Name = "Online";
+            dataPoint13.Color = System.Drawing.Color.Green;
+            dataPoint13.IsValueShownAsLabel = true;
+            dataPoint13.Label = "";
+            dataPoint13.LegendText = "Online";
+            dataPoint14.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataPoint14.IsValueShownAsLabel = true;
+            dataPoint14.IsVisibleInLegend = true;
+            dataPoint14.Label = "";
+            dataPoint14.LegendText = "Offline";
+            dataPoint15.Color = System.Drawing.Color.Yellow;
+            dataPoint15.IsValueShownAsLabel = true;
+            dataPoint15.Label = "";
+            dataPoint15.LegendText = "Desconhecido";
+            dataPoint16.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataPoint16.IsValueShownAsLabel = true;
+            dataPoint16.Label = "";
+            dataPoint16.LegendText = "Não Testado";
+            series3.Points.Add(dataPoint13);
+            series3.Points.Add(dataPoint14);
+            series3.Points.Add(dataPoint15);
+            series3.Points.Add(dataPoint16);
+            series3.YValuesPerPoint = 3;
+            this.ChartStatus.Series.Add(series3);
             this.ChartStatus.Size = new System.Drawing.Size(434, 325);
             this.ChartStatus.TabIndex = 7;
             this.ChartStatus.Text = "chart1";
-            title6.Name = "Title1";
-            title6.Text = "Status Dispositivos";
-            this.ChartStatus.Titles.Add(title6);
+            title3.Name = "Title1";
+            title3.Text = "Status Dispositivos";
+            this.ChartStatus.Titles.Add(title3);
             // 
             // panel10
             // 
@@ -490,7 +487,7 @@ namespace TNetworkAdministrator
             this.ConectivityStatus.Controls.Add(this.panel6);
             this.ConectivityStatus.Location = new System.Drawing.Point(13, 475);
             this.ConectivityStatus.Name = "ConectivityStatus";
-            this.ConectivityStatus.Size = new System.Drawing.Size(1366, 408);
+            this.ConectivityStatus.Size = new System.Drawing.Size(1387, 408);
             this.ConectivityStatus.TabIndex = 41;
             // 
             // panel6
@@ -711,57 +708,13 @@ namespace TNetworkAdministrator
             this.button17.TabIndex = 31;
             this.button17.UseVisualStyleBackColor = false;
             // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.AutoScroll = true;
-            this.flowLayoutPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel6.Controls.Add(this.panel8);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(26, 1268);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(1022, 371);
-            this.flowLayoutPanel6.TabIndex = 39;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.button13);
-            this.panel8.Controls.Add(this.button14);
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(851, 33);
-            this.panel8.TabIndex = 2;
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(831, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(20, 33);
-            this.button13.TabIndex = 1;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(0, 0);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(135, 33);
-            this.button14.TabIndex = 0;
-            this.button14.Text = "Mapa de Dispositivos";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
             // LastOnline
             // 
             this.LastOnline.AutoScroll = true;
             this.LastOnline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LastOnline.Controls.Add(this.panel5);
             this.LastOnline.Controls.Add(this.panel12);
-            this.LastOnline.Location = new System.Drawing.Point(394, 911);
+            this.LastOnline.Location = new System.Drawing.Point(374, 911);
             this.LastOnline.Name = "LastOnline";
             this.LastOnline.Size = new System.Drawing.Size(322, 338);
             this.LastOnline.TabIndex = 34;
@@ -1176,6 +1129,17 @@ namespace TNetworkAdministrator
             this.ListImage.Images.SetKeyName(4, "e14894d1b443ee21cbb0e6f94eb71b71.png");
             this.ListImage.Images.SetKeyName(5, "wireless-access-point-icon-29.jpg");
             // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.MapButton);
+            this.ribbonPanel6.Text = "ribbonPanel6";
+            // 
+            // MapButton
+            // 
+            this.MapButton.Image = ((System.Drawing.Image)(resources.GetObject("MapButton.Image")));
+            this.MapButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("MapButton.SmallImage")));
+            this.MapButton.Text = "Mapa de Dispositivos";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1202,8 +1166,6 @@ namespace TNetworkAdministrator
             this.StatusList.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.LastOnline.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -1255,10 +1217,6 @@ namespace TNetworkAdministrator
         private Panel panel4;
         private Button button5;
         private Button button6;
-        private FlowLayoutPanel flowLayoutPanel6;
-        private Panel panel8;
-        private Button button13;
-        private Button button14;
         private FlowLayoutPanel StatusList;
         private Panel panel9;
         private Button button15;
@@ -1309,6 +1267,8 @@ namespace TNetworkAdministrator
         private Label label9;
         private Label label8;
         public ImageList ListImage;
+        private RibbonPanel ribbonPanel6;
+        private RibbonButton MapButton;
     }
 }
 

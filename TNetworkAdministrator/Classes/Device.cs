@@ -35,5 +35,7 @@ namespace TNetworkAdministrator.Classes
         public List<string> Log { get; set; }
 
         public List<Classes.WarningType> WarningTypes { get;set ;}
+
+        public Location location { get; set; }
     }
 }

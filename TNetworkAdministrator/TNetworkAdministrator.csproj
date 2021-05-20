@@ -106,6 +106,7 @@
     <Compile Include="Classes\Device.cs" />
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\InputBox.cs" />
+    <Compile Include="Classes\Location.cs" />
     <Compile Include="Classes\Priority.cs" />
     <Compile Include="Classes\Status.cs" />
     <Compile Include="Classes\Type.cs" />
@@ -179,6 +180,12 @@
     <Compile Include="SubFormas\Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubFormas\Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormas\Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubFormas\Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormas\Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>

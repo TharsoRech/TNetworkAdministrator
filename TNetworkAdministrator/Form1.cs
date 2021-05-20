@@ -25,6 +25,7 @@ namespace TNetworkAdministrator
             this.Alertas.Click += (sender, e) => { ShowForm(new SubFormas.Warnings()); };
             this.Relatorios.Click += (sender, e) => { ShowForm(new SubFormas.Reports()); };
             this.Configuracoes.Click += (sender, e) => { ShowForm(new SubFormas.Configuracoes()); };
+            this.MapButton.Click += (sender, e) => { ShowForm(new SubFormas.Map()); };
             this.ribbonconfig.Click += (sender, e) => { ShowForm(new SubFormas.Configuracoes()); };
             this.ribbonexit.Click += (sender, e) => { this.Close(); };
             instance = this;
@@ -167,6 +168,10 @@ namespace TNetworkAdministrator
         {
 
         }
-      
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
