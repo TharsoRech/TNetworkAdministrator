@@ -68,13 +68,15 @@ namespace TNetworkAdministrator.Controls
             // Online
             // 
             this.Online.AutoSize = true;
-            this.Online.BackColor = System.Drawing.Color.White;
+            this.Online.BackColor = System.Drawing.Color.Transparent;
+            this.Online.Checked = true;
             this.Online.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Online.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Online.Location = new System.Drawing.Point(109, 29);
             this.Online.Name = "Online";
             this.Online.Size = new System.Drawing.Size(13, 12);
             this.Online.TabIndex = 27;
+            this.Online.TabStop = true;
             this.Online.UseVisualStyleBackColor = false;
             this.Online.CheckedChanged += new System.EventHandler(this.Online_CheckedChanged);
             // 
@@ -91,28 +93,28 @@ namespace TNetworkAdministrator.Controls
             // 
             this.editarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editarToolStripMenuItem.Image")));
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // checarStatusToolStripMenuItem
             // 
             this.checarStatusToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("checarStatusToolStripMenuItem.Image")));
             this.checarStatusToolStripMenuItem.Name = "checarStatusToolStripMenuItem";
-            this.checarStatusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checarStatusToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.checarStatusToolStripMenuItem.Text = "Checar Status";
             // 
             // removerToolStripMenuItem
             // 
             this.removerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("removerToolStripMenuItem.Image")));
             this.removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            this.removerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removerToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.removerToolStripMenuItem.Text = "Remover";
             // 
             // MapControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.ContextMenuStrip = this.metroContextMenu1;
             this.Controls.Add(this.Online);
             this.Controls.Add(this.DeviceImage);

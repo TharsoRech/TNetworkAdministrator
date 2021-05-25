@@ -32,8 +32,9 @@ namespace TNetworkAdministrator.Controls
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceControl));
             this.Image1 = new System.Windows.Forms.PictureBox();
-            this.StatusText = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.Backbackground = new AltoControls.AltoButton();
+            this.StatusText = new AltoControls.AltoSlidingLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Image1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,16 +51,6 @@ namespace TNetworkAdministrator.Controls
             this.Image1.TabStop = false;
             this.Image1.Click += new System.EventHandler(this.Image1_Click);
             // 
-            // StatusText
-            // 
-            this.StatusText.AutoSize = true;
-            this.StatusText.Font = new System.Drawing.Font("Georgia", 10F);
-            this.StatusText.Location = new System.Drawing.Point(0, 53);
-            this.StatusText.Name = "StatusText";
-            this.StatusText.Size = new System.Drawing.Size(37, 17);
-            this.StatusText.TabIndex = 7;
-            this.StatusText.Text = "Bom";
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -69,24 +60,54 @@ namespace TNetworkAdministrator.Controls
             this.imageList1.Images.SetKeyName(2, "PngItem_3638770.png");
             this.imageList1.Images.SetKeyName(3, "qmwskqgpny cópia.png");
             // 
+            // Backbackground
+            // 
+            this.Backbackground.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.Backbackground.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.Backbackground.BackColor = System.Drawing.Color.Transparent;
+            this.Backbackground.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Backbackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Backbackground.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.Backbackground.ForeColor = System.Drawing.Color.Black;
+            this.Backbackground.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Backbackground.Inactive2 = System.Drawing.Color.Transparent;
+            this.Backbackground.Location = new System.Drawing.Point(0, 0);
+            this.Backbackground.Name = "Backbackground";
+            this.Backbackground.Radius = 10;
+            this.Backbackground.Size = new System.Drawing.Size(78, 80);
+            this.Backbackground.Stroke = false;
+            this.Backbackground.StrokeColor = System.Drawing.Color.Gray;
+            this.Backbackground.TabIndex = 8;
+            this.Backbackground.Transparency = false;
+            // 
+            // StatusText
+            // 
+            this.StatusText.Location = new System.Drawing.Point(3, 48);
+            this.StatusText.Name = "StatusText";
+            this.StatusText.Size = new System.Drawing.Size(72, 18);
+            this.StatusText.Slide = true;
+            this.StatusText.TabIndex = 9;
+            this.StatusText.Text = "altoSlidingLabel1";
+            // 
             // DeviceControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.StatusText);
             this.Controls.Add(this.Image1);
+            this.Controls.Add(this.Backbackground);
             this.Name = "DeviceControl";
             this.Size = new System.Drawing.Size(78, 80);
             ((System.ComponentModel.ISupportInitialize)(this.Image1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         public System.Windows.Forms.PictureBox Image1;
-        public System.Windows.Forms.Label StatusText;
         private System.Windows.Forms.ImageList imageList1;
+        private AltoControls.AltoButton Backbackground;
+        private AltoControls.AltoSlidingLabel StatusText;
     }
 }

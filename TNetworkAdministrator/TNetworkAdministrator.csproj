@@ -8,11 +8,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TNetworkAdministrator</RootNamespace>
     <AssemblyName>TNetworkAdministrator</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -53,6 +55,9 @@
     <ApplicationIcon>Itzikgur-My-Seven-Network-2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
+    </Reference>
     <Reference Include="CommonWin32, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a0a4edcfe233918d, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonWin32.2.1.0.3\lib\net35-Client\CommonWin32.dll</HintPath>
     </Reference>
@@ -142,6 +147,12 @@
     <Compile Include="Controls\MapControl.Designer.cs">
       <DependentUpon>MapControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ResizableController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ResizableController.Designer.cs">
+      <DependentUpon>ResizableController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\StatusTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +221,12 @@
     <Compile Include="SubFormas\Scan.Designer.cs">
       <DependentUpon>Scan.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubFormas\SelectDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormas\SelectDevice.Designer.cs">
+      <DependentUpon>SelectDevice.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubFormas\Warnings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MapControl.resx">
       <DependentUpon>MapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ResizableController.resx">
+      <DependentUpon>ResizableController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\StatusTable.resx">
       <DependentUpon>StatusTable.cs</DependentUpon>
@@ -273,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\Scan.resx">
       <DependentUpon>Scan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormas\SelectDevice.resx">
+      <DependentUpon>SelectDevice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\Warnings.resx">
       <DependentUpon>Warnings.cs</DependentUpon>

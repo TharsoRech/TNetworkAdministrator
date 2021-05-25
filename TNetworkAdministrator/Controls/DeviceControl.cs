@@ -18,25 +18,25 @@ namespace TNetworkAdministrator.Controls
             StatusText.Text = statusText;
             if(status == Classes.Status.Good) 
             {
-                BackColor = Color.DarkGreen;
+                Backbackground.Inactive1= Color.DarkGreen;
                 return;
             }
             if (status == Classes.Status.Slow)
             {
-                BackColor = Color.Goldenrod;
+                Backbackground.Inactive1 = Color.Goldenrod;
               Image1.Image = imageList1.Images[1];
 
                 return;
             }
             if (status == Classes.Status.Unreacheable)
             {
-                BackColor = Color.DarkRed;
+                Backbackground.Inactive1 = Color.DarkRed;
                Image1.Image = imageList1.Images[2];
                 return;
             }
             if (status == Classes.Status.NotTested)
             {
-                BackColor = Color.Gray;
+                Backbackground.Inactive1 = Color.Gray;
                 Image1.Image = imageList1.Images[3];
                 return;
             }

@@ -71,6 +71,8 @@ namespace TNetworkAdministrator
             this.Scannear = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.Alertas = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
+            this.MapButton = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.Relatorios = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
@@ -141,8 +143,6 @@ namespace TNetworkAdministrator
             this.label12 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
             this.ListImage = new System.Windows.Forms.ImageList(this.components);
-            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.MapButton = new System.Windows.Forms.RibbonButton();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CharProblemas)).BeginInit();
@@ -269,6 +269,17 @@ namespace TNetworkAdministrator
             this.Alertas.Image = ((System.Drawing.Image)(resources.GetObject("Alertas.Image")));
             this.Alertas.SmallImage = ((System.Drawing.Image)(resources.GetObject("Alertas.SmallImage")));
             this.Alertas.Text = "Alertas";
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.MapButton);
+            this.ribbonPanel6.Text = "ribbonPanel6";
+            // 
+            // MapButton
+            // 
+            this.MapButton.Image = ((System.Drawing.Image)(resources.GetObject("MapButton.Image")));
+            this.MapButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("MapButton.SmallImage")));
+            this.MapButton.Text = "Mapa de Dispositivos";
             // 
             // ribbonPanel4
             // 
@@ -1128,17 +1139,6 @@ namespace TNetworkAdministrator
             this.ListImage.Images.SetKeyName(3, "Switch.png");
             this.ListImage.Images.SetKeyName(4, "e14894d1b443ee21cbb0e6f94eb71b71.png");
             this.ListImage.Images.SetKeyName(5, "wireless-access-point-icon-29.jpg");
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.MapButton);
-            this.ribbonPanel6.Text = "ribbonPanel6";
-            // 
-            // MapButton
-            // 
-            this.MapButton.Image = ((System.Drawing.Image)(resources.GetObject("MapButton.Image")));
-            this.MapButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("MapButton.SmallImage")));
-            this.MapButton.Text = "Mapa de Dispositivos";
             // 
             // Form1
             // 

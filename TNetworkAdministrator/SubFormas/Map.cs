@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,8 +35,16 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                TNetworkAdministrator.Controls.MapControl p = new Controls.MapControl();
-                MapTabControl.SelectedTab.Controls.Add(p);
+                if(MapTabControl.TabPages.Count > 0)
+                {
+                    SubFormas.SelectDevice p = new SelectDevice(MapTabControl.SelectedTab);
+                        p.Show();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Primeiro Adicione uma localização", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             catch (Exception)
             {
@@ -52,6 +61,28 @@ namespace TNetworkAdministrator.SubFormas
                 newp.BackColor = Color.White;
                 newp.Text = Classes.InputBox.ShowDialog("Digite O nome", "Digite o nome da localização,Adm,Engenharia...");
                 MapTabControl.TabPages.Add(newp);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (MapTabControl.TabPages.Count > 0)
+                {
+                    TNetworkAdministrator.Controls.ResizableController p = new Controls.ResizableController();
+                    MapTabControl.SelectedTab.Controls.Add(p);
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Primeiro Adicione uma localização", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
