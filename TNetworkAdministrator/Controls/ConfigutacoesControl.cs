@@ -1,27 +1,21 @@
 ﻿using Microsoft.Exchange.WebServices.Data;
-using Microsoft.Exchange.WebServices.Autodiscover;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-
-
-namespace TNetworkAdministrator.SubFormas
+namespace TNetworkAdministrator.Controls
 {
-    public partial class Configuracoes : Wisder.W3Common.WMetroControl.Forms.MetroForm
+    public partial class ConfigutacoesControl : UserControl
     {
-        public Configuracoes()
+        public ConfigutacoesControl()
         {
             InitializeComponent();
-        }
-
-        private void Configuracoes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -56,5 +50,8 @@ namespace TNetworkAdministrator.SubFormas
             }
 
         }
+
+
+
     }
 }

@@ -36,6 +36,7 @@ namespace TNetworkAdministrator.Controls
             this.Backbackground = new AltoControls.AltoButton();
             this.StatusText = new AltoControls.AltoSlidingLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Image1)).BeginInit();
+            this.Backbackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // Image1
@@ -65,41 +66,43 @@ namespace TNetworkAdministrator.Controls
             this.Backbackground.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
             this.Backbackground.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.Backbackground.BackColor = System.Drawing.Color.Transparent;
+            this.Backbackground.Controls.Add(this.StatusText);
+            this.Backbackground.Controls.Add(this.Image1);
             this.Backbackground.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Backbackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Backbackground.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.Backbackground.ForeColor = System.Drawing.Color.Black;
             this.Backbackground.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Backbackground.Inactive2 = System.Drawing.Color.Transparent;
+            this.Backbackground.Inactive2 = System.Drawing.Color.DarkGray;
             this.Backbackground.Location = new System.Drawing.Point(0, 0);
             this.Backbackground.Name = "Backbackground";
             this.Backbackground.Radius = 10;
             this.Backbackground.Size = new System.Drawing.Size(78, 80);
             this.Backbackground.Stroke = false;
-            this.Backbackground.StrokeColor = System.Drawing.Color.Gray;
+            this.Backbackground.StrokeColor = System.Drawing.Color.Transparent;
             this.Backbackground.TabIndex = 8;
             this.Backbackground.Transparency = false;
             // 
             // StatusText
             // 
+            this.StatusText.ForeColor = System.Drawing.SystemColors.Control;
             this.StatusText.Location = new System.Drawing.Point(3, 48);
             this.StatusText.Name = "StatusText";
             this.StatusText.Size = new System.Drawing.Size(72, 18);
             this.StatusText.Slide = true;
             this.StatusText.TabIndex = 9;
-            this.StatusText.Text = "altoSlidingLabel1";
+            this.StatusText.Text = "asas";
             // 
             // DeviceControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.StatusText);
-            this.Controls.Add(this.Image1);
             this.Controls.Add(this.Backbackground);
             this.Name = "DeviceControl";
             this.Size = new System.Drawing.Size(78, 80);
             ((System.ComponentModel.ISupportInitialize)(this.Image1)).EndInit();
+            this.Backbackground.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

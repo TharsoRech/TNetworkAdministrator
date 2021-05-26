@@ -37,5 +37,6 @@ namespace TNetworkAdministrator.Controls
                 this.Top = e.Y + this.Top - MouseDownLocation.Y;
             }
         }
+
     }
 }

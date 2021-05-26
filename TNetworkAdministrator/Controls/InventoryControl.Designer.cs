@@ -1,13 +1,17 @@
 ﻿
-namespace TNetworkAdministrator.SubFormas
+namespace TNetworkAdministrator.Controls
 {
-    partial class Inventory
+    partial class InventoryControl
     {
-
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Variável de designer necessária.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Limpar os recursos que estão sendo usados.
+        /// </summary>
+        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -17,21 +21,14 @@ namespace TNetworkAdministrator.SubFormas
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código gerado pelo Designer de Componentes
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Método necessário para suporte ao Designer - não modifique 
+        /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.verificarStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTabControl1 = new Wisder.W3Common.WMetroControl.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,65 +59,31 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton4 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.DevicesList = new System.Windows.Forms.TreeView();
-            this.contextMenuStrip1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verificarStatusToolStripMenuItem,
-            this.gerarRelatórioToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.removerToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
-            // 
-            // verificarStatusToolStripMenuItem
-            // 
-            this.verificarStatusToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("verificarStatusToolStripMenuItem.Image")));
-            this.verificarStatusToolStripMenuItem.Name = "verificarStatusToolStripMenuItem";
-            this.verificarStatusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.verificarStatusToolStripMenuItem.Text = "Verificar Status";
-            // 
-            // gerarRelatórioToolStripMenuItem
-            // 
-            this.gerarRelatórioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gerarRelatórioToolStripMenuItem.Image")));
-            this.gerarRelatórioToolStripMenuItem.Name = "gerarRelatórioToolStripMenuItem";
-            this.gerarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gerarRelatórioToolStripMenuItem.Text = "Gerar Relatório";
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editarToolStripMenuItem.Image")));
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
-            // 
-            // removerToolStripMenuItem
-            // 
-            this.removerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("removerToolStripMenuItem.Image")));
-            this.removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            this.removerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.removerToolStripMenuItem.Text = "Remover";
-            // 
             // metroTabControl1
             // 
+            this.metroTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.metroTabControl1.Controls.Add(this.tabPage1);
             this.metroTabControl1.Controls.Add(this.tabPage2);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Multiline = true;
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.Padding = new System.Drawing.Point(6, 8);
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(1169, 733);
-            this.metroTabControl1.TabIndex = 13;
+            this.metroTabControl1.Size = new System.Drawing.Size(1209, 813);
+            this.metroTabControl1.TabIndex = 14;
+            this.metroTabControl1.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.NameChoose);
@@ -137,19 +100,18 @@ namespace TNetworkAdministrator.SubFormas
             this.tabPage1.Controls.Add(this.GroupsChoose);
             this.tabPage1.Controls.Add(this.Texto);
             this.tabPage1.Controls.Add(this.metroButton1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 38);
+            this.tabPage1.Location = new System.Drawing.Point(4, 41);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1161, 691);
+            this.tabPage1.Size = new System.Drawing.Size(1201, 768);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dispostivos";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(339, 72);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 23);
@@ -160,7 +122,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(123, 66);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 23);
@@ -197,7 +159,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(753, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 23);
@@ -223,16 +185,16 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.ListofDevices.AutoScroll = true;
             this.ListofDevices.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ListofDevices.Location = new System.Drawing.Point(3, 130);
+            this.ListofDevices.Location = new System.Drawing.Point(3, 207);
             this.ListofDevices.Name = "ListofDevices";
-            this.ListofDevices.Size = new System.Drawing.Size(1155, 558);
+            this.ListofDevices.Size = new System.Drawing.Size(1195, 558);
             this.ListofDevices.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(305, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 23);
@@ -243,7 +205,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(548, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 23);
@@ -254,7 +216,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(91, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 23);
@@ -289,6 +251,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 25);
@@ -333,6 +296,8 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.Controls.Add(this.metroButton8);
             this.tabPage2.Controls.Add(this.metroButton7);
             this.tabPage2.Controls.Add(this.metroButton6);
@@ -344,13 +309,12 @@ namespace TNetworkAdministrator.SubFormas
             this.tabPage2.Controls.Add(this.metroButton4);
             this.tabPage2.Controls.Add(this.metroButton3);
             this.tabPage2.Controls.Add(this.DevicesList);
-            this.tabPage2.Location = new System.Drawing.Point(4, 38);
+            this.tabPage2.Location = new System.Drawing.Point(4, 41);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1161, 691);
+            this.tabPage2.Size = new System.Drawing.Size(1201, 768);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Grupos";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // metroButton8
             // 
@@ -392,6 +356,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(60, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 25);
@@ -400,6 +365,8 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // GroupList
             // 
+            this.GroupList.BackColor = System.Drawing.Color.Black;
+            this.GroupList.ForeColor = System.Drawing.Color.White;
             this.GroupList.Location = new System.Drawing.Point(445, 46);
             this.GroupList.Name = "GroupList";
             this.GroupList.Size = new System.Drawing.Size(293, 515);
@@ -421,6 +388,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(547, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 25);
@@ -466,23 +434,21 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // DevicesList
             // 
+            this.DevicesList.BackColor = System.Drawing.Color.Black;
+            this.DevicesList.ForeColor = System.Drawing.Color.White;
             this.DevicesList.Location = new System.Drawing.Point(15, 46);
             this.DevicesList.Name = "DevicesList";
             this.DevicesList.Size = new System.Drawing.Size(248, 515);
             this.DevicesList.TabIndex = 13;
             // 
-            // Inventory
+            // InventoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 813);
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.metroTabControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Inventory";
-            this.ShadowType = Wisder.W3Common.WMetroControl.Forms.MetroFormShadowType.SystemShadow;
-            this.Text = "Inventário";
-            this.Load += new System.EventHandler(this.Inventory_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.Name = "InventoryControl";
+            this.Size = new System.Drawing.Size(1209, 813);
             this.metroTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -493,15 +459,14 @@ namespace TNetworkAdministrator.SubFormas
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.ComponentModel.IContainer components;
-        private System.Windows.Forms.ToolStripMenuItem verificarStatusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gerarRelatórioToolStripMenuItem;
-        private Wisder.W3Common.WMetroControl.Controls.MetroTabControl metroTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox NameChoose;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox IpChoose;
+        private System.Windows.Forms.Label label5;
+        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox ProrityChoose;
+        private System.Windows.Forms.FlowLayoutPanel ListofDevices;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -511,23 +476,18 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroComboBox GroupsChoose;
         private Wisder.W3Common.WMetroControl.Controls.MetroTextBox Texto;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.TreeView DevicesList;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton5;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton4;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.FlowLayoutPanel ListofDevices;
-        private System.Windows.Forms.Label label5;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox ProrityChoose;
-        private System.Windows.Forms.Label label7;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox NameChoose;
-        private Wisder.W3Common.WMetroControl.Controls.MetroComboBox IpChoose;
-        private System.Windows.Forms.Label label8;
-        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TreeView GroupList;
+        private System.Windows.Forms.TabPage tabPage2;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton8;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton7;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TreeView GroupList;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.Label label6;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton5;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton4;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
+        private System.Windows.Forms.TreeView DevicesList;
+        public Wisder.W3Common.WMetroControl.Controls.MetroTabControl metroTabControl1;
     }
 }

@@ -59,7 +59,7 @@ namespace TNetworkAdministrator.SubFormas
             {
                 TabPage newp = new TabPage();
                 newp.BackColor = Color.White;
-                newp.Text = Classes.InputBox.ShowDialog("Digite O nome", "Digite o nome da localização,Adm,Engenharia...");
+                newp.Text = Classes.InputBox.ShowDialog("Digite o nome", "Digite o nome da localização,Adm,Engenharia...");
                 MapTabControl.TabPages.Add(newp);
             }
             catch (Exception)

@@ -31,1103 +31,27 @@ namespace TNetworkAdministrator
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 5D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 6D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(200D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, "50,0,0");
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.ribbon1 = new System.Windows.Forms.Ribbon();
-            this.ribboninventario = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonscan = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonconfig = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonexit = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.Inventario = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
-            this.Scannear = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
-            this.Alertas = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.MapButton = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
-            this.Relatorios = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.Configuracoes = new System.Windows.Forms.RibbonButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.CharProblemas = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ChartMonitorados = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ChartStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.ConectivityStatus = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.StatusList = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.Status = new System.Windows.Forms.Label();
-            this.SystemName = new System.Windows.Forms.Label();
-            this.Ip = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.LastOnline = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
-            this.PingList = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.DiskList = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button22 = new System.Windows.Forms.Button();
-            this.CpuList = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
             this.ListImage = new System.Windows.Forms.ImageList(this.components);
-            this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CharProblemas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartMonitorados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartStatus)).BeginInit();
-            this.panel10.SuspendLayout();
-            this.ConectivityStatus.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.StatusList.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.LastOnline.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.PingList.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.DiskList.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.CpuList.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.BarPanel = new System.Windows.Forms.Panel();
+            this.altoButton15 = new AltoControls.AltoButton();
+            this.altoButton16 = new AltoControls.AltoButton();
+            this.altoButton13 = new AltoControls.AltoButton();
+            this.altoButton14 = new AltoControls.AltoButton();
+            this.altoButton11 = new AltoControls.AltoButton();
+            this.altoButton12 = new AltoControls.AltoButton();
+            this.altoButton9 = new AltoControls.AltoButton();
+            this.altoButton10 = new AltoControls.AltoButton();
+            this.altoButton7 = new AltoControls.AltoButton();
+            this.altoButton8 = new AltoControls.AltoButton();
+            this.altoButton5 = new AltoControls.AltoButton();
+            this.altoButton6 = new AltoControls.AltoButton();
+            this.altoButton3 = new AltoControls.AltoButton();
+            this.altoButton4 = new AltoControls.AltoButton();
+            this.altoButton2 = new AltoControls.AltoButton();
+            this.altoButton1 = new AltoControls.AltoButton();
+            this.PanelVisualizer = new System.Windows.Forms.Panel();
+            this.BarPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ribbon1
-            // 
-            this.ribbon1.CaptionBarVisible = false;
-            this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ribbon1.Location = new System.Drawing.Point(20, 30);
-            this.ribbon1.Minimized = false;
-            this.ribbon1.Name = "ribbon1";
-            // 
-            // 
-            // 
-            this.ribbon1.OrbDropDown.BorderRoundness = 8;
-            this.ribbon1.OrbDropDown.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribboninventario);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonscan);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonconfig);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonexit);
-            this.ribbon1.OrbDropDown.Name = "";
-            this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 248);
-            this.ribbon1.OrbDropDown.TabIndex = 0;
-            this.ribbon1.OrbImage = null;
-            this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2013;
-            this.ribbon1.OrbText = "Arquivo";
-            this.ribbon1.PanelCaptionHeight = 0;
-            this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(1420, 113);
-            this.ribbon1.TabIndex = 0;
-            this.ribbon1.Tabs.Add(this.ribbonTab1);
-            this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 2, 20, 0);
-            this.ribbon1.Text = "ribbon1";
-            this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
-            // 
-            // ribboninventario
-            // 
-            this.ribboninventario.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribboninventario.Image = ((System.Drawing.Image)(resources.GetObject("ribboninventario.Image")));
-            this.ribboninventario.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribboninventario.SmallImage")));
-            this.ribboninventario.Text = " Inventário";
-            // 
-            // ribbonscan
-            // 
-            this.ribbonscan.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonscan.Image = ((System.Drawing.Image)(resources.GetObject("ribbonscan.Image")));
-            this.ribbonscan.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonscan.SmallImage")));
-            this.ribbonscan.Text = "Scanear Rede";
-            // 
-            // ribbonconfig
-            // 
-            this.ribbonconfig.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonconfig.Image = ((System.Drawing.Image)(resources.GetObject("ribbonconfig.Image")));
-            this.ribbonconfig.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonconfig.SmallImage")));
-            this.ribbonconfig.Text = "Configurações";
-            // 
-            // ribbonexit
-            // 
-            this.ribbonexit.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonexit.Image = ((System.Drawing.Image)(resources.GetObject("ribbonexit.Image")));
-            this.ribbonexit.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonexit.SmallImage")));
-            this.ribbonexit.Text = "Sair";
-            // 
-            // ribbonTab1
-            // 
-            this.ribbonTab1.Panels.Add(this.ribbonPanel1);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel2);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel3);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel6);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel4);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab1.Text = "Gerenciamento";
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.Items.Add(this.Inventario);
-            this.ribbonPanel1.Text = "Inventario";
-            // 
-            // Inventario
-            // 
-            this.Inventario.Image = ((System.Drawing.Image)(resources.GetObject("Inventario.Image")));
-            this.Inventario.SmallImage = ((System.Drawing.Image)(resources.GetObject("Inventario.SmallImage")));
-            this.Inventario.Text = "Inventário";
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.Items.Add(this.Scannear);
-            this.ribbonPanel2.Text = "Scanear Rede";
-            // 
-            // Scannear
-            // 
-            this.Scannear.Image = ((System.Drawing.Image)(resources.GetObject("Scannear.Image")));
-            this.Scannear.SmallImage = ((System.Drawing.Image)(resources.GetObject("Scannear.SmallImage")));
-            this.Scannear.Text = "Scaneamento de Rede";
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.Items.Add(this.Alertas);
-            this.ribbonPanel3.Text = "ribbonPanel3";
-            // 
-            // Alertas
-            // 
-            this.Alertas.Image = ((System.Drawing.Image)(resources.GetObject("Alertas.Image")));
-            this.Alertas.SmallImage = ((System.Drawing.Image)(resources.GetObject("Alertas.SmallImage")));
-            this.Alertas.Text = "Alertas";
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.MapButton);
-            this.ribbonPanel6.Text = "ribbonPanel6";
-            // 
-            // MapButton
-            // 
-            this.MapButton.Image = ((System.Drawing.Image)(resources.GetObject("MapButton.Image")));
-            this.MapButton.SmallImage = ((System.Drawing.Image)(resources.GetObject("MapButton.SmallImage")));
-            this.MapButton.Text = "Mapa de Dispositivos";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.Items.Add(this.Relatorios);
-            this.ribbonPanel4.Text = "ribbonPanel4";
-            // 
-            // Relatorios
-            // 
-            this.Relatorios.Image = ((System.Drawing.Image)(resources.GetObject("Relatorios.Image")));
-            this.Relatorios.SmallImage = ((System.Drawing.Image)(resources.GetObject("Relatorios.SmallImage")));
-            this.Relatorios.Text = "Relatórios";
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.Configuracoes);
-            this.ribbonPanel5.Text = "ribbonPanel5";
-            // 
-            // Configuracoes
-            // 
-            this.Configuracoes.Image = ((System.Drawing.Image)(resources.GetObject("Configuracoes.Image")));
-            this.Configuracoes.SmallImage = ((System.Drawing.Image)(resources.GetObject("Configuracoes.SmallImage")));
-            this.Configuracoes.Text = "Configurações";
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.ConectivityStatus);
-            this.panel1.Controls.Add(this.StatusList);
-            this.panel1.Controls.Add(this.LastOnline);
-            this.panel1.Controls.Add(this.PingList);
-            this.panel1.Controls.Add(this.DiskList);
-            this.panel1.Controls.Add(this.CpuList);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(20, 143);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1420, 630);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.CharProblemas);
-            this.panel7.Controls.Add(this.ChartMonitorados);
-            this.panel7.Controls.Add(this.ChartStatus);
-            this.panel7.Controls.Add(this.panel10);
-            this.panel7.Location = new System.Drawing.Point(16, 17);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1363, 442);
-            this.panel7.TabIndex = 42;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
-            // 
-            // CharProblemas
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.CharProblemas.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.CharProblemas.Legends.Add(legend1);
-            this.CharProblemas.Location = new System.Drawing.Point(893, 66);
-            this.CharProblemas.Name = "CharProblemas";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Problems";
-            dataPoint1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataPoint1.LegendText = "Perca de Pacote";
-            dataPoint2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataPoint2.LegendText = "Offline";
-            dataPoint3.Color = System.Drawing.Color.SlateBlue;
-            dataPoint3.LegendText = "Uso da Rede Extremo";
-            dataPoint4.LegendText = "Uso da Cpu Extremo";
-            dataPoint5.LegendText = "Espaço em Disco";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            this.CharProblemas.Series.Add(series1);
-            this.CharProblemas.Size = new System.Drawing.Size(454, 336);
-            this.CharProblemas.TabIndex = 9;
-            this.CharProblemas.Text = "chart3";
-            title1.Name = "Principais Problemas";
-            title1.Text = "Principais Problemas";
-            this.CharProblemas.Titles.Add(title1);
-            // 
-            // ChartMonitorados
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.ChartMonitorados.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ChartMonitorados.Legends.Add(legend2);
-            this.ChartMonitorados.Location = new System.Drawing.Point(453, 67);
-            this.ChartMonitorados.Name = "ChartMonitorados";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.Legend = "Legend1";
-            series2.Name = "DeviceMonitor";
-            dataPoint6.Color = System.Drawing.Color.SteelBlue;
-            dataPoint6.LegendText = "Computadores";
-            dataPoint7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataPoint7.LabelForeColor = System.Drawing.Color.Black;
-            dataPoint7.LegendText = "Impressora";
-            dataPoint8.Color = System.Drawing.Color.Maroon;
-            dataPoint8.LegendText = "Servidores";
-            dataPoint9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataPoint9.LegendText = "Switchs";
-            dataPoint10.Color = System.Drawing.Color.Green;
-            dataPoint10.LegendText = "Cameras";
-            dataPoint11.Color = System.Drawing.Color.MediumAquamarine;
-            dataPoint11.LegendText = "Wifi";
-            dataPoint12.Color = System.Drawing.Color.SeaGreen;
-            dataPoint12.LabelForeColor = System.Drawing.Color.Black;
-            dataPoint12.LegendText = "Ips";
-            series2.Points.Add(dataPoint6);
-            series2.Points.Add(dataPoint7);
-            series2.Points.Add(dataPoint8);
-            series2.Points.Add(dataPoint9);
-            series2.Points.Add(dataPoint10);
-            series2.Points.Add(dataPoint11);
-            series2.Points.Add(dataPoint12);
-            this.ChartMonitorados.Series.Add(series2);
-            this.ChartMonitorados.Size = new System.Drawing.Size(434, 325);
-            this.ChartMonitorados.TabIndex = 8;
-            this.ChartMonitorados.Text = "chart2";
-            title2.Name = "Title1";
-            title2.Text = "Dispositivos Monitorados";
-            this.ChartMonitorados.Titles.Add(title2);
-            // 
-            // ChartStatus
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.ChartStatus.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.ChartStatus.Legends.Add(legend3);
-            this.ChartStatus.Location = new System.Drawing.Point(3, 68);
-            this.ChartStatus.Name = "ChartStatus";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.Legend = "Legend1";
-            series3.Name = "Online";
-            dataPoint13.Color = System.Drawing.Color.Green;
-            dataPoint13.IsValueShownAsLabel = true;
-            dataPoint13.Label = "";
-            dataPoint13.LegendText = "Online";
-            dataPoint14.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataPoint14.IsValueShownAsLabel = true;
-            dataPoint14.IsVisibleInLegend = true;
-            dataPoint14.Label = "";
-            dataPoint14.LegendText = "Offline";
-            dataPoint15.Color = System.Drawing.Color.Yellow;
-            dataPoint15.IsValueShownAsLabel = true;
-            dataPoint15.Label = "";
-            dataPoint15.LegendText = "Desconhecido";
-            dataPoint16.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataPoint16.IsValueShownAsLabel = true;
-            dataPoint16.Label = "";
-            dataPoint16.LegendText = "Não Testado";
-            series3.Points.Add(dataPoint13);
-            series3.Points.Add(dataPoint14);
-            series3.Points.Add(dataPoint15);
-            series3.Points.Add(dataPoint16);
-            series3.YValuesPerPoint = 3;
-            this.ChartStatus.Series.Add(series3);
-            this.ChartStatus.Size = new System.Drawing.Size(434, 325);
-            this.ChartStatus.TabIndex = 7;
-            this.ChartStatus.Text = "chart1";
-            title3.Name = "Title1";
-            title3.Text = "Status Dispositivos";
-            this.ChartStatus.Titles.Add(title3);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.button12);
-            this.panel10.Controls.Add(this.button11);
-            this.panel10.Location = new System.Drawing.Point(3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(155, 33);
-            this.panel10.TabIndex = 3;
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(135, 33);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Relatório por Gráfico";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(135, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(20, 33);
-            this.button11.TabIndex = 1;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // ConectivityStatus
-            // 
-            this.ConectivityStatus.AutoScroll = true;
-            this.ConectivityStatus.BackColor = System.Drawing.Color.Transparent;
-            this.ConectivityStatus.Controls.Add(this.panel6);
-            this.ConectivityStatus.Location = new System.Drawing.Point(13, 475);
-            this.ConectivityStatus.Name = "ConectivityStatus";
-            this.ConectivityStatus.Size = new System.Drawing.Size(1387, 408);
-            this.ConectivityStatus.TabIndex = 41;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.panel20);
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.panel18);
-            this.panel6.Controls.Add(this.panel17);
-            this.panel6.Controls.Add(this.panel14);
-            this.panel6.Controls.Add(this.button10);
-            this.panel6.Controls.Add(this.button9);
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1347, 35);
-            this.panel6.TabIndex = 2;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(495, 9);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 16);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "Não Testado";
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Gray;
-            this.panel20.Location = new System.Drawing.Point(464, 5);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(25, 25);
-            this.panel20.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(390, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 16);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Devagar";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(261, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 16);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Desconectado";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(184, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 16);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Bom";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel18.Location = new System.Drawing.Point(358, 5);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(25, 25);
-            this.panel18.TabIndex = 4;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.DarkRed;
-            this.panel17.Location = new System.Drawing.Point(230, 5);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(25, 25);
-            this.panel17.TabIndex = 3;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel14.Location = new System.Drawing.Point(153, 5);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(25, 25);
-            this.panel14.TabIndex = 2;
-            // 
-            // button10
-            // 
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(1327, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(20, 35);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(135, 35);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "Status de Conectividade";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // StatusList
-            // 
-            this.StatusList.AutoScroll = true;
-            this.StatusList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StatusList.Controls.Add(this.panel9);
-            this.StatusList.Controls.Add(this.panel11);
-            this.StatusList.Location = new System.Drawing.Point(29, 911);
-            this.StatusList.Name = "StatusList";
-            this.StatusList.Size = new System.Drawing.Size(322, 338);
-            this.StatusList.TabIndex = 40;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.button15);
-            this.panel9.Controls.Add(this.button16);
-            this.panel9.Location = new System.Drawing.Point(3, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(287, 33);
-            this.panel9.TabIndex = 0;
-            // 
-            // button15
-            // 
-            this.button15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(267, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(20, 33);
-            this.button15.TabIndex = 1;
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Location = new System.Drawing.Point(0, 0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(179, 33);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "Dispositivos por status";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.Status);
-            this.panel11.Controls.Add(this.SystemName);
-            this.panel11.Controls.Add(this.Ip);
-            this.panel11.Controls.Add(this.button17);
-            this.panel11.Location = new System.Drawing.Point(3, 42);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(335, 21);
-            this.panel11.TabIndex = 1;
-            // 
-            // Status
-            // 
-            this.Status.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Status.Font = new System.Drawing.Font("Calibri", 10F);
-            this.Status.ForeColor = System.Drawing.Color.Black;
-            this.Status.Location = new System.Drawing.Point(255, 0);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(99, 21);
-            this.Status.TabIndex = 34;
-            this.Status.Text = "Status:";
-            // 
-            // SystemName
-            // 
-            this.SystemName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SystemName.Font = new System.Drawing.Font("Calibri", 10F);
-            this.SystemName.ForeColor = System.Drawing.Color.Black;
-            this.SystemName.Location = new System.Drawing.Point(152, 0);
-            this.SystemName.Name = "SystemName";
-            this.SystemName.Size = new System.Drawing.Size(103, 21);
-            this.SystemName.TabIndex = 33;
-            this.SystemName.Text = "Nome:";
-            // 
-            // Ip
-            // 
-            this.Ip.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Ip.Font = new System.Drawing.Font("Calibri", 10F);
-            this.Ip.ForeColor = System.Drawing.Color.Black;
-            this.Ip.Location = new System.Drawing.Point(47, 0);
-            this.Ip.Name = "Ip";
-            this.Ip.Size = new System.Drawing.Size(105, 21);
-            this.Ip.TabIndex = 32;
-            this.Ip.Text = "Ip:";
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.Transparent;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Location = new System.Drawing.Point(0, 0);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(47, 21);
-            this.button17.TabIndex = 31;
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // LastOnline
-            // 
-            this.LastOnline.AutoScroll = true;
-            this.LastOnline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LastOnline.Controls.Add(this.panel5);
-            this.LastOnline.Controls.Add(this.panel12);
-            this.LastOnline.Location = new System.Drawing.Point(374, 911);
-            this.LastOnline.Name = "LastOnline";
-            this.LastOnline.Size = new System.Drawing.Size(322, 338);
-            this.LastOnline.TabIndex = 34;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button7);
-            this.panel5.Controls.Add(this.button8);
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(308, 33);
-            this.panel5.TabIndex = 0;
-            // 
-            // button7
-            // 
-            this.button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(288, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(20, 33);
-            this.button7.TabIndex = 1;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(179, 33);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Top 10 por Ultima Vez Online";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.label1);
-            this.panel12.Controls.Add(this.label2);
-            this.panel12.Controls.Add(this.label3);
-            this.panel12.Controls.Add(this.button18);
-            this.panel12.Location = new System.Drawing.Point(3, 42);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(335, 21);
-            this.panel12.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(255, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 21);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Horário:";
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(152, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 21);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Nome:";
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 21);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Ip:";
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Transparent;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(0, 0);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(47, 21);
-            this.button18.TabIndex = 31;
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // PingList
-            // 
-            this.PingList.AutoScroll = true;
-            this.PingList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PingList.Controls.Add(this.panel4);
-            this.PingList.Controls.Add(this.panel13);
-            this.PingList.Location = new System.Drawing.Point(726, 911);
-            this.PingList.Name = "PingList";
-            this.PingList.Size = new System.Drawing.Size(322, 338);
-            this.PingList.TabIndex = 33;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(308, 33);
-            this.panel4.TabIndex = 1;
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(288, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(20, 33);
-            this.button5.TabIndex = 1;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(179, 33);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Top 10 por Pior Píng";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label4);
-            this.panel13.Controls.Add(this.label5);
-            this.panel13.Controls.Add(this.label6);
-            this.panel13.Controls.Add(this.button19);
-            this.panel13.Location = new System.Drawing.Point(3, 42);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(335, 21);
-            this.panel13.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(255, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 21);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Ping:";
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(152, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 21);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Nome:";
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(47, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 21);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Ip:";
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.Transparent;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Location = new System.Drawing.Point(0, 0);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(47, 21);
-            this.button19.TabIndex = 31;
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // DiskList
-            // 
-            this.DiskList.AutoScroll = true;
-            this.DiskList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DiskList.Controls.Add(this.panel3);
-            this.DiskList.Controls.Add(this.panel16);
-            this.DiskList.Location = new System.Drawing.Point(1067, 1271);
-            this.DiskList.Name = "DiskList";
-            this.DiskList.Size = new System.Drawing.Size(322, 365);
-            this.DiskList.TabIndex = 32;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(308, 33);
-            this.panel3.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(288, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(20, 33);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(179, 33);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Top 10 por Uso Total do Disco";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.label13);
-            this.panel16.Controls.Add(this.label14);
-            this.panel16.Controls.Add(this.label15);
-            this.panel16.Controls.Add(this.button22);
-            this.panel16.Location = new System.Drawing.Point(3, 42);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(335, 21);
-            this.panel16.TabIndex = 3;
-            // 
-            // label13
-            // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(255, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 21);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Espaço Total em Disco:";
-            // 
-            // label14
-            // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label14.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(152, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 21);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Nome:";
-            // 
-            // label15
-            // 
-            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label15.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(47, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 21);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "Ip:";
-            // 
-            // button22
-            // 
-            this.button22.BackColor = System.Drawing.Color.Transparent;
-            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button22.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button22.FlatAppearance.BorderSize = 0;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Location = new System.Drawing.Point(0, 0);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(47, 21);
-            this.button22.TabIndex = 31;
-            this.button22.UseVisualStyleBackColor = false;
-            // 
-            // CpuList
-            // 
-            this.CpuList.AutoScroll = true;
-            this.CpuList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CpuList.Controls.Add(this.panel2);
-            this.CpuList.Controls.Add(this.panel15);
-            this.CpuList.Location = new System.Drawing.Point(1067, 911);
-            this.CpuList.Name = "CpuList";
-            this.CpuList.Size = new System.Drawing.Size(322, 338);
-            this.CpuList.TabIndex = 31;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 33);
-            this.panel2.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(288, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(20, 33);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Top 10 por Uso da CPU";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label10);
-            this.panel15.Controls.Add(this.label11);
-            this.panel15.Controls.Add(this.label12);
-            this.panel15.Controls.Add(this.button21);
-            this.panel15.Location = new System.Drawing.Point(3, 42);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(335, 21);
-            this.panel15.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(255, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 21);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Uso da CPU:";
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label11.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(152, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 21);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Nome:";
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(47, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 21);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Ip:";
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.Transparent;
-            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Location = new System.Drawing.Point(0, 0);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(47, 21);
-            this.button21.TabIndex = 31;
-            this.button21.UseVisualStyleBackColor = false;
             // 
             // ListImage
             // 
@@ -1140,135 +64,417 @@ namespace TNetworkAdministrator
             this.ListImage.Images.SetKeyName(4, "e14894d1b443ee21cbb0e6f94eb71b71.png");
             this.ListImage.Images.SetKeyName(5, "wireless-access-point-icon-29.jpg");
             // 
+            // BarPanel
+            // 
+            this.BarPanel.Controls.Add(this.altoButton15);
+            this.BarPanel.Controls.Add(this.altoButton16);
+            this.BarPanel.Controls.Add(this.altoButton13);
+            this.BarPanel.Controls.Add(this.altoButton14);
+            this.BarPanel.Controls.Add(this.altoButton11);
+            this.BarPanel.Controls.Add(this.altoButton12);
+            this.BarPanel.Controls.Add(this.altoButton9);
+            this.BarPanel.Controls.Add(this.altoButton10);
+            this.BarPanel.Controls.Add(this.altoButton7);
+            this.BarPanel.Controls.Add(this.altoButton8);
+            this.BarPanel.Controls.Add(this.altoButton5);
+            this.BarPanel.Controls.Add(this.altoButton6);
+            this.BarPanel.Controls.Add(this.altoButton3);
+            this.BarPanel.Controls.Add(this.altoButton4);
+            this.BarPanel.Controls.Add(this.altoButton2);
+            this.BarPanel.Controls.Add(this.altoButton1);
+            this.BarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BarPanel.Location = new System.Drawing.Point(20, 60);
+            this.BarPanel.Name = "BarPanel";
+            this.BarPanel.Size = new System.Drawing.Size(97, 713);
+            this.BarPanel.TabIndex = 2;
+            // 
+            // altoButton15
+            // 
+            this.altoButton15.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton15.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton15.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton15.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton15.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton15.ForeColor = System.Drawing.Color.White;
+            this.altoButton15.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton15.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton15.Location = new System.Drawing.Point(0, 310);
+            this.altoButton15.Name = "altoButton15";
+            this.altoButton15.Radius = 10;
+            this.altoButton15.Size = new System.Drawing.Size(97, 10);
+            this.altoButton15.Stroke = false;
+            this.altoButton15.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton15.TabIndex = 15;
+            this.altoButton15.Transparency = false;
+            // 
+            // altoButton16
+            // 
+            this.altoButton16.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton16.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton16.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton16.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton16.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton16.ForeColor = System.Drawing.Color.White;
+            this.altoButton16.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton16.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton16.Location = new System.Drawing.Point(0, 280);
+            this.altoButton16.Name = "altoButton16";
+            this.altoButton16.Radius = 10;
+            this.altoButton16.Size = new System.Drawing.Size(97, 30);
+            this.altoButton16.Stroke = false;
+            this.altoButton16.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton16.TabIndex = 14;
+            this.altoButton16.Text = "Sair";
+            this.altoButton16.Transparency = false;
+            this.altoButton16.Click += new System.EventHandler(this.altoButton16_Click);
+            // 
+            // altoButton13
+            // 
+            this.altoButton13.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton13.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton13.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton13.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton13.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton13.ForeColor = System.Drawing.Color.White;
+            this.altoButton13.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton13.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton13.Location = new System.Drawing.Point(0, 270);
+            this.altoButton13.Name = "altoButton13";
+            this.altoButton13.Radius = 10;
+            this.altoButton13.Size = new System.Drawing.Size(97, 10);
+            this.altoButton13.Stroke = false;
+            this.altoButton13.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton13.TabIndex = 13;
+            this.altoButton13.Transparency = false;
+            this.altoButton13.Visible = false;
+            // 
+            // altoButton14
+            // 
+            this.altoButton14.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton14.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton14.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton14.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton14.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton14.ForeColor = System.Drawing.Color.White;
+            this.altoButton14.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton14.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton14.Location = new System.Drawing.Point(0, 240);
+            this.altoButton14.Name = "altoButton14";
+            this.altoButton14.Radius = 10;
+            this.altoButton14.Size = new System.Drawing.Size(97, 30);
+            this.altoButton14.Stroke = false;
+            this.altoButton14.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton14.TabIndex = 12;
+            this.altoButton14.Text = "Configurações";
+            this.altoButton14.Transparency = false;
+            // 
+            // altoButton11
+            // 
+            this.altoButton11.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton11.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton11.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton11.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton11.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton11.ForeColor = System.Drawing.Color.White;
+            this.altoButton11.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton11.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton11.Location = new System.Drawing.Point(0, 230);
+            this.altoButton11.Name = "altoButton11";
+            this.altoButton11.Radius = 10;
+            this.altoButton11.Size = new System.Drawing.Size(97, 10);
+            this.altoButton11.Stroke = false;
+            this.altoButton11.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton11.TabIndex = 11;
+            this.altoButton11.Transparency = false;
+            this.altoButton11.Visible = false;
+            // 
+            // altoButton12
+            // 
+            this.altoButton12.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton12.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton12.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton12.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton12.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton12.ForeColor = System.Drawing.Color.White;
+            this.altoButton12.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton12.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton12.Location = new System.Drawing.Point(0, 200);
+            this.altoButton12.Name = "altoButton12";
+            this.altoButton12.Radius = 10;
+            this.altoButton12.Size = new System.Drawing.Size(97, 30);
+            this.altoButton12.Stroke = false;
+            this.altoButton12.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton12.TabIndex = 10;
+            this.altoButton12.Text = "Alertas";
+            this.altoButton12.Transparency = false;
+            // 
+            // altoButton9
+            // 
+            this.altoButton9.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton9.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton9.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton9.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton9.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton9.ForeColor = System.Drawing.Color.White;
+            this.altoButton9.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton9.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton9.Location = new System.Drawing.Point(0, 190);
+            this.altoButton9.Name = "altoButton9";
+            this.altoButton9.Radius = 10;
+            this.altoButton9.Size = new System.Drawing.Size(97, 10);
+            this.altoButton9.Stroke = false;
+            this.altoButton9.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton9.TabIndex = 9;
+            this.altoButton9.Transparency = false;
+            this.altoButton9.Visible = false;
+            // 
+            // altoButton10
+            // 
+            this.altoButton10.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton10.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton10.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton10.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton10.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton10.ForeColor = System.Drawing.Color.White;
+            this.altoButton10.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton10.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton10.Location = new System.Drawing.Point(0, 160);
+            this.altoButton10.Name = "altoButton10";
+            this.altoButton10.Radius = 10;
+            this.altoButton10.Size = new System.Drawing.Size(97, 30);
+            this.altoButton10.Stroke = false;
+            this.altoButton10.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton10.TabIndex = 8;
+            this.altoButton10.Text = "Relatórios";
+            this.altoButton10.Transparency = false;
+            // 
+            // altoButton7
+            // 
+            this.altoButton7.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton7.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton7.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton7.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton7.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton7.ForeColor = System.Drawing.Color.White;
+            this.altoButton7.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton7.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton7.Location = new System.Drawing.Point(0, 150);
+            this.altoButton7.Name = "altoButton7";
+            this.altoButton7.Radius = 10;
+            this.altoButton7.Size = new System.Drawing.Size(97, 10);
+            this.altoButton7.Stroke = false;
+            this.altoButton7.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton7.TabIndex = 7;
+            this.altoButton7.Transparency = false;
+            this.altoButton7.Visible = false;
+            // 
+            // altoButton8
+            // 
+            this.altoButton8.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton8.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton8.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton8.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton8.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton8.ForeColor = System.Drawing.Color.White;
+            this.altoButton8.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton8.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton8.Location = new System.Drawing.Point(0, 120);
+            this.altoButton8.Name = "altoButton8";
+            this.altoButton8.Radius = 10;
+            this.altoButton8.Size = new System.Drawing.Size(97, 30);
+            this.altoButton8.Stroke = false;
+            this.altoButton8.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton8.TabIndex = 6;
+            this.altoButton8.Text = "Mapa";
+            this.altoButton8.Transparency = false;
+            // 
+            // altoButton5
+            // 
+            this.altoButton5.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton5.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton5.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton5.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton5.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton5.ForeColor = System.Drawing.Color.White;
+            this.altoButton5.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton5.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton5.Location = new System.Drawing.Point(0, 110);
+            this.altoButton5.Name = "altoButton5";
+            this.altoButton5.Radius = 10;
+            this.altoButton5.Size = new System.Drawing.Size(97, 10);
+            this.altoButton5.Stroke = false;
+            this.altoButton5.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton5.TabIndex = 5;
+            this.altoButton5.Transparency = false;
+            this.altoButton5.Visible = false;
+            // 
+            // altoButton6
+            // 
+            this.altoButton6.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton6.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton6.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton6.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton6.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton6.ForeColor = System.Drawing.Color.White;
+            this.altoButton6.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton6.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton6.Location = new System.Drawing.Point(0, 80);
+            this.altoButton6.Name = "altoButton6";
+            this.altoButton6.Radius = 10;
+            this.altoButton6.Size = new System.Drawing.Size(97, 30);
+            this.altoButton6.Stroke = false;
+            this.altoButton6.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton6.TabIndex = 4;
+            this.altoButton6.Text = "Scanner";
+            this.altoButton6.Transparency = false;
+            // 
+            // altoButton3
+            // 
+            this.altoButton3.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton3.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton3.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton3.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton3.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton3.ForeColor = System.Drawing.Color.White;
+            this.altoButton3.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton3.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton3.Location = new System.Drawing.Point(0, 70);
+            this.altoButton3.Name = "altoButton3";
+            this.altoButton3.Radius = 10;
+            this.altoButton3.Size = new System.Drawing.Size(97, 10);
+            this.altoButton3.Stroke = false;
+            this.altoButton3.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton3.TabIndex = 3;
+            this.altoButton3.Transparency = false;
+            this.altoButton3.Visible = false;
+            // 
+            // altoButton4
+            // 
+            this.altoButton4.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton4.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton4.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton4.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton4.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton4.ForeColor = System.Drawing.Color.White;
+            this.altoButton4.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton4.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton4.Location = new System.Drawing.Point(0, 40);
+            this.altoButton4.Name = "altoButton4";
+            this.altoButton4.Radius = 10;
+            this.altoButton4.Size = new System.Drawing.Size(97, 30);
+            this.altoButton4.Stroke = false;
+            this.altoButton4.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton4.TabIndex = 2;
+            this.altoButton4.Text = "Inventário";
+            this.altoButton4.Transparency = false;
+            this.altoButton4.Click += new System.EventHandler(this.altoButton4_Click);
+            // 
+            // altoButton2
+            // 
+            this.altoButton2.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton2.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton2.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton2.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton2.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton2.ForeColor = System.Drawing.Color.White;
+            this.altoButton2.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton2.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton2.Location = new System.Drawing.Point(0, 30);
+            this.altoButton2.Name = "altoButton2";
+            this.altoButton2.Radius = 10;
+            this.altoButton2.Size = new System.Drawing.Size(97, 10);
+            this.altoButton2.Stroke = false;
+            this.altoButton2.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton2.TabIndex = 1;
+            this.altoButton2.Transparency = false;
+            this.altoButton2.Visible = false;
+            // 
+            // altoButton1
+            // 
+            this.altoButton1.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.altoButton1.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton1.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.altoButton1.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.altoButton1.ForeColor = System.Drawing.Color.White;
+            this.altoButton1.Inactive1 = System.Drawing.Color.Transparent;
+            this.altoButton1.Inactive2 = System.Drawing.Color.Transparent;
+            this.altoButton1.Location = new System.Drawing.Point(0, 0);
+            this.altoButton1.Name = "altoButton1";
+            this.altoButton1.Radius = 10;
+            this.altoButton1.Size = new System.Drawing.Size(97, 30);
+            this.altoButton1.Stroke = false;
+            this.altoButton1.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton1.TabIndex = 0;
+            this.altoButton1.Text = "Inicio";
+            this.altoButton1.Transparency = false;
+            this.altoButton1.Click += new System.EventHandler(this.altoButton1_Click);
+            // 
+            // PanelVisualizer
+            // 
+            this.PanelVisualizer.AutoScroll = true;
+            this.PanelVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelVisualizer.Location = new System.Drawing.Point(117, 60);
+            this.PanelVisualizer.Name = "PanelVisualizer";
+            this.PanelVisualizer.Size = new System.Drawing.Size(1323, 713);
+            this.PanelVisualizer.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1460, 793);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ribbon1);
-            this.DisplayHeader = false;
+            this.Controls.Add(this.PanelVisualizer);
+            this.Controls.Add(this.BarPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.ShadowType = Wisder.W3Common.WMetroControl.Forms.MetroFormShadowType.SystemShadow;
-            this.Text = "Form1";
+            this.Text = "Tnetwork Administrator";
+            this.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CharProblemas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartMonitorados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartStatus)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.ConectivityStatus.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.StatusList.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.LastOnline.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.PingList.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.DiskList.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.CpuList.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
+            this.BarPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Ribbon ribbon1;
-        private System.Windows.Forms.RibbonOrbMenuItem ribboninventario;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonscan;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonconfig;
-        private System.Windows.Forms.RibbonTab ribbonTab1;
-        private System.Windows.Forms.RibbonPanel ribbonPanel1;
-        private System.Windows.Forms.RibbonPanel ribbonPanel2;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonexit;
-        private System.Windows.Forms.RibbonButton Inventario;
-        private System.Windows.Forms.RibbonButton Scannear;
-        private System.Windows.Forms.RibbonPanel ribbonPanel3;
-        private System.Windows.Forms.RibbonButton Alertas;
-        private System.Windows.Forms.RibbonPanel ribbonPanel4;
-        private System.Windows.Forms.RibbonButton Relatorios;
-        private System.Windows.Forms.RibbonPanel ribbonPanel5;
-        private System.Windows.Forms.RibbonButton Configuracoes;
-        private System.Windows.Forms.Panel panel1;
-        private FlowLayoutPanel DiskList;
-        private FlowLayoutPanel CpuList;
-        private Panel panel2;
-        private Button button2;
-        private Button button1;
-        private Panel panel3;
-        private Button button3;
-        private Button button4;
-        private FlowLayoutPanel LastOnline;
-        private Panel panel5;
-        private Button button7;
-        private Button button8;
-        private FlowLayoutPanel PingList;
-        private Panel panel4;
-        private Button button5;
-        private Button button6;
-        private FlowLayoutPanel StatusList;
-        private Panel panel9;
-        private Button button15;
-        private Button button16;
-        private FlowLayoutPanel ConectivityStatus;
-        private Panel panel6;
-        private Button button10;
-        private Button button9;
-        private Panel panel7;
-        private Panel panel10;
-        private Button button11;
-        private Button button12;
-        private System.Windows.Forms.DataVisualization.Charting.Chart CharProblemas;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ChartMonitorados;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ChartStatus;
         private System.ComponentModel.IContainer components;
-        private Panel panel11;
-        public Label Status;
-        public Label SystemName;
-        public Label Ip;
-        private Button button17;
-        private Panel panel12;
-        public Label label1;
-        public Label label2;
-        public Label label3;
-        private Button button18;
-        private Panel panel13;
-        public Label label4;
-        public Label label5;
-        public Label label6;
-        private Button button19;
-        private Panel panel15;
-        public Label label10;
-        public Label label11;
-        public Label label12;
-        private Button button21;
-        private Panel panel16;
-        public Label label13;
-        public Label label14;
-        public Label label15;
-        private Button button22;
-        private Label label7;
-        private Panel panel18;
-        private Panel panel17;
-        private Panel panel14;
-        private Label label17;
-        private Panel panel20;
-        private Label label9;
-        private Label label8;
         public ImageList ListImage;
-        private RibbonPanel ribbonPanel6;
-        private RibbonButton MapButton;
+        private Panel BarPanel;
+        private AltoControls.AltoButton altoButton11;
+        private AltoControls.AltoButton altoButton12;
+        private AltoControls.AltoButton altoButton9;
+        private AltoControls.AltoButton altoButton10;
+        private AltoControls.AltoButton altoButton7;
+        private AltoControls.AltoButton altoButton8;
+        private AltoControls.AltoButton altoButton5;
+        private AltoControls.AltoButton altoButton6;
+        private AltoControls.AltoButton altoButton3;
+        private AltoControls.AltoButton altoButton4;
+        private AltoControls.AltoButton altoButton2;
+        private AltoControls.AltoButton altoButton1;
+        private AltoControls.AltoButton altoButton15;
+        private AltoControls.AltoButton altoButton16;
+        private AltoControls.AltoButton altoButton13;
+        private AltoControls.AltoButton altoButton14;
+        private Panel PanelVisualizer;
     }
 }
 

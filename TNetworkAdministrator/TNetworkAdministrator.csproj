@@ -117,6 +117,12 @@
     <Compile Include="Classes\Type.cs" />
     <Compile Include="Classes\Warning.cs" />
     <Compile Include="Classes\WarningType.cs" />
+    <Compile Include="Controls\ConfigutacoesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConfigutacoesControl.Designer.cs">
+      <DependentUpon>ConfigutacoesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Device.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,18 @@
     </Compile>
     <Compile Include="Controls\DeviceStatusControl.Designer.cs">
       <DependentUpon>DeviceStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InicioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InicioControl.Designer.cs">
+      <DependentUpon>InicioControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InventoryControl.Designer.cs">
+      <DependentUpon>InventoryControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MapControl.cs">
       <SubType>UserControl</SubType>
@@ -167,12 +185,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubFormas\Configuracoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormas\Configuracoes.Designer.cs">
-      <DependentUpon>Configuracoes.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubFormas\DeviceEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,12 +202,6 @@
     </Compile>
     <Compile Include="SubFormas\ImageChoose.Designer.cs">
       <DependentUpon>ImageChoose.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubFormas\Inventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormas\Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="SubFormas\Map.cs">
       <SubType>Form</SubType>
@@ -233,6 +239,9 @@
     <Compile Include="SubFormas\Warnings.Designer.cs">
       <DependentUpon>Warnings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\ConfigutacoesControl.resx">
+      <DependentUpon>ConfigutacoesControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Device.resx">
       <DependentUpon>Device.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +253,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DeviceStatusControl.resx">
       <DependentUpon>DeviceStatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InicioControl.resx">
+      <DependentUpon>InicioControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InventoryControl.resx">
+      <DependentUpon>InventoryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MapControl.resx">
       <DependentUpon>MapControl.cs</DependentUpon>
@@ -267,9 +282,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SubFormas\Configuracoes.resx">
-      <DependentUpon>Configuracoes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\DeviceEdit.resx">
       <DependentUpon>DeviceEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,9 +290,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\ImageChoose.resx">
       <DependentUpon>ImageChoose.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubFormas\Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\Map.resx">
       <DependentUpon>Map.cs</DependentUpon>

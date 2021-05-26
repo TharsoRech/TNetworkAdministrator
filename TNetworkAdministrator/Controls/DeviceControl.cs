@@ -10,28 +10,32 @@ using System.Windows.Forms;
 namespace TNetworkAdministrator.Controls
 {
     public partial class DeviceControl : UserControl
+
     {
-        public DeviceControl(String statusText,Classes.Status status)
+
+
+        public DeviceControl(String statusText, Classes.Status status)
 
         {
+
             InitializeComponent();
             StatusText.Text = statusText;
-            if(status == Classes.Status.Good) 
+            if (status == Classes.Status.Good)
             {
-                Backbackground.Inactive1= Color.DarkGreen;
+                Backbackground.Inactive1 = Color.DarkGreen;
                 return;
             }
             if (status == Classes.Status.Slow)
             {
                 Backbackground.Inactive1 = Color.Goldenrod;
-              Image1.Image = imageList1.Images[1];
+                Image1.Image = imageList1.Images[1];
 
                 return;
             }
             if (status == Classes.Status.Unreacheable)
             {
                 Backbackground.Inactive1 = Color.DarkRed;
-               Image1.Image = imageList1.Images[2];
+                Image1.Image = imageList1.Images[2];
                 return;
             }
             if (status == Classes.Status.NotTested)
@@ -41,11 +45,15 @@ namespace TNetworkAdministrator.Controls
                 return;
             }
 
+
+
         }
 
+    
         private void Image1_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
