@@ -31,7 +31,6 @@ namespace TNetworkAdministrator.SubFormas
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageChoose));
             this.DeviceCheck = new System.Windows.Forms.CheckBox();
             this.ServerCheck = new System.Windows.Forms.CheckBox();
@@ -42,13 +41,13 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton2 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.SaveButton = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.LinkCheck = new System.Windows.Forms.CheckBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // DeviceCheck
             // 
             this.DeviceCheck.AutoSize = true;
             this.DeviceCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DeviceCheck.ForeColor = System.Drawing.Color.White;
             this.DeviceCheck.Location = new System.Drawing.Point(27, 76);
             this.DeviceCheck.Name = "DeviceCheck";
             this.DeviceCheck.Size = new System.Drawing.Size(77, 17);
@@ -60,6 +59,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.ServerCheck.AutoSize = true;
             this.ServerCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ServerCheck.ForeColor = System.Drawing.Color.White;
             this.ServerCheck.Location = new System.Drawing.Point(136, 76);
             this.ServerCheck.Name = "ServerCheck";
             this.ServerCheck.Size = new System.Drawing.Size(65, 17);
@@ -71,6 +71,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.ComputerCheck.AutoSize = true;
             this.ComputerCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ComputerCheck.ForeColor = System.Drawing.Color.White;
             this.ComputerCheck.Location = new System.Drawing.Point(27, 122);
             this.ComputerCheck.Name = "ComputerCheck";
             this.ComputerCheck.Size = new System.Drawing.Size(83, 17);
@@ -82,6 +83,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.PrinterCheck.AutoSize = true;
             this.PrinterCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PrinterCheck.ForeColor = System.Drawing.Color.White;
             this.PrinterCheck.Location = new System.Drawing.Point(136, 122);
             this.PrinterCheck.Name = "PrinterCheck";
             this.PrinterCheck.Size = new System.Drawing.Size(77, 17);
@@ -93,6 +95,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.WifiCheck.AutoSize = true;
             this.WifiCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.WifiCheck.ForeColor = System.Drawing.Color.White;
             this.WifiCheck.Location = new System.Drawing.Point(27, 171);
             this.WifiCheck.Name = "WifiCheck";
             this.WifiCheck.Size = new System.Drawing.Size(44, 17);
@@ -104,6 +107,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.SwitchCheck.AutoSize = true;
             this.SwitchCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SwitchCheck.ForeColor = System.Drawing.Color.White;
             this.SwitchCheck.Location = new System.Drawing.Point(136, 171);
             this.SwitchCheck.Name = "SwitchCheck";
             this.SwitchCheck.Size = new System.Drawing.Size(58, 17);
@@ -139,22 +143,13 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.LinkCheck.AutoSize = true;
             this.LinkCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LinkCheck.ForeColor = System.Drawing.Color.White;
             this.LinkCheck.Location = new System.Drawing.Point(27, 211);
             this.LinkCheck.Name = "LinkCheck";
             this.LinkCheck.Size = new System.Drawing.Size(46, 17);
             this.LinkCheck.TabIndex = 32;
             this.LinkCheck.Text = "Link";
             this.LinkCheck.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "DefaultDevice.png");
-            this.imageList1.Images.SetKeyName(1, "ComputerImage.png");
-            this.imageList1.Images.SetKeyName(2, "PrinterImage.png");
-            this.imageList1.Images.SetKeyName(3, "Switch.png");
-            this.imageList1.Images.SetKeyName(4, "LinkImage.png");
             // 
             // ImageChoose
             // 
@@ -173,6 +168,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ImageChoose";
             this.Text = "Escolher Imagens";
+            this.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.ImageChoose_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,6 +186,5 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton2;
         public Wisder.W3Common.WMetroControl.Controls.MetroButton SaveButton;
         private System.Windows.Forms.CheckBox LinkCheck;
-        public System.Windows.Forms.ImageList imageList1;
     }
 }

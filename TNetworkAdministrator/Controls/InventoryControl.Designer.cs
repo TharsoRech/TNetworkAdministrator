@@ -140,6 +140,7 @@ namespace TNetworkAdministrator.Controls
             this.NameChoose.Name = "NameChoose";
             this.NameChoose.Size = new System.Drawing.Size(121, 29);
             this.NameChoose.TabIndex = 28;
+            this.NameChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.NameChoose.UseSelectable = true;
             // 
             // IpChoose
@@ -153,6 +154,7 @@ namespace TNetworkAdministrator.Controls
             this.IpChoose.Name = "IpChoose";
             this.IpChoose.Size = new System.Drawing.Size(121, 29);
             this.IpChoose.TabIndex = 27;
+            this.IpChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.IpChoose.UseSelectable = true;
             // 
             // label5
@@ -179,6 +181,7 @@ namespace TNetworkAdministrator.Controls
             this.ProrityChoose.Name = "ProrityChoose";
             this.ProrityChoose.Size = new System.Drawing.Size(121, 29);
             this.ProrityChoose.TabIndex = 25;
+            this.ProrityChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.ProrityChoose.UseSelectable = true;
             // 
             // ListofDevices
@@ -231,6 +234,7 @@ namespace TNetworkAdministrator.Controls
             this.ManufactuerChoose.Name = "ManufactuerChoose";
             this.ManufactuerChoose.Size = new System.Drawing.Size(121, 29);
             this.ManufactuerChoose.TabIndex = 19;
+            this.ManufactuerChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.ManufactuerChoose.UseSelectable = true;
             // 
             // StatusChoose
@@ -245,6 +249,7 @@ namespace TNetworkAdministrator.Controls
             this.StatusChoose.Name = "StatusChoose";
             this.StatusChoose.Size = new System.Drawing.Size(121, 29);
             this.StatusChoose.TabIndex = 18;
+            this.StatusChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.StatusChoose.UseSelectable = true;
             // 
             // label1
@@ -266,6 +271,7 @@ namespace TNetworkAdministrator.Controls
             this.GroupsChoose.Name = "GroupsChoose";
             this.GroupsChoose.Size = new System.Drawing.Size(121, 29);
             this.GroupsChoose.TabIndex = 16;
+            this.GroupsChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.GroupsChoose.UseSelectable = true;
             // 
             // Texto
@@ -279,6 +285,7 @@ namespace TNetworkAdministrator.Controls
             this.Texto.SelectedText = "";
             this.Texto.Size = new System.Drawing.Size(379, 22);
             this.Texto.TabIndex = 15;
+            this.Texto.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Texto.UseSelectable = true;
             // 
             // metroButton1

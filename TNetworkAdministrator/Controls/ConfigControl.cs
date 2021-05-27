@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TNetworkAdministrator.Controls
 {
-    public partial class ConfigutacoesControl : UserControl
+    public partial class ConfigControl : UserControl
     {
-        public ConfigutacoesControl()
+        public ConfigControl()
         {
             InitializeComponent();
         }

@@ -48,6 +48,7 @@ namespace TNetworkAdministrator.SubFormas
             this.DeviceBox.Name = "DeviceBox";
             this.DeviceBox.Size = new System.Drawing.Size(171, 29);
             this.DeviceBox.TabIndex = 0;
+            this.DeviceBox.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.DeviceBox.UseSelectable = true;
             // 
             // metroButton2
@@ -78,7 +79,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -102,6 +103,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectDevice";
             this.Text = "Selecionar Dispositivo";
+            this.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.ResumeLayout(false);
 
         }

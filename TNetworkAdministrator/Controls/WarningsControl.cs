@@ -5,20 +5,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TNetworkAdministrator.SubFormas
+namespace TNetworkAdministrator.Controls
 {
-    public partial class Warnings : Wisder.W3Common.WMetroControl.Forms.MetroForm
+    public partial class WarningsControl : UserControl
     {
-        public Warnings()
+        public WarningsControl()
         {
             InitializeComponent();
-        }
-
-        private void Warnings_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void enviarEmailDeAlertaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -26,25 +22,8 @@ namespace TNetworkAdministrator.SubFormas
             try
             {
                 string resultado = Classes.InputBox.ShowDialog("Email", "Envie um alerta");
-               if(resultado != "")
+                if (resultado != "")
                 {
-
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                for (int i = 0; i < 10; i++)
-                {
-     
 
                 }
             }

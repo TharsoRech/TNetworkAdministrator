@@ -45,7 +45,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.Ip.AutoSize = true;
             this.Ip.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ip.ForeColor = System.Drawing.Color.Black;
+            this.Ip.ForeColor = System.Drawing.Color.White;
             this.Ip.Location = new System.Drawing.Point(53, 6);
             this.Ip.Name = "Ip";
             this.Ip.Size = new System.Drawing.Size(25, 19);
@@ -69,7 +69,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.DeviceText.AutoSize = true;
             this.DeviceText.Font = new System.Drawing.Font("Calibri", 12F);
-            this.DeviceText.ForeColor = System.Drawing.Color.Black;
+            this.DeviceText.ForeColor = System.Drawing.Color.White;
             this.DeviceText.Location = new System.Drawing.Point(259, 6);
             this.DeviceText.Name = "DeviceText";
             this.DeviceText.Size = new System.Drawing.Size(78, 19);
@@ -80,7 +80,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.Status.AutoSize = true;
             this.Status.Font = new System.Drawing.Font("Calibri", 12F);
-            this.Status.ForeColor = System.Drawing.Color.Black;
+            this.Status.ForeColor = System.Drawing.Color.White;
             this.Status.Location = new System.Drawing.Point(619, 7);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(53, 19);
@@ -131,6 +131,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.button3);

@@ -33,22 +33,21 @@ namespace TNetworkAdministrator
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ListImage = new System.Windows.Forms.ImageList(this.components);
             this.BarPanel = new System.Windows.Forms.Panel();
-            this.altoButton15 = new AltoControls.AltoButton();
-            this.altoButton16 = new AltoControls.AltoButton();
+            this.ExitButton = new AltoControls.AltoButton();
             this.altoButton13 = new AltoControls.AltoButton();
-            this.altoButton14 = new AltoControls.AltoButton();
+            this.ConfigButton = new AltoControls.AltoButton();
             this.altoButton11 = new AltoControls.AltoButton();
-            this.altoButton12 = new AltoControls.AltoButton();
+            this.AlertButton = new AltoControls.AltoButton();
             this.altoButton9 = new AltoControls.AltoButton();
-            this.altoButton10 = new AltoControls.AltoButton();
+            this.ReportButton = new AltoControls.AltoButton();
             this.altoButton7 = new AltoControls.AltoButton();
-            this.altoButton8 = new AltoControls.AltoButton();
+            this.MapButton = new AltoControls.AltoButton();
             this.altoButton5 = new AltoControls.AltoButton();
-            this.altoButton6 = new AltoControls.AltoButton();
+            this.ScannerButton = new AltoControls.AltoButton();
             this.altoButton3 = new AltoControls.AltoButton();
-            this.altoButton4 = new AltoControls.AltoButton();
+            this.InventoryButton = new AltoControls.AltoButton();
             this.altoButton2 = new AltoControls.AltoButton();
-            this.altoButton1 = new AltoControls.AltoButton();
+            this.InicioButton = new AltoControls.AltoButton();
             this.PanelVisualizer = new System.Windows.Forms.Panel();
             this.BarPanel.SuspendLayout();
             this.SuspendLayout();
@@ -66,69 +65,48 @@ namespace TNetworkAdministrator
             // 
             // BarPanel
             // 
-            this.BarPanel.Controls.Add(this.altoButton15);
-            this.BarPanel.Controls.Add(this.altoButton16);
+            this.BarPanel.Controls.Add(this.ExitButton);
             this.BarPanel.Controls.Add(this.altoButton13);
-            this.BarPanel.Controls.Add(this.altoButton14);
+            this.BarPanel.Controls.Add(this.ConfigButton);
             this.BarPanel.Controls.Add(this.altoButton11);
-            this.BarPanel.Controls.Add(this.altoButton12);
+            this.BarPanel.Controls.Add(this.AlertButton);
             this.BarPanel.Controls.Add(this.altoButton9);
-            this.BarPanel.Controls.Add(this.altoButton10);
+            this.BarPanel.Controls.Add(this.ReportButton);
             this.BarPanel.Controls.Add(this.altoButton7);
-            this.BarPanel.Controls.Add(this.altoButton8);
+            this.BarPanel.Controls.Add(this.MapButton);
             this.BarPanel.Controls.Add(this.altoButton5);
-            this.BarPanel.Controls.Add(this.altoButton6);
+            this.BarPanel.Controls.Add(this.ScannerButton);
             this.BarPanel.Controls.Add(this.altoButton3);
-            this.BarPanel.Controls.Add(this.altoButton4);
+            this.BarPanel.Controls.Add(this.InventoryButton);
             this.BarPanel.Controls.Add(this.altoButton2);
-            this.BarPanel.Controls.Add(this.altoButton1);
+            this.BarPanel.Controls.Add(this.InicioButton);
             this.BarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarPanel.Location = new System.Drawing.Point(20, 60);
             this.BarPanel.Name = "BarPanel";
             this.BarPanel.Size = new System.Drawing.Size(97, 713);
             this.BarPanel.TabIndex = 2;
             // 
-            // altoButton15
+            // ExitButton
             // 
-            this.altoButton15.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton15.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton15.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton15.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton15.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton15.ForeColor = System.Drawing.Color.White;
-            this.altoButton15.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton15.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton15.Location = new System.Drawing.Point(0, 310);
-            this.altoButton15.Name = "altoButton15";
-            this.altoButton15.Radius = 10;
-            this.altoButton15.Size = new System.Drawing.Size(97, 10);
-            this.altoButton15.Stroke = false;
-            this.altoButton15.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton15.TabIndex = 15;
-            this.altoButton15.Transparency = false;
-            // 
-            // altoButton16
-            // 
-            this.altoButton16.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton16.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton16.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton16.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton16.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton16.ForeColor = System.Drawing.Color.White;
-            this.altoButton16.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton16.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton16.Location = new System.Drawing.Point(0, 280);
-            this.altoButton16.Name = "altoButton16";
-            this.altoButton16.Radius = 10;
-            this.altoButton16.Size = new System.Drawing.Size(97, 30);
-            this.altoButton16.Stroke = false;
-            this.altoButton16.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton16.TabIndex = 14;
-            this.altoButton16.Text = "Sair";
-            this.altoButton16.Transparency = false;
-            this.altoButton16.Click += new System.EventHandler(this.altoButton16_Click);
+            this.ExitButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.ExitButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ExitButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ExitButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.ExitButton.ForeColor = System.Drawing.Color.White;
+            this.ExitButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.ExitButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.ExitButton.Location = new System.Drawing.Point(0, 280);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Radius = 10;
+            this.ExitButton.Size = new System.Drawing.Size(97, 30);
+            this.ExitButton.Stroke = false;
+            this.ExitButton.StrokeColor = System.Drawing.Color.Gray;
+            this.ExitButton.TabIndex = 14;
+            this.ExitButton.Text = "Sair";
+            this.ExitButton.Transparency = false;
+            this.ExitButton.Click += new System.EventHandler(this.altoButton16_Click);
             // 
             // altoButton13
             // 
@@ -151,26 +129,27 @@ namespace TNetworkAdministrator
             this.altoButton13.Transparency = false;
             this.altoButton13.Visible = false;
             // 
-            // altoButton14
+            // ConfigButton
             // 
-            this.altoButton14.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton14.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton14.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton14.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton14.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton14.ForeColor = System.Drawing.Color.White;
-            this.altoButton14.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton14.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton14.Location = new System.Drawing.Point(0, 240);
-            this.altoButton14.Name = "altoButton14";
-            this.altoButton14.Radius = 10;
-            this.altoButton14.Size = new System.Drawing.Size(97, 30);
-            this.altoButton14.Stroke = false;
-            this.altoButton14.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton14.TabIndex = 12;
-            this.altoButton14.Text = "Configurações";
-            this.altoButton14.Transparency = false;
+            this.ConfigButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.ConfigButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.ConfigButton.BackColor = System.Drawing.Color.Transparent;
+            this.ConfigButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ConfigButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ConfigButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.ConfigButton.ForeColor = System.Drawing.Color.White;
+            this.ConfigButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.ConfigButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.ConfigButton.Location = new System.Drawing.Point(0, 240);
+            this.ConfigButton.Name = "ConfigButton";
+            this.ConfigButton.Radius = 10;
+            this.ConfigButton.Size = new System.Drawing.Size(97, 30);
+            this.ConfigButton.Stroke = false;
+            this.ConfigButton.StrokeColor = System.Drawing.Color.Gray;
+            this.ConfigButton.TabIndex = 12;
+            this.ConfigButton.Text = "Configurações";
+            this.ConfigButton.Transparency = false;
+            this.ConfigButton.Click += new System.EventHandler(this.ConfigButton_Click);
             // 
             // altoButton11
             // 
@@ -193,26 +172,27 @@ namespace TNetworkAdministrator
             this.altoButton11.Transparency = false;
             this.altoButton11.Visible = false;
             // 
-            // altoButton12
+            // AlertButton
             // 
-            this.altoButton12.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton12.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton12.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton12.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton12.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton12.ForeColor = System.Drawing.Color.White;
-            this.altoButton12.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton12.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton12.Location = new System.Drawing.Point(0, 200);
-            this.altoButton12.Name = "altoButton12";
-            this.altoButton12.Radius = 10;
-            this.altoButton12.Size = new System.Drawing.Size(97, 30);
-            this.altoButton12.Stroke = false;
-            this.altoButton12.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton12.TabIndex = 10;
-            this.altoButton12.Text = "Alertas";
-            this.altoButton12.Transparency = false;
+            this.AlertButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.AlertButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.AlertButton.BackColor = System.Drawing.Color.Transparent;
+            this.AlertButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.AlertButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AlertButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.AlertButton.ForeColor = System.Drawing.Color.White;
+            this.AlertButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.AlertButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.AlertButton.Location = new System.Drawing.Point(0, 200);
+            this.AlertButton.Name = "AlertButton";
+            this.AlertButton.Radius = 10;
+            this.AlertButton.Size = new System.Drawing.Size(97, 30);
+            this.AlertButton.Stroke = false;
+            this.AlertButton.StrokeColor = System.Drawing.Color.Gray;
+            this.AlertButton.TabIndex = 10;
+            this.AlertButton.Text = "Alertas";
+            this.AlertButton.Transparency = false;
+            this.AlertButton.Click += new System.EventHandler(this.AlertButton_Click);
             // 
             // altoButton9
             // 
@@ -235,26 +215,27 @@ namespace TNetworkAdministrator
             this.altoButton9.Transparency = false;
             this.altoButton9.Visible = false;
             // 
-            // altoButton10
+            // ReportButton
             // 
-            this.altoButton10.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton10.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton10.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton10.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton10.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton10.ForeColor = System.Drawing.Color.White;
-            this.altoButton10.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton10.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton10.Location = new System.Drawing.Point(0, 160);
-            this.altoButton10.Name = "altoButton10";
-            this.altoButton10.Radius = 10;
-            this.altoButton10.Size = new System.Drawing.Size(97, 30);
-            this.altoButton10.Stroke = false;
-            this.altoButton10.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton10.TabIndex = 8;
-            this.altoButton10.Text = "Relatórios";
-            this.altoButton10.Transparency = false;
+            this.ReportButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.ReportButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.ReportButton.BackColor = System.Drawing.Color.Transparent;
+            this.ReportButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ReportButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ReportButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.ReportButton.ForeColor = System.Drawing.Color.White;
+            this.ReportButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.ReportButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.ReportButton.Location = new System.Drawing.Point(0, 160);
+            this.ReportButton.Name = "ReportButton";
+            this.ReportButton.Radius = 10;
+            this.ReportButton.Size = new System.Drawing.Size(97, 30);
+            this.ReportButton.Stroke = false;
+            this.ReportButton.StrokeColor = System.Drawing.Color.Gray;
+            this.ReportButton.TabIndex = 8;
+            this.ReportButton.Text = "Relatórios";
+            this.ReportButton.Transparency = false;
+            this.ReportButton.Click += new System.EventHandler(this.altoButton10_Click);
             // 
             // altoButton7
             // 
@@ -277,26 +258,27 @@ namespace TNetworkAdministrator
             this.altoButton7.Transparency = false;
             this.altoButton7.Visible = false;
             // 
-            // altoButton8
+            // MapButton
             // 
-            this.altoButton8.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton8.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton8.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton8.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton8.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton8.ForeColor = System.Drawing.Color.White;
-            this.altoButton8.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton8.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton8.Location = new System.Drawing.Point(0, 120);
-            this.altoButton8.Name = "altoButton8";
-            this.altoButton8.Radius = 10;
-            this.altoButton8.Size = new System.Drawing.Size(97, 30);
-            this.altoButton8.Stroke = false;
-            this.altoButton8.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton8.TabIndex = 6;
-            this.altoButton8.Text = "Mapa";
-            this.altoButton8.Transparency = false;
+            this.MapButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.MapButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.MapButton.BackColor = System.Drawing.Color.Transparent;
+            this.MapButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.MapButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MapButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.MapButton.ForeColor = System.Drawing.Color.White;
+            this.MapButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.MapButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.MapButton.Location = new System.Drawing.Point(0, 120);
+            this.MapButton.Name = "MapButton";
+            this.MapButton.Radius = 10;
+            this.MapButton.Size = new System.Drawing.Size(97, 30);
+            this.MapButton.Stroke = false;
+            this.MapButton.StrokeColor = System.Drawing.Color.Gray;
+            this.MapButton.TabIndex = 6;
+            this.MapButton.Text = "Mapa";
+            this.MapButton.Transparency = false;
+            this.MapButton.Click += new System.EventHandler(this.altoButton8_Click);
             // 
             // altoButton5
             // 
@@ -319,26 +301,27 @@ namespace TNetworkAdministrator
             this.altoButton5.Transparency = false;
             this.altoButton5.Visible = false;
             // 
-            // altoButton6
+            // ScannerButton
             // 
-            this.altoButton6.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton6.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton6.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton6.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton6.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton6.ForeColor = System.Drawing.Color.White;
-            this.altoButton6.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton6.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton6.Location = new System.Drawing.Point(0, 80);
-            this.altoButton6.Name = "altoButton6";
-            this.altoButton6.Radius = 10;
-            this.altoButton6.Size = new System.Drawing.Size(97, 30);
-            this.altoButton6.Stroke = false;
-            this.altoButton6.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton6.TabIndex = 4;
-            this.altoButton6.Text = "Scanner";
-            this.altoButton6.Transparency = false;
+            this.ScannerButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.ScannerButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.ScannerButton.BackColor = System.Drawing.Color.Transparent;
+            this.ScannerButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ScannerButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ScannerButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.ScannerButton.ForeColor = System.Drawing.Color.White;
+            this.ScannerButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.ScannerButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.ScannerButton.Location = new System.Drawing.Point(0, 80);
+            this.ScannerButton.Name = "ScannerButton";
+            this.ScannerButton.Radius = 10;
+            this.ScannerButton.Size = new System.Drawing.Size(97, 30);
+            this.ScannerButton.Stroke = false;
+            this.ScannerButton.StrokeColor = System.Drawing.Color.Gray;
+            this.ScannerButton.TabIndex = 4;
+            this.ScannerButton.Text = "Scanner";
+            this.ScannerButton.Transparency = false;
+            this.ScannerButton.Click += new System.EventHandler(this.altoButton6_Click);
             // 
             // altoButton3
             // 
@@ -361,27 +344,27 @@ namespace TNetworkAdministrator
             this.altoButton3.Transparency = false;
             this.altoButton3.Visible = false;
             // 
-            // altoButton4
+            // InventoryButton
             // 
-            this.altoButton4.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton4.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton4.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton4.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton4.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton4.ForeColor = System.Drawing.Color.White;
-            this.altoButton4.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton4.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton4.Location = new System.Drawing.Point(0, 40);
-            this.altoButton4.Name = "altoButton4";
-            this.altoButton4.Radius = 10;
-            this.altoButton4.Size = new System.Drawing.Size(97, 30);
-            this.altoButton4.Stroke = false;
-            this.altoButton4.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton4.TabIndex = 2;
-            this.altoButton4.Text = "Inventário";
-            this.altoButton4.Transparency = false;
-            this.altoButton4.Click += new System.EventHandler(this.altoButton4_Click);
+            this.InventoryButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.InventoryButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.InventoryButton.BackColor = System.Drawing.Color.Transparent;
+            this.InventoryButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.InventoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InventoryButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.InventoryButton.ForeColor = System.Drawing.Color.White;
+            this.InventoryButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.InventoryButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.InventoryButton.Location = new System.Drawing.Point(0, 40);
+            this.InventoryButton.Name = "InventoryButton";
+            this.InventoryButton.Radius = 10;
+            this.InventoryButton.Size = new System.Drawing.Size(97, 30);
+            this.InventoryButton.Stroke = false;
+            this.InventoryButton.StrokeColor = System.Drawing.Color.Gray;
+            this.InventoryButton.TabIndex = 2;
+            this.InventoryButton.Text = "Inventário";
+            this.InventoryButton.Transparency = false;
+            this.InventoryButton.Click += new System.EventHandler(this.altoButton4_Click);
             // 
             // altoButton2
             // 
@@ -404,27 +387,27 @@ namespace TNetworkAdministrator
             this.altoButton2.Transparency = false;
             this.altoButton2.Visible = false;
             // 
-            // altoButton1
+            // InicioButton
             // 
-            this.altoButton1.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton1.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton1.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.altoButton1.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.altoButton1.ForeColor = System.Drawing.Color.White;
-            this.altoButton1.Inactive1 = System.Drawing.Color.Transparent;
-            this.altoButton1.Inactive2 = System.Drawing.Color.Transparent;
-            this.altoButton1.Location = new System.Drawing.Point(0, 0);
-            this.altoButton1.Name = "altoButton1";
-            this.altoButton1.Radius = 10;
-            this.altoButton1.Size = new System.Drawing.Size(97, 30);
-            this.altoButton1.Stroke = false;
-            this.altoButton1.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton1.TabIndex = 0;
-            this.altoButton1.Text = "Inicio";
-            this.altoButton1.Transparency = false;
-            this.altoButton1.Click += new System.EventHandler(this.altoButton1_Click);
+            this.InicioButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.InicioButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.InicioButton.BackColor = System.Drawing.Color.Transparent;
+            this.InicioButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.InicioButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InicioButton.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.InicioButton.ForeColor = System.Drawing.Color.White;
+            this.InicioButton.Inactive1 = System.Drawing.Color.Transparent;
+            this.InicioButton.Inactive2 = System.Drawing.Color.Transparent;
+            this.InicioButton.Location = new System.Drawing.Point(0, 0);
+            this.InicioButton.Name = "InicioButton";
+            this.InicioButton.Radius = 10;
+            this.InicioButton.Size = new System.Drawing.Size(97, 30);
+            this.InicioButton.Stroke = false;
+            this.InicioButton.StrokeColor = System.Drawing.Color.Gray;
+            this.InicioButton.TabIndex = 0;
+            this.InicioButton.Text = "Inicio";
+            this.InicioButton.Transparency = false;
+            this.InicioButton.Click += new System.EventHandler(this.altoButton1_Click);
             // 
             // PanelVisualizer
             // 
@@ -459,21 +442,20 @@ namespace TNetworkAdministrator
         public ImageList ListImage;
         private Panel BarPanel;
         private AltoControls.AltoButton altoButton11;
-        private AltoControls.AltoButton altoButton12;
+        private AltoControls.AltoButton AlertButton;
         private AltoControls.AltoButton altoButton9;
-        private AltoControls.AltoButton altoButton10;
+        private AltoControls.AltoButton ReportButton;
         private AltoControls.AltoButton altoButton7;
-        private AltoControls.AltoButton altoButton8;
+        private AltoControls.AltoButton MapButton;
         private AltoControls.AltoButton altoButton5;
-        private AltoControls.AltoButton altoButton6;
+        private AltoControls.AltoButton ScannerButton;
         private AltoControls.AltoButton altoButton3;
-        private AltoControls.AltoButton altoButton4;
+        private AltoControls.AltoButton InventoryButton;
         private AltoControls.AltoButton altoButton2;
-        private AltoControls.AltoButton altoButton1;
-        private AltoControls.AltoButton altoButton15;
-        private AltoControls.AltoButton altoButton16;
+        private AltoControls.AltoButton InicioButton;
+        private AltoControls.AltoButton ExitButton;
         private AltoControls.AltoButton altoButton13;
-        private AltoControls.AltoButton altoButton14;
+        private AltoControls.AltoButton ConfigButton;
         private Panel PanelVisualizer;
     }
 }

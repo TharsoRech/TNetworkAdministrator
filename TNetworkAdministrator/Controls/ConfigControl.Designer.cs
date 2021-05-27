@@ -1,7 +1,7 @@
 ﻿
 namespace TNetworkAdministrator.Controls
 {
-    partial class ConfigutacoesControl
+    partial class ConfigControl
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -106,6 +106,7 @@ namespace TNetworkAdministrator.Controls
             this.Database.SelectedText = "";
             this.Database.Size = new System.Drawing.Size(257, 24);
             this.Database.TabIndex = 75;
+            this.Database.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Database.UseSelectable = true;
             // 
             // label3
@@ -204,6 +205,7 @@ namespace TNetworkAdministrator.Controls
             this.Server.SelectedText = "";
             this.Server.Size = new System.Drawing.Size(189, 24);
             this.Server.TabIndex = 67;
+            this.Server.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Server.UseSelectable = true;
             // 
             // label4
@@ -228,6 +230,7 @@ namespace TNetworkAdministrator.Controls
             this.Password.SelectedText = "";
             this.Password.Size = new System.Drawing.Size(189, 24);
             this.Password.TabIndex = 65;
+            this.Password.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Password.UseSelectable = true;
             // 
             // label2
@@ -252,9 +255,10 @@ namespace TNetworkAdministrator.Controls
             this.Email.SelectedText = "";
             this.Email.Size = new System.Drawing.Size(189, 24);
             this.Email.TabIndex = 63;
+            this.Email.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Email.UseSelectable = true;
             // 
-            // ConfigutacoesControl
+            // ConfigControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -276,7 +280,7 @@ namespace TNetworkAdministrator.Controls
             this.Controls.Add(this.Password);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Email);
-            this.Name = "ConfigutacoesControl";
+            this.Name = "ConfigControl";
             this.Size = new System.Drawing.Size(701, 387);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

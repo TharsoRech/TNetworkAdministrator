@@ -80,7 +80,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(61, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 23);
@@ -98,13 +98,14 @@ namespace TNetworkAdministrator.SubFormas
             this.NameText.SelectedText = "";
             this.NameText.Size = new System.Drawing.Size(189, 24);
             this.NameText.TabIndex = 11;
+            this.NameText.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.NameText.UseSelectable = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(332, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 23);
@@ -122,13 +123,14 @@ namespace TNetworkAdministrator.SubFormas
             this.Ip.SelectedText = "";
             this.Ip.Size = new System.Drawing.Size(189, 24);
             this.Ip.TabIndex = 13;
+            this.Ip.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Ip.UseSelectable = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(29, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 23);
@@ -146,13 +148,14 @@ namespace TNetworkAdministrator.SubFormas
             this.Manufacturer.SelectedText = "";
             this.Manufacturer.Size = new System.Drawing.Size(189, 24);
             this.Manufacturer.TabIndex = 17;
+            this.Manufacturer.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Manufacturer.UseSelectable = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(91, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 23);
@@ -170,6 +173,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Description.SelectedText = "";
             this.Description.Size = new System.Drawing.Size(302, 70);
             this.Description.TabIndex = 15;
+            this.Description.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Description.UseSelectable = true;
             this.Description.Click += new System.EventHandler(this.metroTextBox3_Click);
             // 
@@ -177,7 +181,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(61, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 23);
@@ -196,13 +200,14 @@ namespace TNetworkAdministrator.SubFormas
             this.Status.SelectedText = "";
             this.Status.Size = new System.Drawing.Size(189, 24);
             this.Status.TabIndex = 19;
+            this.Status.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Status.UseSelectable = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(58, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 23);
@@ -219,6 +224,7 @@ namespace TNetworkAdministrator.SubFormas
             this.GroupsChoose.Name = "GroupsChoose";
             this.GroupsChoose.Size = new System.Drawing.Size(189, 29);
             this.GroupsChoose.TabIndex = 22;
+            this.GroupsChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.GroupsChoose.UseSelectable = true;
             this.GroupsChoose.SelectedIndexChanged += new System.EventHandler(this.GroupsChoose_SelectedIndexChanged);
             // 
@@ -226,7 +232,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(29, 279);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 23);
@@ -246,6 +252,7 @@ namespace TNetworkAdministrator.SubFormas
             this.PriorityChoose.Name = "PriorityChoose";
             this.PriorityChoose.Size = new System.Drawing.Size(189, 29);
             this.PriorityChoose.TabIndex = 24;
+            this.PriorityChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.PriorityChoose.UseSelectable = true;
             // 
             // ImageText
@@ -260,13 +267,14 @@ namespace TNetworkAdministrator.SubFormas
             this.ImageText.SelectedText = "";
             this.ImageText.Size = new System.Drawing.Size(197, 24);
             this.ImageText.TabIndex = 26;
+            this.ImageText.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.ImageText.UseSelectable = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(24, 403);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 23);
@@ -316,7 +324,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.AddIn.AutoSize = true;
             this.AddIn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddIn.ForeColor = System.Drawing.Color.Black;
+            this.AddIn.ForeColor = System.Drawing.Color.White;
             this.AddIn.Location = new System.Drawing.Point(29, 529);
             this.AddIn.Name = "AddIn";
             this.AddIn.Size = new System.Drawing.Size(169, 23);
@@ -332,6 +340,7 @@ namespace TNetworkAdministrator.SubFormas
             this.ProcessorUseCheck.Size = new System.Drawing.Size(127, 15);
             this.ProcessorUseCheck.TabIndex = 42;
             this.ProcessorUseCheck.Text = "Uso do Processador";
+            this.ProcessorUseCheck.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.ProcessorUseCheck.UseSelectable = true;
             this.ProcessorUseCheck.UseVisualStyleBackColor = true;
             // 
@@ -343,6 +352,7 @@ namespace TNetworkAdministrator.SubFormas
             this.NetworkUseCheckl.Size = new System.Drawing.Size(88, 15);
             this.NetworkUseCheckl.TabIndex = 41;
             this.NetworkUseCheckl.Text = "Uso da Rede";
+            this.NetworkUseCheckl.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.NetworkUseCheckl.UseSelectable = true;
             this.NetworkUseCheckl.UseVisualStyleBackColor = true;
             // 
@@ -354,6 +364,7 @@ namespace TNetworkAdministrator.SubFormas
             this.LostPackageCheck.Size = new System.Drawing.Size(107, 15);
             this.LostPackageCheck.TabIndex = 40;
             this.LostPackageCheck.Text = "Perca de Pacote";
+            this.LostPackageCheck.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.LostPackageCheck.UseSelectable = true;
             this.LostPackageCheck.UseVisualStyleBackColor = true;
             // 
@@ -365,6 +376,7 @@ namespace TNetworkAdministrator.SubFormas
             this.StatusCheck.Size = new System.Drawing.Size(178, 15);
             this.StatusCheck.TabIndex = 39;
             this.StatusCheck.Text = "Verificar Status do Dispositivo";
+            this.StatusCheck.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.StatusCheck.UseSelectable = true;
             this.StatusCheck.UseVisualStyleBackColor = true;
             // 
@@ -372,7 +384,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(383, 228);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(303, 46);
@@ -395,7 +407,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(383, 352);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(195, 19);
@@ -406,7 +418,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(381, 162);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(202, 31);
@@ -417,7 +429,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(383, 385);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(209, 19);
@@ -428,7 +440,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(380, 493);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 19);
@@ -439,7 +451,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(501, 492);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 19);
@@ -456,6 +468,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Sunday.Size = new System.Drawing.Size(73, 15);
             this.Sunday.TabIndex = 67;
             this.Sunday.Text = "Domingo";
+            this.Sunday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Sunday.UseSelectable = true;
             this.Sunday.UseVisualStyleBackColor = true;
             // 
@@ -469,6 +482,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Monday.Size = new System.Drawing.Size(99, 15);
             this.Monday.TabIndex = 68;
             this.Monday.Text = "Segunda-Feira";
+            this.Monday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Monday.UseSelectable = true;
             this.Monday.UseVisualStyleBackColor = true;
             // 
@@ -482,6 +496,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Tuesday.Size = new System.Drawing.Size(80, 15);
             this.Tuesday.TabIndex = 69;
             this.Tuesday.Text = "Terça-Feira";
+            this.Tuesday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Tuesday.UseSelectable = true;
             this.Tuesday.UseVisualStyleBackColor = true;
             // 
@@ -495,6 +510,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Fryday.Size = new System.Drawing.Size(81, 15);
             this.Fryday.TabIndex = 72;
             this.Fryday.Text = "Sexta-Feira";
+            this.Fryday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Fryday.UseSelectable = true;
             this.Fryday.UseVisualStyleBackColor = true;
             // 
@@ -508,6 +524,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Thursday.Size = new System.Drawing.Size(89, 15);
             this.Thursday.TabIndex = 71;
             this.Thursday.Text = "Quinta-Feira";
+            this.Thursday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Thursday.UseSelectable = true;
             this.Thursday.UseVisualStyleBackColor = true;
             // 
@@ -521,6 +538,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Wednesday.Size = new System.Drawing.Size(89, 15);
             this.Wednesday.TabIndex = 70;
             this.Wednesday.Text = "Quarta-Feira";
+            this.Wednesday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Wednesday.UseSelectable = true;
             this.Wednesday.UseVisualStyleBackColor = true;
             // 
@@ -534,6 +552,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Saturday.Size = new System.Drawing.Size(62, 15);
             this.Saturday.TabIndex = 73;
             this.Saturday.Text = "Sábado";
+            this.Saturday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Saturday.UseSelectable = true;
             this.Saturday.UseVisualStyleBackColor = true;
             // 
@@ -556,19 +575,22 @@ namespace TNetworkAdministrator.SubFormas
             // UseDefaultGroup
             // 
             this.UseDefaultGroup.AutoSize = true;
+            this.UseDefaultGroup.BackColor = System.Drawing.Color.Transparent;
             this.UseDefaultGroup.Enabled = false;
+            this.UseDefaultGroup.ForeColor = System.Drawing.Color.White;
             this.UseDefaultGroup.Location = new System.Drawing.Point(387, 210);
             this.UseDefaultGroup.Name = "UseDefaultGroup";
             this.UseDefaultGroup.Size = new System.Drawing.Size(355, 15);
             this.UseDefaultGroup.TabIndex = 123;
             this.UseDefaultGroup.Text = "Usar Monitoramento padrão obedecendo ao grupo pertecente:";
+            this.UseDefaultGroup.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.UseDefaultGroup.UseSelectable = true;
-            this.UseDefaultGroup.UseVisualStyleBackColor = true;
+            this.UseDefaultGroup.UseVisualStyleBackColor = false;
             this.UseDefaultGroup.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -582,7 +604,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
@@ -645,6 +667,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeviceEdit";
             this.Text = "Editar Dispositivo";
+            this.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.DeviceEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).EndInit();
             this.ResumeLayout(false);

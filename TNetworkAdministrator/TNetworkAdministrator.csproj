@@ -117,11 +117,17 @@
     <Compile Include="Classes\Type.cs" />
     <Compile Include="Classes\Warning.cs" />
     <Compile Include="Classes\WarningType.cs" />
-    <Compile Include="Controls\ConfigutacoesControl.cs">
+    <Compile Include="Controls\ConfigControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ConfigutacoesControl.Designer.cs">
-      <DependentUpon>ConfigutacoesControl.cs</DependentUpon>
+    <Compile Include="Controls\ConfigControl.Designer.cs">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlMap.Designer.cs">
+      <DependentUpon>ControlMap.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Device.cs">
       <SubType>UserControl</SubType>
@@ -165,17 +171,35 @@
     <Compile Include="Controls\MapControl.Designer.cs">
       <DependentUpon>MapControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ReportsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportsControl.Designer.cs">
+      <DependentUpon>ReportsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ResizableController.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\ResizableController.Designer.cs">
       <DependentUpon>ResizableController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ScanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ScanControl.Designer.cs">
+      <DependentUpon>ScanControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\StatusTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\StatusTable.Designer.cs">
       <DependentUpon>StatusTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WarningsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WarningsControl.Designer.cs">
+      <DependentUpon>WarningsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -203,29 +227,11 @@
     <Compile Include="SubFormas\ImageChoose.Designer.cs">
       <DependentUpon>ImageChoose.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubFormas\Map.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormas\Map.Designer.cs">
-      <DependentUpon>Map.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubFormas\Report.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubFormas\Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubFormas\Reports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormas\Reports.Designer.cs">
-      <DependentUpon>Reports.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubFormas\Scan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormas\Scan.Designer.cs">
-      <DependentUpon>Scan.cs</DependentUpon>
     </Compile>
     <Compile Include="SubFormas\SelectDevice.cs">
       <SubType>Form</SubType>
@@ -233,14 +239,11 @@
     <Compile Include="SubFormas\SelectDevice.Designer.cs">
       <DependentUpon>SelectDevice.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubFormas\Warnings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormas\Warnings.Designer.cs">
-      <DependentUpon>Warnings.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Controls\ConfigutacoesControl.resx">
-      <DependentUpon>ConfigutacoesControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ConfigControl.resx">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlMap.resx">
+      <DependentUpon>ControlMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Device.resx">
       <DependentUpon>Device.cs</DependentUpon>
@@ -263,11 +266,20 @@
     <EmbeddedResource Include="Controls\MapControl.resx">
       <DependentUpon>MapControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportsControl.resx">
+      <DependentUpon>ReportsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ResizableController.resx">
       <DependentUpon>ResizableController.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScanControl.resx">
+      <DependentUpon>ScanControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\StatusTable.resx">
       <DependentUpon>StatusTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WarningsControl.resx">
+      <DependentUpon>WarningsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -291,23 +303,11 @@
     <EmbeddedResource Include="SubFormas\ImageChoose.resx">
       <DependentUpon>ImageChoose.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubFormas\Map.resx">
-      <DependentUpon>Map.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubFormas\Reports.resx">
-      <DependentUpon>Reports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubFormas\Scan.resx">
-      <DependentUpon>Scan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubFormas\SelectDevice.resx">
       <DependentUpon>SelectDevice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubFormas\Warnings.resx">
-      <DependentUpon>Warnings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />

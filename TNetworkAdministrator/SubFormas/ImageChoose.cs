@@ -20,7 +20,7 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                DeviceCheck.BackgroundImage = imageList1.Images[0];
+               
  
             }
             catch (Exception)

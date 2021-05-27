@@ -46,6 +46,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.Description.AutoSize = true;
             this.Description.Font = new System.Drawing.Font("Georgia", 10F);
+            this.Description.ForeColor = System.Drawing.Color.White;
             this.Description.Location = new System.Drawing.Point(45, 14);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(46, 17);

@@ -56,7 +56,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.DeviceText.AutoSize = true;
             this.DeviceText.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeviceText.ForeColor = System.Drawing.Color.Black;
+            this.DeviceText.ForeColor = System.Drawing.Color.White;
             this.DeviceText.Location = new System.Drawing.Point(328, 6);
             this.DeviceText.Name = "DeviceText";
             this.DeviceText.Size = new System.Drawing.Size(93, 23);
@@ -67,7 +67,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.Status.AutoSize = true;
             this.Status.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.ForeColor = System.Drawing.Color.Black;
+            this.Status.ForeColor = System.Drawing.Color.White;
             this.Status.Location = new System.Drawing.Point(670, 6);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(64, 23);
@@ -105,7 +105,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.Ip.AutoSize = true;
             this.Ip.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ip.ForeColor = System.Drawing.Color.Black;
+            this.Ip.ForeColor = System.Drawing.Color.White;
             this.Ip.Location = new System.Drawing.Point(53, 6);
             this.Ip.Name = "Ip";
             this.Ip.Size = new System.Drawing.Size(31, 23);
@@ -116,7 +116,7 @@ namespace TNetworkAdministrator.Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.Ip);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

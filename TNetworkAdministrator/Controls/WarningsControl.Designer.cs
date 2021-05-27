@@ -1,17 +1,17 @@
 ﻿
-namespace TNetworkAdministrator.SubFormas
+namespace TNetworkAdministrator.Controls
 {
-    partial class Warnings
+    partial class WarningsControl
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Limpar os recursos que estão sendo usados.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,16 +21,16 @@ namespace TNetworkAdministrator.SubFormas
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código gerado pelo Designer de Componentes
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Método necessário para suporte ao Designer - não modifique 
+        /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Warnings));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningsControl));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -60,7 +60,7 @@ namespace TNetworkAdministrator.SubFormas
             this.verificarSeHáErrosNovosToolStripMenuItem,
             this.limparListaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 158);
             // 
             // exibirAlertaDetalhadoToolStripMenuItem
             // 
@@ -108,16 +108,16 @@ namespace TNetworkAdministrator.SubFormas
             // WarningsList
             // 
             this.WarningsList.AllowUserToResizeRows = false;
-            this.WarningsList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.WarningsList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.WarningsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WarningsList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.WarningsList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.WarningsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.WarningsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -128,32 +128,33 @@ namespace TNetworkAdministrator.SubFormas
             this.Column4});
             this.WarningsList.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.WarningsList.DefaultCellStyle = dataGridViewCellStyle2;
             this.WarningsList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WarningsList.EnableHeadersVisualStyles = false;
             this.WarningsList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.WarningsList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.WarningsList.Location = new System.Drawing.Point(20, 60);
+            this.WarningsList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.WarningsList.Location = new System.Drawing.Point(0, 0);
             this.WarningsList.Name = "WarningsList";
             this.WarningsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.WarningsList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.WarningsList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.WarningsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.WarningsList.Size = new System.Drawing.Size(1025, 722);
-            this.WarningsList.TabIndex = 5;
+            this.WarningsList.Size = new System.Drawing.Size(1065, 802);
+            this.WarningsList.TabIndex = 6;
+            this.WarningsList.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             // 
             // Column1
             // 
@@ -183,16 +184,13 @@ namespace TNetworkAdministrator.SubFormas
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Warnings
+            // WarningsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 802);
             this.Controls.Add(this.WarningsList);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Warnings";
-            this.Text = "Alertas";
-            this.Load += new System.EventHandler(this.Warnings_Load);
+            this.Name = "WarningsControl";
+            this.Size = new System.Drawing.Size(1065, 802);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WarningsList)).EndInit();
             this.ResumeLayout(false);
@@ -200,14 +198,15 @@ namespace TNetworkAdministrator.SubFormas
         }
 
         #endregion
+
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exibirAlertaDetalhadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarRelatórioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enviarEmailDeAlertaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removerAlertaToolStripMenuItem;
-        private Wisder.W3Common.WMetroControl.Controls.MetroGrid WarningsList;
         private System.Windows.Forms.ToolStripMenuItem verificarSeHáErrosNovosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limparListaToolStripMenuItem;
+        private Wisder.W3Common.WMetroControl.Controls.MetroGrid WarningsList;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

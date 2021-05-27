@@ -1,33 +1,22 @@
 ﻿using SnmpSharpNet;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Net;
-using System.Text;
 using System.Windows.Forms;
 
-namespace TNetworkAdministrator.SubFormas
+namespace TNetworkAdministrator.Controls
 {
-    public partial class Scan : Wisder.W3Common.WMetroControl.Forms.MetroForm
+    public partial class ScanControl : UserControl
     {
-        public  Scan()
+        public ScanControl()
         {
             InitializeComponent();
         }
 
-        private void Scan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-    
-
-   
         private void metroButton5_Click(object sender, EventArgs e)
         {
             try
             {
-               
+
                 SubFormas.DeviceEdit newp = new SubFormas.DeviceEdit();
                 newp.Show();
             }
@@ -36,16 +25,16 @@ namespace TNetworkAdministrator.SubFormas
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-           
+
         }
 
 
-  
+
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
 
-            this.ScanWorker.DoWork += (senderr,eer) => { searchingips(); };
+            this.ScanWorker.DoWork += (senderr, eer) => { searchingips(); };
             ScanWorker.RunWorkerAsync();
         }
 
@@ -59,13 +48,13 @@ namespace TNetworkAdministrator.SubFormas
                 if (rep.Status == System.Net.NetworkInformation.IPStatus.Success)
                 {
                     ping1 = true;
-                        return ping1;
+                    return ping1;
                 }
                 return ping1;
             }
-            catch (Exception )
+            catch (Exception)
             {
-               // MessageBox.Show(ex.Message);
+                // MessageBox.Show(ex.Message);
                 return ping1;
             }
         }
@@ -74,7 +63,7 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                if(SearchForGateway.Checked == true)
+                if (SearchForGateway.Checked == true)
                 {
                     SearchForIP.Checked = false;
                     Gateway.Enabled = true;
@@ -106,7 +95,7 @@ namespace TNetworkAdministrator.SubFormas
                     SearchForGateway.Checked = false;
                     IpInicial.Enabled = true;
                     Gateway.Enabled = false;
-                    
+
                 }
             }
             catch (Exception)
@@ -116,11 +105,11 @@ namespace TNetworkAdministrator.SubFormas
             }
         }
 
-        public  void searchingips()
+        public void searchingips()
         {
             try
             {
-                if (Gateway.Text == "" && SearchForGateway.Checked==true)
+                if (Gateway.Text == "" && SearchForGateway.Checked == true)
                 {
                     MessageBox.Show("Está faltado informação de Gateway,favor digitar");
                     return;
@@ -161,7 +150,7 @@ namespace TNetworkAdministrator.SubFormas
                             Second = value2;
                             value2 = "";
                         }
-                        if (maxindex == 3 || Thirt == "" )
+                        if (maxindex == 3 || Thirt == "")
                         {
                             Thirt = value2;
                             value2 = "";
@@ -175,9 +164,9 @@ namespace TNetworkAdministrator.SubFormas
 
                     k++;
                 }
-                this.Invoke(new MethodInvoker(delegate { Status.Visible=true; }));
+                this.Invoke(new MethodInvoker(delegate { Status.Visible = true; }));
                 this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneando..."; }));
-                
+
                 if (SearchForGateway.Checked == true)
 
                 {
@@ -186,28 +175,28 @@ namespace TNetworkAdministrator.SubFormas
                     this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Maximum = 253; }));
 
 
-                
-                       
+
+
                     for (int i = 2; i <= 255; i++)
                     {
-                    if(ScanWorker.CancellationPending == true)
+                        if (ScanWorker.CancellationPending == true)
                         {
-                           
+
                             this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneamento cancelado"; }));
                             this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value = 0; }));
                             return;
                         }
                         this.Invoke(new MethodInvoker(delegate { metroProgressBar1.Value += 1; }));
                         ping_var = First + "." + Second + "." + Thirt + "." + i;
-                        this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneando IP:"+ ping_var; }));
+                        this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneando IP:" + ping_var; }));
                         if (Pinghost(ping_var) == true)
-                         {
+                        {
                             Controls.DeviceScan newc = new Controls.DeviceScan();
                             newc.Ip.Text = ping_var;
-                        this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
-                        this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
+                            this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
+                            this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
 
-                         }
+                        }
                     }
                 }
                 else
@@ -236,23 +225,23 @@ namespace TNetworkAdministrator.SubFormas
                             ping_var = First + "." + Second + "." + i + "." + j;
                             this.Invoke(new MethodInvoker(delegate { Status.Text = "Scaneando IP:" + ping_var; }));
                             if (Pinghost(ping_var) == true)
-                             {
+                            {
                                 Controls.DeviceScan newc = new Controls.DeviceScan();
-                            newc.Ip.Text = ping_var;
+                                newc.Ip.Text = ping_var;
                                 this.Invoke(new MethodInvoker(delegate { Scaneados.Controls.Add(newc); }));
                                 this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
-                          
-                               
+
+
                             }
                         }
                     }
                 }
                 this.Invoke(new MethodInvoker(delegate { Status.Text = "Scanemento concluido"; }));
             }
-         
+
             catch (Exception ex)
             {
-              
+
             }
         }
 
@@ -273,7 +262,7 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-  
+
                 foreach (TNetworkAdministrator.Controls.DeviceScan n1 in Scaneados.Controls)
                 {
                     if (n1.check() == true)
@@ -300,13 +289,13 @@ namespace TNetworkAdministrator.SubFormas
                 Dictionary<Oid, AsnType> result = snmp.Walk(SnmpVersion.Ver2, ".1.3.6.1.2.1");
                 if (result == null)
                 {
-                    pc1 =   "Request failed.";
+                    pc1 = "Request failed.";
                 }
                 else
                 {
                     foreach (KeyValuePair<Oid, AsnType> entry in result)
                     {
-                
+
                         pc1 = pc1 + entry.Value.ToString();
                     }
 
@@ -327,7 +316,7 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                foreach(TNetworkAdministrator.Controls.DeviceScan n1 in Scaneados.Controls)
+                foreach (TNetworkAdministrator.Controls.DeviceScan n1 in Scaneados.Controls)
                 {
                     if (n1.check() == true)
                     {
@@ -337,7 +326,7 @@ namespace TNetworkAdministrator.SubFormas
                     {
                         n1.check(true);
                     }
-                   
+
                 }
             }
             catch (Exception)
@@ -346,5 +335,8 @@ namespace TNetworkAdministrator.SubFormas
                 throw;
             }
         }
+
+
     }
+
 }

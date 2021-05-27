@@ -109,13 +109,14 @@ namespace TNetworkAdministrator
         }
 
 
-        public void ShowForm(object e)
+        public void ShowControl(object e)
         {
             try { 
 
              var newp = Activator.CreateInstance(e.GetType());
-             Wisder.W3Common.WMetroControl.Forms.MetroForm newp2 = (Wisder.W3Common.WMetroControl.Forms.MetroForm) newp;
-                newp2.Show();
+             UserControl newp2 = (UserControl) newp;
+                newp2.Dock = DockStyle.Fill;
+                PanelVisualizer.Controls.Add(newp2);
 
             }
             catch (Exception)
@@ -140,20 +141,7 @@ namespace TNetworkAdministrator
             }
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void altoButton16_Click(object sender, EventArgs e)
         {
@@ -174,9 +162,7 @@ namespace TNetworkAdministrator
             {
                 PanelVisualizer.Controls.Clear();
 
-                TNetworkAdministrator.Controls.InventoryControl p = new Controls.InventoryControl();
-                p.Dock = DockStyle.Fill;
-                PanelVisualizer.Controls.Add(p);
+                ShowControl(new TNetworkAdministrator.Controls.InventoryControl());
 
             }
             catch (Exception)
@@ -189,9 +175,43 @@ namespace TNetworkAdministrator
         private void altoButton1_Click(object sender, EventArgs e)
         {
             PanelVisualizer.Controls.Clear();
-            TNetworkAdministrator.Controls.InicioControl p = new Controls.InicioControl();
-            p.Dock = DockStyle.Fill;
-            PanelVisualizer.Controls.Add(p);
+
+            ShowControl(new TNetworkAdministrator.Controls.InicioControl());
+        }
+
+        private void altoButton6_Click(object sender, EventArgs e)
+        {
+            PanelVisualizer.Controls.Clear();
+
+            ShowControl(new TNetworkAdministrator.Controls.ScanControl());
+        }
+
+        private void altoButton8_Click(object sender, EventArgs e)
+        {
+            PanelVisualizer.Controls.Clear();
+
+            ShowControl(new TNetworkAdministrator.Controls.ControlMap());
+        }
+
+        private void altoButton10_Click(object sender, EventArgs e)
+        {
+            PanelVisualizer.Controls.Clear();
+
+            ShowControl(new TNetworkAdministrator.Controls.ReportsControl());
+        }
+
+        private void AlertButton_Click(object sender, EventArgs e)
+        {
+            PanelVisualizer.Controls.Clear();
+
+            ShowControl(new TNetworkAdministrator.Controls.WarningsControl());
+        }
+
+        private void ConfigButton_Click(object sender, EventArgs e)
+        {
+            PanelVisualizer.Controls.Clear();
+
+            ShowControl(new TNetworkAdministrator.Controls.ConfigControl());
         }
     }
 }

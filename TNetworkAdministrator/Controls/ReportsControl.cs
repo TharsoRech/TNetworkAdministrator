@@ -1,18 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using TNetworkAdministrator.SubFormas;
 
-
-namespace TNetworkAdministrator.SubFormas
+namespace TNetworkAdministrator.Controls
 {
-    public partial class Reports : Wisder.W3Common.WMetroControl.Forms.MetroForm
+    public partial class ReportsControl : UserControl
     {
-        public Reports()
+        public ReportsControl()
         {
             InitializeComponent();
-        }
-
-        private void Reports_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
