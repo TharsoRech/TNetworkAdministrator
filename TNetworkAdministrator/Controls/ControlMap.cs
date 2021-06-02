@@ -32,7 +32,7 @@ namespace TNetworkAdministrator.Controls
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "Primeiro Adicione uma localização", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(TNetworkAdministrator.Form1.ActiveForm, "Primeiro Adicione uma localização", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -71,7 +71,7 @@ namespace TNetworkAdministrator.Controls
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "Primeiro Adicione uma localização", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(TNetworkAdministrator.Form1.ActiveForm, "Primeiro Adicione uma localização", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)

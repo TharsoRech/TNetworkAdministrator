@@ -131,7 +131,7 @@ namespace TNetworkAdministrator
         {
             try
             {
-
+                
                 return ListImage.Images[n];
             }
             catch (Exception)
@@ -172,46 +172,59 @@ namespace TNetworkAdministrator
             }
         }
 
-        private void altoButton1_Click(object sender, EventArgs e)
+      
+        private void altoButton2_Click(object sender, EventArgs e)
         {
             PanelVisualizer.Controls.Clear();
 
             ShowControl(new TNetworkAdministrator.Controls.InicioControl());
         }
 
-        private void altoButton6_Click(object sender, EventArgs e)
+        private void altoButton3_Click(object sender, EventArgs e)
+        {
+            PanelVisualizer.Controls.Clear();
+
+            ShowControl(new TNetworkAdministrator.Controls.InventoryControl());
+        }
+
+        private void altoButton5_Click(object sender, EventArgs e)
         {
             PanelVisualizer.Controls.Clear();
 
             ShowControl(new TNetworkAdministrator.Controls.ScanControl());
         }
 
-        private void altoButton8_Click(object sender, EventArgs e)
+        private void altoButton7_Click(object sender, EventArgs e)
         {
             PanelVisualizer.Controls.Clear();
 
             ShowControl(new TNetworkAdministrator.Controls.ControlMap());
         }
 
-        private void altoButton10_Click(object sender, EventArgs e)
+        private void altoButton9_Click(object sender, EventArgs e)
         {
             PanelVisualizer.Controls.Clear();
 
             ShowControl(new TNetworkAdministrator.Controls.ReportsControl());
         }
 
-        private void AlertButton_Click(object sender, EventArgs e)
+        private void altoButton11_Click(object sender, EventArgs e)
         {
             PanelVisualizer.Controls.Clear();
 
             ShowControl(new TNetworkAdministrator.Controls.WarningsControl());
         }
 
-        private void ConfigButton_Click(object sender, EventArgs e)
+        private void altoButton13_Click(object sender, EventArgs e)
         {
             PanelVisualizer.Controls.Clear();
 
             ShowControl(new TNetworkAdministrator.Controls.ConfigControl());
+        }
+
+        private void altoButton6_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

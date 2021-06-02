@@ -40,7 +40,7 @@ namespace TNetworkAdministrator.Controls
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Dock = System.Windows.Forms.DockStyle.Left;
