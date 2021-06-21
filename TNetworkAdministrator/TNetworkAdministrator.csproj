@@ -75,6 +75,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="RectTrack">
+      <HintPath>bin\RectTrack.dll</HintPath>
+    </Reference>
     <Reference Include="Select.HtmlToPdf">
       <HintPath>bin\Select.HtmlToPdf.dll</HintPath>
     </Reference>
@@ -108,11 +111,13 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ControlMoverOrResizer.cs.cs" />
     <Compile Include="Classes\Device.cs" />
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\InputBox.cs" />
     <Compile Include="Classes\Location.cs" />
     <Compile Include="Classes\Priority.cs" />
+    <Compile Include="Classes\Service.cs" />
     <Compile Include="Classes\Status.cs" />
     <Compile Include="Classes\Type.cs" />
     <Compile Include="Classes\Warning.cs" />
@@ -176,12 +181,6 @@
     </Compile>
     <Compile Include="Controls\ReportsControl.Designer.cs">
       <DependentUpon>ReportsControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\ResizableController.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\ResizableController.Designer.cs">
-      <DependentUpon>ResizableController.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ScanControl.cs">
       <SubType>UserControl</SubType>
@@ -268,9 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ReportsControl.resx">
       <DependentUpon>ReportsControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ResizableController.resx">
-      <DependentUpon>ResizableController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ScanControl.resx">
       <DependentUpon>ScanControl.cs</DependentUpon>

@@ -448,8 +448,8 @@ namespace TNetworkAdministrator
             // 
             // altoButton1
             // 
-            this.altoButton1.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton1.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.altoButton1.Active1 = System.Drawing.Color.Transparent;
+            this.altoButton1.Active2 = System.Drawing.Color.Transparent;
             this.altoButton1.BackColor = System.Drawing.Color.Transparent;
             this.altoButton1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.altoButton1.Dock = System.Windows.Forms.DockStyle.Top;

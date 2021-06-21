@@ -48,7 +48,7 @@ namespace TNetworkAdministrator.Controls
             try
             {
                 TabPage newp = new TabPage();
-                newp.BackColor = Color.White;
+                newp.BackColor = Color.Transparent;
                 newp.Text = Classes.InputBox.ShowDialog("Digite o nome", "Digite o nome da localização,Adm,Engenharia...");
                 MapTabControl.TabPages.Add(newp);
             }
@@ -66,8 +66,15 @@ namespace TNetworkAdministrator.Controls
 
                 if (MapTabControl.TabPages.Count > 0)
                 {
-                    TNetworkAdministrator.Controls.ResizableController p = new Controls.ResizableController();
+                    AltoControls.AltoButton p = new AltoControls.AltoButton();
                     MapTabControl.SelectedTab.Controls.Add(p);
+                    p.Active1 = Color.Lime;
+                    p.Active2 = Color.Lime;
+                    p.Inactive1 = Color.Lime;
+                    p.Inactive2 = Color.Lime;
+                    p.Text = "";
+                    p.Size = new System.Drawing.Size(102, 15);
+                    ControlManager.ControlMoverOrResizer.Init(p);
                 }
                 else
                 {
