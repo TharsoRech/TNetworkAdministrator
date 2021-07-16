@@ -7,6 +7,7 @@ namespace TNetworkAdministrator.Classes
 {
      class Warning
     {
+        public int Id { get; set; }
         public Device Device { get; set; }
 
         public DateTime Createdin { get; private set; }

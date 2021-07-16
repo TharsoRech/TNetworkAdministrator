@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace TNetworkAdministrator.Classes
 {
-    class Service
+    class Settings
     {
-
         public int Id { get; set; }
-        public string Name { get; set; }
-
-        public Device Computer { get; set; }
-
-        public string Port { get; set; }
     }
 }

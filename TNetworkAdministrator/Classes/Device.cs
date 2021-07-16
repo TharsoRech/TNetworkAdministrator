@@ -7,6 +7,8 @@ namespace TNetworkAdministrator.Classes
 {
     class Device
     {
+
+        public int Id { get; }
         public string Name { get; set; }
 
         public string Description { get; set; }
@@ -16,7 +18,7 @@ namespace TNetworkAdministrator.Classes
 
         public Status Status { get; set; }
 
-        public Image Image { get; set; }
+        public string Image { get; set; }
 
        public Priority Priority { get; set; }
 
