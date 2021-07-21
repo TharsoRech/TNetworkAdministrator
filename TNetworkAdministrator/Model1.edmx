@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="Model1TargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DeviceSet" EntityType="Model1.Device" />
+          <EntitySet Name="Group" EntityType="Model1.Group" />
+          <EntitySet Name="Location" EntityType="Model1.Location" />
+          <EntitySet Name="Priority" EntityType="Model1.Priority" />
+          <EntitySet Name="Service" EntityType="Model1.Service" />
+          <EntitySet Name="Settings" EntityType="Model1.Settings" />
+          <EntitySet Name="Status" EntityType="Model1.Status" />
+          <EntitySet Name="Type" EntityType="Model1.Type" />
+          <EntitySet Name="Warning" EntityType="Model1.Warning" />
+          <EntitySet Name="WarningType" EntityType="Model1.WarningType" />
+          <AssociationSet Name="Group_ID" Association="Model1.Group_ID">
+            <End Role="Device" EntitySet="DeviceSet" />
+            <End Role="Group" EntitySet="Group" />
+          </AssociationSet>
+          <AssociationSet Name="DeviceWarning" Association="Model1.Waring_ID">
+            <End Role="Device" EntitySet="DeviceSet" />
+            <End Role="Warning" EntitySet="Warning" />
+          </AssociationSet>
+          <AssociationSet Name="DeviceLocation" Association="Model1.Location_ID">
+            <End Role="Device" EntitySet="DeviceSet" />
+            <End Role="Location" EntitySet="Location" />
+          </AssociationSet>
+          <AssociationSet Name="DeviceService" Association="Model1.Service_ID">
+            <End Role="Device" EntitySet="DeviceSet" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <EntitySet Name="DaysToCheck" EntityType="Model1.DaysToCheck" />
+        </EntityContainer>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="true" />
+          <Property Name="Manufacturer" Type="String" Nullable="true" />
+          <Property Name="Ip" Type="String" Nullable="false" />
+          <Property Name="status" Type="String" Nullable="false" />
+          <Property Name="Image" Type="String" Nullable="true" />
+          <Property Name="Priority" Type="Int32" Nullable="true" />
+          <Property Name="Group" Type="Int32" Nullable="true" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="AddIn" Type="DateTime" Nullable="false" />
+          <Property Name="TimeON" Type="DateTime" Nullable="true" />
+          <Property Name="TimeOF" Type="DateTime" Nullable="true" />
+          <Property Name="DaysToCheck" Type="Int32" Nullable="true" />
+          <Property Name="CheckEvery" Type="Int32" Nullable="true" />
+          <Property Name="Log" Type="String" Nullable="true" />
+          <Property Name="Warnings" Type="Int32" Nullable="true" />
+          <Property Name="Location" Type="Int32" Nullable="true" />
+          <Property Name="Services" Type="Int32" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="UseDefaultPriority" Type="Byte" Nullable="true" />
+          <Property Name="Priority" Type="Int32" Nullable="true" />
+          <Property Name="TimeOn" Type="DateTime" Nullable="true" />
+          <Property Name="TimeOff" Type="DateTime" Nullable="true" />
+          <Property Name="DaysToCheck" Type="Int32" Nullable="true" />
+          <Property Name="CheckEvery" Type="Int32" Nullable="true" />
+          <Property Name="Warnings" Type="Int32" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Priority">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Low" Type="Int32" Nullable="false" DefaultValue="1" />
+          <Property Name="Medium" Type="Int32" Nullable="false" DefaultValue="2" />
+          <Property Name="High" Type="Int32" Nullable="false" DefaultValue="3" />
+          <Property Name="Critical" Type="Int32" Nullable="false" DefaultValue="4" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Computer" Type="String" Nullable="false" />
+          <Property Name="Port" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Good" Type="Int32" Nullable="false" DefaultValue="1" />
+          <Property Name="Slow" Type="Int32" Nullable="false" DefaultValue="2" />
+          <Property Name="Unreacheable" Type="Int32" Nullable="false" DefaultValue="3" />
+          <Property Name="NotTested" Type="Int32" Nullable="false" DefaultValue="4" />
+        </EntityType>
+        <EntityType Name="Type">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Computer" Type="String" Nullable="false" />
+          <Property Name="Printer" Type="String" Nullable="false" />
+          <Property Name="Switch" Type="String" Nullable="false" />
+          <Property Name="Camera" Type="String" Nullable="false" />
+          <Property Name="Unknown" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Warning">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Device" Type="Int32" Nullable="false" />
+          <Property Name="CreatedIn" Type="DateTime" Nullable="false" />
+          <Property Name="WarningType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WarningType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Offline" Type="String" Nullable="false" DefaultValue="1" />
+          <Property Name="LostingPackage" Type="String" Nullable="false" DefaultValue="2" />
+          <Property Name="NetworkUsingExtreme" Type="String" Nullable="false" DefaultValue="3" />
+          <Property Name="ProcessUsingExtreme" Type="String" Nullable="false" DefaultValue="4" />
+          <Property Name="DiskUtilization" Type="String" Nullable="false" DefaultValue="5" />
+          <Property Name="Unknown" Type="Int32" Nullable="false" DefaultValue="6" />
+        </EntityType>
+        <Association Name="Group_ID">
+          <End Type="Model1.Device" Role="Device" Multiplicity="*" />
+          <End Type="Model1.Group" Role="Group" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="Group" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Waring_ID">
+          <End Type="Model1.Device" Role="Device" Multiplicity="*" />
+          <End Type="Model1.Warning" Role="Warning" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Warning">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="Warnings" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Location_ID">
+          <End Type="Model1.Device" Role="Device" Multiplicity="*" />
+          <End Type="Model1.Location" Role="Location" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="Location" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Service_ID">
+          <End Type="Model1.Device" Role="Device" Multiplicity="*" />
+          <End Type="Model1.Service" Role="Service" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="Services" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DaysToCheck">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sunday" Type="Int32" Nullable="false" DefaultValue="1" />
+          <Property Name="Monday" Type="Int32" Nullable="false" DefaultValue="2" />
+          <Property Name="Tuesday" Type="Int32" Nullable="false" DefaultValue="3" />
+          <Property Name="wednesday" Type="Int32" Nullable="false" DefaultValue="4" />
+          <Property Name="Thursday" Type="Int32" Nullable="false" DefaultValue="5" />
+          <Property Name="Friday" Type="Int32" Nullable="false" DefaultValue="6" />
+          <Property Name="Saturday" Type="Int32" Nullable="false" DefaultValue="7" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="Model1" />
+        <Alias Key="Target" Value="Model1.Store" />
+        <EntityContainerMapping CdmEntityContainer="Model1Container" StorageEntityContainer="Model1TargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

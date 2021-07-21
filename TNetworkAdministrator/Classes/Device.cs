@@ -38,6 +38,6 @@ namespace TNetworkAdministrator.Classes
 
         public List<Classes.WarningType> WarningTypes { get;set ;}
 
-        public Location location { get; set; }
-    }
+        public Location location{ get; set; }
+    } 
 }
