@@ -287,7 +287,7 @@ namespace TNetworkAdministrator.Controls
                     }
                     return iscamera;
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
 
                     return iscamera;

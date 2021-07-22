@@ -66,6 +66,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label2 = new System.Windows.Forms.Label();
             this.Prioridades = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DevicesList)).BeginInit();
             this.SuspendLayout();
@@ -499,11 +500,23 @@ namespace TNetworkAdministrator.SubFormas
             this.label3.TabIndex = 129;
             this.label3.Text = "Prioridade:";
             // 
+            // Id
+            // 
+            this.Id.AutoSize = true;
+            this.Id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id.ForeColor = System.Drawing.Color.White;
+            this.Id.Location = new System.Drawing.Point(64, 66);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(31, 23);
+            this.Id.TabIndex = 130;
+            this.Id.Text = "Id:";
+            // 
             // GroupEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 651);
+            this.Controls.Add(this.Id);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DevicesList);
@@ -583,5 +596,6 @@ namespace TNetworkAdministrator.SubFormas
         public System.Windows.Forms.Label label2;
         private Wisder.W3Common.WMetroControl.Controls.MetroComboBox Prioridades;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Id;
     }
 }

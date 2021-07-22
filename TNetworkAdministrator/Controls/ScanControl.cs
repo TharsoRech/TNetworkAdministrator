@@ -1,6 +1,7 @@
 ﻿using SnmpSharpNet;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace TNetworkAdministrator.Controls
@@ -239,7 +240,7 @@ namespace TNetworkAdministrator.Controls
                 this.Invoke(new MethodInvoker(delegate { Status.Text = "Scanemento concluido"; }));
             }
 
-            catch (Exception ex)
+            catch (Exception )
             {
 
             }
@@ -258,11 +259,11 @@ namespace TNetworkAdministrator.Controls
             }
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        public void metroButton1_Click(object sender, EventArgs e)
         {
             try
             {
-
+               
                 foreach (TNetworkAdministrator.Controls.DeviceScan n1 in Scaneados.Controls)
                 {
                     if (n1.check() == true)
@@ -338,5 +339,4 @@ namespace TNetworkAdministrator.Controls
 
 
     }
-
 }

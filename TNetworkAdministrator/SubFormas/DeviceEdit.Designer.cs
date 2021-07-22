@@ -73,6 +73,7 @@ namespace TNetworkAdministrator.SubFormas
             this.UseDefaultGroup = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).BeginInit();
             this.SuspendLayout();
             // 
@@ -616,11 +617,23 @@ namespace TNetworkAdministrator.SubFormas
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Id
+            // 
+            this.Id.AutoSize = true;
+            this.Id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id.ForeColor = System.Drawing.Color.White;
+            this.Id.Location = new System.Drawing.Point(341, 40);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(31, 23);
+            this.Id.TabIndex = 126;
+            this.Id.Text = "Id:";
+            // 
             // DeviceEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 576);
+            this.Controls.Add(this.Id);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UseDefaultGroup);
@@ -720,5 +733,6 @@ namespace TNetworkAdministrator.SubFormas
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         public Wisder.W3Common.WMetroControl.Controls.MetroCheckBox UseDefaultGroup;
+        private System.Windows.Forms.Label Id;
     }
 }

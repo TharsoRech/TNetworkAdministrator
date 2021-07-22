@@ -20,6 +20,8 @@
         <AssociationConnector Association="Model1.Location_ID" />
         <AssociationConnector Association="Model1.Service_ID" />
         <EntityTypeShape EntityType="Model1.DaysToCheck" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Model1.Log" Width="1.5" PointX="10.75" PointY="7.875" />
+        <AssociationConnector Association="Model1.Log_Id" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

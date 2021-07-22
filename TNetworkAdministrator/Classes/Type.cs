@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TNetworkAdministrator.Classes
 {
-   enum Type
+   public enum Type
     {
         Computer,
         Printer,

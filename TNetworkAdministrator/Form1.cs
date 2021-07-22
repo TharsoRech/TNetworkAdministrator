@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using System.Linq;
-
+using System.Data.SqlClient;
+using Org.BouncyCastle.Utilities;
 
 namespace TNetworkAdministrator
 {
@@ -148,7 +148,11 @@ namespace TNetworkAdministrator
         {
             try
             {
-                this.Close();
+                //addnewDevice("teste2", "172.16.1.11", new TNetworkAdministrator.Status().Good, Convert.ToInt32(new TNetworkAdministrator.Type().Computer));
+
+                // RemoveDevice("Device", "Id","2");
+
+                UpdateDevice("Device", "Name", "5", "Testando2");
             }
             catch (Exception)
             {
@@ -227,5 +231,157 @@ namespace TNetworkAdministrator
         {
             this.Close();
         }
+        public void addnewDevice(string name, string ip, int status, int type)
+        {
+            try
+            {
+
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+                //definição do comando sql
+                string sql = "INSERT INTO Device(Name, Ip, status, Type,Addin )VALUES(@Name, @Ip, @status, @Type,@Addin)";
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    comando.Parameters.Add(new SqlParameter("@Name", name));
+                    comando.Parameters.Add(new SqlParameter("@Ip", ip));
+                    comando.Parameters.Add(new SqlParameter("@status", status));
+                    comando.Parameters.Add(new SqlParameter("@Type", type));
+                    comando.Parameters.Add(new SqlParameter("@Addin", DateTime.Now));
+                    conn.Open();
+                    comando.ExecuteNonQuery();
+                    conn.Close();
+
+                    MessageBox.Show("comando executado com sucesso");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public void RemoveDevice(String Table, string columnName, string value)
+        {
+            try
+            {
+
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+
+                string sql = "DELETE FROM " + Table + " WHERE " + columnName + " = '" + value + "'";
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    conn.Open();
+                    comando.ExecuteNonQuery();
+                    conn.Close();
+
+                    MessageBox.Show("comando executado com sucesso");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+        public void UpdateDevice(String Table, string columnName,String valueID, string Newvalue)
+        {
+            try
+            {
+
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+                //definição do comando sql
+                string sql = "UPDATE "+ Table +" SET"+ new string(' ', 2) + columnName + "=" + "'" + Newvalue +"'" + new string(' ', 2) + "WHERE Id=" + valueID + "";
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    conn.Open();
+                    comando.ExecuteNonQuery();
+                    conn.Close();
+
+                    MessageBox.Show("comando executado com sucesso");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+        public void GetInfoFrom(String Table, string columnName, String value)
+        {
+            try
+            {
+                SqlDataReader reader = null;
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+                //definição do comando sql
+                string sql = "select * from"+ new string(' ', 2) + Table + "where" + columnName + new string(' ', 2) + " = '" + value + "'";
+                MessageBox.Show(sql);
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    reader = comando.ExecuteReader();
+
+                    // Exibindo os registros
+                    while (reader.Read())
+                    {
+                        MessageBox.Show(reader["Nome"].ToString());
+                    }
+                    conn.Close();
+
+                    MessageBox.Show("comando executado com sucesso");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
     }
 }
+
+
+

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace TNetworkAdministrator.Classes
 {
-    public enum Status
+    public  enum  Status
     {
-        Good,
-        Slow,
+        Good ,
+        Slow ,
         Unreacheable,
         NotTested,
 
