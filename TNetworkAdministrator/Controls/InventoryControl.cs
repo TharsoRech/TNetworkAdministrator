@@ -16,6 +16,14 @@ namespace TNetworkAdministrator.Controls
         public InventoryControl()
         {
             InitializeComponent();
+            List<string> values = Form1.GetInfoFrom("Device", new List<string>() { "Id", "Ip", "Name","Group" });
+
+               Controls.Device dev1 = new Controls.Device();
+            dev1.ID = values[0];
+            dev1.Ip.Text = values[1];
+            dev1.DeviceText.Text = values[2];
+            ListofDevices.Controls.Add(dev1);
+
         }
 
         private void metroButton1_Click(object sender, EventArgs e)

@@ -17,13 +17,13 @@ namespace TNetworkAdministrator
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DaysToCheck()
         {
-            this.Sunday = 1;
-            this.Monday = 2;
-            this.Tuesday = 3;
-            this.wednesday = 4;
-            this.Thursday = 5;
-            this.Friday = 6;
-            this.Saturday = 7;
+            this.Sunday = 0;
+            this.Monday = 0;
+            this.Tuesday = 0;
+            this.wednesday = 0;
+            this.Thursday = 0;
+            this.Friday = 0;
+            this.Saturday = 0;
         }
     
         public int Id { get; set; }

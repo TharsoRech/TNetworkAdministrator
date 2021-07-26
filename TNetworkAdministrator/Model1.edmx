@@ -6,7 +6,7 @@
     <edmx:StorageModels>
     <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="Model1StoreContainer">
-    <EntitySet Name="DeviceSet" EntityType="Model1.Store.DeviceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Device" EntityType="Model1.Store.Device" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Group" EntityType="Model1.Store.Group" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Location" EntityType="Model1.Store.Location" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Priority" EntityType="Model1.Store.Priority" store:Type="Tables" Schema="dbo" />
@@ -17,24 +17,33 @@
     <EntitySet Name="Warning" EntityType="Model1.Store.Warning" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="WarningType" EntityType="Model1.Store.WarningType" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DaysToCheck" EntityType="Model1.Store.DaysToCheck" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Log" EntityType="Model1.Store.Log" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="Group_ID" Association="Model1.Store.Group_ID">
-      <End Role="Device" EntitySet="DeviceSet" />
+      <End Role="Device" EntitySet="Device" />
       <End Role="Group" EntitySet="Group" />
     </AssociationSet>
     <AssociationSet Name="DeviceWarning" Association="Model1.Store.Waring_ID">
-      <End Role="Device" EntitySet="DeviceSet" />
+      <End Role="Device" EntitySet="Device" />
       <End Role="Warning" EntitySet="Warning" />
     </AssociationSet>
     <AssociationSet Name="DeviceLocation" Association="Model1.Store.Location_ID">
-      <End Role="Device" EntitySet="DeviceSet" />
+      <End Role="Device" EntitySet="Device" />
       <End Role="Location" EntitySet="Location" />
     </AssociationSet>
     <AssociationSet Name="DeviceService" Association="Model1.Store.Service_ID">
-      <End Role="Device" EntitySet="DeviceSet" />
+      <End Role="Device" EntitySet="Device" />
       <End Role="Service" EntitySet="Service" />
     </AssociationSet>
+    <AssociationSet Name="Log_Id" Association="Model1.Store.Log_Id">
+      <End Role="Log" EntitySet="Device" />
+      <End Role="_Id" EntitySet="Log" />
+    </AssociationSet>
+    <AssociationSet Name="DeviceDaysToCheck" Association="Model1.Store.DaysToCheck_Id">
+      <End Role="Device" EntitySet="Device" />
+      <End Role="DaysToCheck" EntitySet="DaysToCheck" />
+    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="DeviceSet">
+  <EntityType Name="Device">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -153,16 +162,25 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Sunday" Type="int" Nullable="false" DefaultValue="1" />
-    <Property Name="Monday" Type="int" Nullable="false" DefaultValue="2" />
-    <Property Name="Tuesday" Type="int" Nullable="false" DefaultValue="3" />
-    <Property Name="wednesday" Type="int" Nullable="false" DefaultValue="4" />
-    <Property Name="Thursday" Type="int" Nullable="false" DefaultValue="5" />
-    <Property Name="Friday" Type="int" Nullable="false" DefaultValue="6" />
-    <Property Name="Saturday" Type="int" Nullable="false" DefaultValue="7" />
+    <Property Name="Sunday" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="Monday" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="Tuesday" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="wednesday" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="Thursday" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="Friday" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="Saturday" Type="int" Nullable="false" DefaultValue="0" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CurrentUser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
   </EntityType>
   <Association Name="Group_ID">
-    <End Role="Device" Type="Model1.Store.DeviceSet" Multiplicity="*" />
+    <End Role="Device" Type="Model1.Store.Device" Multiplicity="*" />
     <End Role="Group" Type="Model1.Store.Group" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Group">
@@ -174,7 +192,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Waring_ID">
-    <End Role="Device" Type="Model1.Store.DeviceSet" Multiplicity="*" />
+    <End Role="Device" Type="Model1.Store.Device" Multiplicity="*" />
     <End Role="Warning" Type="Model1.Store.Warning" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Warning">
@@ -186,7 +204,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Location_ID">
-    <End Role="Device" Type="Model1.Store.DeviceSet" Multiplicity="*" />
+    <End Role="Device" Type="Model1.Store.Device" Multiplicity="*" />
     <End Role="Location" Type="Model1.Store.Location" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Location">
@@ -198,7 +216,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="Service_ID">
-    <End Role="Device" Type="Model1.Store.DeviceSet" Multiplicity="*" />
+    <End Role="Device" Type="Model1.Store.Device" Multiplicity="*" />
     <End Role="Service" Type="Model1.Store.Service" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Service">
@@ -206,6 +224,30 @@
       </Principal>
       <Dependent Role="Device">
         <PropertyRef Name="Services" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Log_Id">
+    <End Role="Log" Type="Model1.Store.Device" Multiplicity="1" />
+    <End Role="_Id" Type="Model1.Store.Log" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Log">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Id">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DaysToCheck_Id">
+    <End Role="Device" Type="Model1.Store.Device" Multiplicity="*" />
+    <End Role="DaysToCheck" Type="Model1.Store.DaysToCheck" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DaysToCheck">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="DaysToCheck" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -245,6 +287,10 @@
           <AssociationSet Name="Log_Id" Association="Model1.Log_Id">
             <End Role="Log" EntitySet="Device" />
             <End Role="_Id" EntitySet="Log" />
+          </AssociationSet>
+          <AssociationSet Name="DeviceDaysToCheck" Association="Model1.DaysToCheck_Id">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="DaysToCheck" EntitySet="DaysToCheck" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Device">
@@ -414,13 +460,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Sunday" Type="Int32" Nullable="false" DefaultValue="1" />
-          <Property Name="Monday" Type="Int32" Nullable="false" DefaultValue="2" />
-          <Property Name="Tuesday" Type="Int32" Nullable="false" DefaultValue="3" />
-          <Property Name="wednesday" Type="Int32" Nullable="false" DefaultValue="4" />
-          <Property Name="Thursday" Type="Int32" Nullable="false" DefaultValue="5" />
-          <Property Name="Friday" Type="Int32" Nullable="false" DefaultValue="6" />
-          <Property Name="Saturday" Type="Int32" Nullable="false" DefaultValue="7" />
+          <Property Name="Sunday" Type="Int32" Nullable="false" DefaultValue="0" />
+          <Property Name="Monday" Type="Int32" Nullable="false" DefaultValue="0" />
+          <Property Name="Tuesday" Type="Int32" Nullable="false" DefaultValue="0" />
+          <Property Name="wednesday" Type="Int32" Nullable="false" DefaultValue="0" />
+          <Property Name="Thursday" Type="Int32" Nullable="false" DefaultValue="0" />
+          <Property Name="Friday" Type="Int32" Nullable="false" DefaultValue="0" />
+          <Property Name="Saturday" Type="Int32" Nullable="false" DefaultValue="0" />
         </EntityType>
         <EntityType Name="Log">
           <Key>
@@ -443,6 +489,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="DaysToCheck_Id">
+          <End Type="Model1.Device" Role="Device" Multiplicity="*" />
+          <End Type="Model1.DaysToCheck" Role="DaysToCheck" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="DaysToCheck">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="DaysToCheck" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -451,7 +509,7 @@
   <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
     <EntitySetMapping Name="Device">
       <EntityTypeMapping TypeName="IsTypeOf(Model1.Device)">
-        <MappingFragment StoreEntitySet="DeviceSet">
+        <MappingFragment StoreEntitySet="Device">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Description" ColumnName="Description" />
@@ -584,6 +642,16 @@
           <ScalarProperty Name="Thursday" ColumnName="Thursday" />
           <ScalarProperty Name="Friday" ColumnName="Friday" />
           <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Log)">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentUser" ColumnName="CurrentUser" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

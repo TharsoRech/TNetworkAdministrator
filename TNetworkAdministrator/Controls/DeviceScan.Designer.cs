@@ -35,7 +35,6 @@ namespace TNetworkAdministrator.Controls
             this.DeviceText = new System.Windows.Forms.Label();
             this.Status = new System.Windows.Forms.Label();
             this.ScanDeviceWork = new System.ComponentModel.BackgroundWorker();
-            this.button3 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.DeviceImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DeviceImage)).BeginInit();
@@ -87,20 +86,6 @@ namespace TNetworkAdministrator.Controls
             this.Status.TabIndex = 23;
             this.Status.Text = "Status:";
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(982, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 35);
-            this.button3.TabIndex = 22;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // checkBox1
             // 
             this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
@@ -108,7 +93,7 @@ namespace TNetworkAdministrator.Controls
             this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(951, 0);
+            this.checkBox1.Location = new System.Drawing.Point(1001, 0);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(31, 35);
             this.checkBox1.TabIndex = 24;
@@ -134,7 +119,6 @@ namespace TNetworkAdministrator.Controls
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Status);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.Ip);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.DeviceText);
@@ -153,7 +137,6 @@ namespace TNetworkAdministrator.Controls
         public System.Windows.Forms.Label DeviceText;
         public System.Windows.Forms.Label Status;
         public System.ComponentModel.BackgroundWorker ScanDeviceWork;
-        private System.Windows.Forms.Button button3;
         public System.Windows.Forms.PictureBox DeviceImage;
         private System.Windows.Forms.CheckBox checkBox1;
     }

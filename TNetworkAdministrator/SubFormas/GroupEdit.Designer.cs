@@ -67,6 +67,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Prioridades = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DevicesList)).BeginInit();
             this.SuspendLayout();
@@ -511,11 +512,25 @@ namespace TNetworkAdministrator.SubFormas
             this.Id.TabIndex = 130;
             this.Id.Text = "Id:";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(645, 292);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(38, 30);
+            this.button1.TabIndex = 131;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // GroupEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 651);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Id);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -597,5 +612,6 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroComboBox Prioridades;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Id;
+        private System.Windows.Forms.Button button1;
     }
 }

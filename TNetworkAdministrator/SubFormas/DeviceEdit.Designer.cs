@@ -55,7 +55,7 @@ namespace TNetworkAdministrator.SubFormas
             this.LostPackageCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.StatusCheck = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.MonitoringCheck = new System.Windows.Forms.NumericUpDown();
+            this.CheckEvery = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -73,8 +73,11 @@ namespace TNetworkAdministrator.SubFormas
             this.UseDefaultGroup = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).BeginInit();
+            this.TypeDevice = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckEvery)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -260,7 +263,7 @@ namespace TNetworkAdministrator.SubFormas
             // 
             this.ImageText.Enabled = false;
             this.ImageText.Lines = new string[0];
-            this.ImageText.Location = new System.Drawing.Point(120, 403);
+            this.ImageText.Location = new System.Drawing.Point(120, 455);
             this.ImageText.MaxLength = 32767;
             this.ImageText.Name = "ImageText";
             this.ImageText.PasswordChar = '\0';
@@ -276,7 +279,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(24, 403);
+            this.label8.Location = new System.Drawing.Point(23, 456);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 23);
             this.label8.TabIndex = 27;
@@ -311,7 +314,7 @@ namespace TNetworkAdministrator.SubFormas
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroButton4.Location = new System.Drawing.Point(188, 433);
+            this.metroButton4.Location = new System.Drawing.Point(188, 493);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(129, 22);
             this.metroButton4.TabIndex = 31;
@@ -392,13 +395,13 @@ namespace TNetworkAdministrator.SubFormas
             this.label9.TabIndex = 43;
             this.label9.Text = "Assinale os tipos de Monitoramento \r\nque você deseja para esse dispositivo:";
             // 
-            // MonitoringCheck
+            // CheckEvery
             // 
-            this.MonitoringCheck.Location = new System.Drawing.Point(586, 351);
-            this.MonitoringCheck.Name = "MonitoringCheck";
-            this.MonitoringCheck.Size = new System.Drawing.Size(27, 20);
-            this.MonitoringCheck.TabIndex = 58;
-            this.MonitoringCheck.Value = new decimal(new int[] {
+            this.CheckEvery.Location = new System.Drawing.Point(586, 351);
+            this.CheckEvery.Name = "CheckEvery";
+            this.CheckEvery.Size = new System.Drawing.Size(27, 20);
+            this.CheckEvery.TabIndex = 58;
+            this.CheckEvery.Value = new decimal(new int[] {
             5,
             0,
             0,
@@ -617,23 +620,67 @@ namespace TNetworkAdministrator.SubFormas
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Id
+            // TypeDevice
             // 
-            this.Id.AutoSize = true;
-            this.Id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.ForeColor = System.Drawing.Color.White;
-            this.Id.Location = new System.Drawing.Point(341, 40);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(31, 23);
-            this.Id.TabIndex = 126;
-            this.Id.Text = "Id:";
+            this.TypeDevice.FormattingEnabled = true;
+            this.TypeDevice.ItemHeight = 23;
+            this.TypeDevice.Items.AddRange(new object[] {
+            "Computador",
+            "Impressora",
+            "Switch",
+            "Camera",
+            "Desconhecido"});
+            this.TypeDevice.Location = new System.Drawing.Point(128, 407);
+            this.TypeDevice.Name = "TypeDevice";
+            this.TypeDevice.Size = new System.Drawing.Size(189, 29);
+            this.TypeDevice.TabIndex = 126;
+            this.TypeDevice.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
+            this.TypeDevice.UseSelectable = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(73, 409);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 23);
+            this.label15.TabIndex = 127;
+            this.label15.Text = "Tipo:";
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton1.Location = new System.Drawing.Point(560, 49);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(77, 22);
+            this.metroButton1.TabIndex = 128;
+            this.metroButton1.Text = "Alertas";
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.UseVisualStyleBackColor = false;
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroButton3.Location = new System.Drawing.Point(653, 49);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(77, 22);
+            this.metroButton3.TabIndex = 129;
+            this.metroButton3.Text = "Log";
+            this.metroButton3.UseCustomBackColor = true;
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.UseVisualStyleBackColor = false;
             // 
             // DeviceEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 576);
-            this.Controls.Add(this.Id);
+            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.TypeDevice);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UseDefaultGroup);
@@ -651,7 +698,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.MonitoringCheck);
+            this.Controls.Add(this.CheckEvery);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ProcessorUseCheck);
             this.Controls.Add(this.NetworkUseCheckl);
@@ -682,7 +729,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Text = "Editar Dispositivo";
             this.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.DeviceEdit_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.MonitoringCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckEvery)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,7 +762,6 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox LostPackageCheck;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox StatusCheck;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown MonitoringCheck;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label12;
@@ -728,11 +774,15 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Thursday;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Wednesday;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Saturday;
-        private System.Windows.Forms.DateTimePicker TimeON;
-        private System.Windows.Forms.DateTimePicker TimeOff;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         public Wisder.W3Common.WMetroControl.Controls.MetroCheckBox UseDefaultGroup;
-        private System.Windows.Forms.Label Id;
+        public Wisder.W3Common.WMetroControl.Controls.MetroComboBox TypeDevice;
+        private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.DateTimePicker TimeON;
+        public System.Windows.Forms.DateTimePicker TimeOff;
+        public System.Windows.Forms.NumericUpDown CheckEvery;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton1;
+        private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
     }
 }

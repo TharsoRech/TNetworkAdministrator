@@ -11,6 +11,7 @@ namespace TNetworkAdministrator.SubFormas
 {
     public partial class DeviceEdit : Wisder.W3Common.WMetroControl.Forms.MetroForm
     {
+        public string Id { get; set; }
         public DeviceEdit()
         {
             InitializeComponent();
@@ -35,7 +36,10 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                
+                if(metroButton1.Text == "Salvar")
+                {
+                    //Form1.addnewDevice()
+                }
             }
             catch (Exception ex)
             {
@@ -69,7 +73,7 @@ namespace TNetworkAdministrator.SubFormas
                     LostPackageCheck.Enabled = false;
                     NetworkUseCheckl.Enabled = false;
                     ProcessorUseCheck.Enabled = false;
-                    MonitoringCheck.Enabled = false;
+                    CheckEvery.Enabled = false;
                     TimeON.Enabled = false;
                     TimeOff.Enabled = false;
                     Sunday.Enabled = false;
@@ -87,7 +91,7 @@ namespace TNetworkAdministrator.SubFormas
                     LostPackageCheck.Enabled = true;
                     NetworkUseCheckl.Enabled = true;
                     ProcessorUseCheck.Enabled = true;
-                    MonitoringCheck.Enabled = true;
+                    CheckEvery.Enabled = true;
                     TimeON.Enabled = true;
                     TimeOff.Enabled = true;
                     Sunday.Enabled = true;

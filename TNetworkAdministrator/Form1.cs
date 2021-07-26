@@ -152,7 +152,13 @@ namespace TNetworkAdministrator
 
                 // RemoveDevice("Device", "Id","2");
 
-                UpdateDevice("Device", "Name", "5", "Testando2");
+                // UpdateDevice("Device", "Name", "5", "Testando2");
+               // foreach(string st in GetInfoFrom("Device", "Id", "5", new List<string>() { "Name", "Ip", "Id" }))
+                //    {
+                //    MessageBox.Show(st);
+               // }
+
+               
             }
             catch (Exception)
             {
@@ -190,6 +196,7 @@ namespace TNetworkAdministrator
             PanelVisualizer.Controls.Clear();
 
             ShowControl(new TNetworkAdministrator.Controls.InventoryControl());
+
         }
 
         private void altoButton5_Click(object sender, EventArgs e)
@@ -231,7 +238,7 @@ namespace TNetworkAdministrator
         {
             this.Close();
         }
-        public void addnewDevice(string name, string ip, int status, int type)
+        public static void addnewDevice(string name, string ip, int status, int type)
         {
             try
             {
@@ -271,7 +278,7 @@ namespace TNetworkAdministrator
             }
         }
 
-        public void RemoveDevice(String Table, string columnName, string value)
+        public static void RemoveDevice(String Table, string columnName, string value)
         {
             try
             {
@@ -305,7 +312,7 @@ namespace TNetworkAdministrator
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        public void UpdateDevice(String Table, string columnName,String valueID, string Newvalue)
+        public static void UpdateDevice(String Table, string columnName,String valueID, string Newvalue)
         {
             try
             {
@@ -339,27 +346,135 @@ namespace TNetworkAdministrator
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        public void GetInfoFrom(String Table, string columnName, String value)
+        public static List<string> GetInfoFrom(String Table, string columnName, String value, List<string> Columns)
         {
+            List<string> values = new List<string>();
             try
             {
+
                 SqlDataReader reader = null;
 
                 SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
                 //definição do comando sql
-                string sql = "select * from"+ new string(' ', 2) + Table + "where" + columnName + new string(' ', 2) + " = '" + value + "'";
-                MessageBox.Show(sql);
+                string sql = "select * from"+ new string(' ', 2) + Table + new string(' ', 2) + "where" + new string(' ', 2)  + columnName + " = '" + value + "'";
                 try
                 {
 
                     SqlCommand comando = new SqlCommand(sql, conn);
+                    conn.Open();
                     reader = comando.ExecuteReader();
 
-                    // Exibindo os registros
+                    // Exibindo os registros e retornando valor
                     while (reader.Read())
                     {
-                        MessageBox.Show(reader["Nome"].ToString());
+                        foreach(string st in Columns)
+                        {
+                            values.Add(reader[st].ToString());
+                        }
                     }
+                    conn.Close();
+                    return values;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    return values;
+                }
+                finally
+                {
+                    conn.Close();
+                 
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+               
+            }
+            return values;
+        }
+
+        public static List<string> GetInfoFrom(String Table,  List<string> Columns)
+        {
+            List<string> values = new List<string>();
+            try
+            {
+
+                SqlDataReader reader = null;
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+                //definição do comando sql
+                string sql = "select * from" + new string(' ', 2) + Table ;
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    conn.Open();
+                    reader = comando.ExecuteReader();
+
+                    // Exibindo os registros e retornando valor
+                    while (reader.Read())
+                    {
+                        foreach (string st in Columns)
+                        {
+                            values.Add(reader[st].ToString());
+                        }
+                    }
+                    conn.Close();
+                    return values;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    return values;
+                }
+                finally
+                {
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+            return values;
+        }
+
+        public static void addnewDevice(string name, string Description ,string Manufacturer,string ip, int status,string Image,int priority,int Group,int Type,DateTime Addin,DateTime TimeOn,DateTime TimeOF,int DaysToCheck,int CheckEvery)
+        {
+            try
+            {
+
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+                //definição do comando sql
+                string sql = "INSERT INTO Device(Name, Ip, status, Type,Addin )VALUES(@Name,@Description,@Manufacturer,@Ip, @status,@Image,@Priority,@Group,@Type,@Addin,@TimeON,@TimeOF,@DaysToCheck,@CheckEvery)";
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    comando.Parameters.Add(new SqlParameter("@Name", name));
+                    comando.Parameters.Add(new SqlParameter("@Description", Description));
+                    comando.Parameters.Add(new SqlParameter("@Manufacturer", Manufacturer));
+                    comando.Parameters.Add(new SqlParameter("@Ip", ip));
+                    comando.Parameters.Add(new SqlParameter("@Status", status));
+                    comando.Parameters.Add(new SqlParameter("@Image", Image));
+                    comando.Parameters.Add(new SqlParameter("@Priority", Type));
+                    comando.Parameters.Add(new SqlParameter("@Group", Group));
+                    comando.Parameters.Add(new SqlParameter("@Type", Type));
+                    comando.Parameters.Add(new SqlParameter("@Addin", Addin));
+                    comando.Parameters.Add(new SqlParameter("@TimeON", TimeOn));
+                    comando.Parameters.Add(new SqlParameter("@TimeOF", TimeOF));
+                    comando.Parameters.Add(new SqlParameter("@DaysToCheck", DaysToCheck));
+                    comando.Parameters.Add(new SqlParameter("@CheckEvery", CheckEvery));
+                    conn.Open();
+                    comando.ExecuteNonQuery();
                     conn.Close();
 
                     MessageBox.Show("comando executado com sucesso");
@@ -379,6 +494,7 @@ namespace TNetworkAdministrator
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
 
     }
 }

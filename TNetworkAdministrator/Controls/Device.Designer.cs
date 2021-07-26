@@ -32,7 +32,7 @@ namespace TNetworkAdministrator.Controls
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Device));
             this.button1 = new System.Windows.Forms.Button();
             this.DeviceText = new System.Windows.Forms.Label();
-            this.Status = new System.Windows.Forms.Label();
+            this.Group = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Ip = new System.Windows.Forms.Label();
@@ -63,16 +63,16 @@ namespace TNetworkAdministrator.Controls
             this.DeviceText.TabIndex = 12;
             this.DeviceText.Text = "Dipositivo:";
             // 
-            // Status
+            // Group
             // 
-            this.Status.AutoSize = true;
-            this.Status.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.ForeColor = System.Drawing.Color.White;
-            this.Status.Location = new System.Drawing.Point(670, 6);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(64, 23);
-            this.Status.TabIndex = 14;
-            this.Status.Text = "Grupo:";
+            this.Group.AutoSize = true;
+            this.Group.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Group.ForeColor = System.Drawing.Color.White;
+            this.Group.Location = new System.Drawing.Point(670, 6);
+            this.Group.Name = "Group";
+            this.Group.Size = new System.Drawing.Size(64, 23);
+            this.Group.TabIndex = 14;
+            this.Group.Text = "Grupo:";
             // 
             // button2
             // 
@@ -120,7 +120,7 @@ namespace TNetworkAdministrator.Controls
             this.Controls.Add(this.Ip);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.Status);
+            this.Controls.Add(this.Group);
             this.Controls.Add(this.DeviceText);
             this.Controls.Add(this.button1);
             this.Name = "Device";
@@ -132,10 +132,10 @@ namespace TNetworkAdministrator.Controls
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label DeviceText;
-        private System.Windows.Forms.Label Status;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label Ip;
+        public System.Windows.Forms.Label DeviceText;
+        public System.Windows.Forms.Label Group;
+        public System.Windows.Forms.Label Ip;
     }
 }
