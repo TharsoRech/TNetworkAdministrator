@@ -36,9 +36,66 @@ namespace TNetworkAdministrator.SubFormas
         {
             try
             {
-                if(metroButton1.Text == "Salvar")
+                int StatusDev = 0;
+                int PriorityDev = 0;
+                int TypeDev = 0;
+                switch (StatusDevice.Text)
                 {
-                    //Form1.addnewDevice()
+                    case "Bom":
+                        StatusDev = 1;
+                        break;
+                    case "Lento":
+                        StatusDev = 2;
+                        break;
+                    case "Não Acessível":
+                        StatusDev = 3;
+                        break;
+                    case "Não Testado":
+                        StatusDev = 4;
+                        break;
+                }
+                switch (PriorityChoose.Text)
+                {
+                    case "Baixa":
+                        PriorityDev = 1;
+                        break;
+                    case "Média":
+                        PriorityDev = 2;
+                        break;
+                    case "Alta":
+                        PriorityDev = 3;
+                        break;
+                    case "Crítica":
+                        PriorityDev = 4;
+                        break;
+                }
+                switch (TypeDevice.Text)
+                {
+                    case "Computador":
+                        TypeDev = 1;
+                        break;
+                    case "Impressora":
+                        TypeDev = 2;
+                        break;
+                    case "Switch":
+                        TypeDev = 3;
+                        break;
+                    case "Camera":
+                        TypeDev = 4;
+                        break;
+                    case "Desconhecido":
+                        TypeDev = 5;
+                        break;
+                }
+
+                if (metroButton1.Text == "Salvar")
+                {
+              //   Form1.addnewDevice(NameText.Text,Description.Text,Manufacturer.Text,Ip.Text,)
+
+                }
+                else
+                {
+                  
                 }
             }
             catch (Exception ex)
@@ -62,54 +119,7 @@ namespace TNetworkAdministrator.SubFormas
             }
         }
 
-        private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-            
-                if (UseDefaultGroup.Checked == true)
-                {
-                    StatusCheck.Enabled = false;
-                    LostPackageCheck.Enabled = false;
-                    NetworkUseCheckl.Enabled = false;
-                    ProcessorUseCheck.Enabled = false;
-                    CheckEvery.Enabled = false;
-                    TimeON.Enabled = false;
-                    TimeOff.Enabled = false;
-                    Sunday.Enabled = false;
-                    Monday.Enabled = false;
-                    Tuesday.Enabled = false;
-                    Wednesday.Enabled = false;
-                    Thursday.Enabled = false;
-                    Fryday.Enabled = false;
-                    Saturday.Enabled = false;
-                    GroupsChoose.Enabled = false;
-                }
-                else
-                {
-                    StatusCheck.Enabled = true;
-                    LostPackageCheck.Enabled = true;
-                    NetworkUseCheckl.Enabled = true;
-                    ProcessorUseCheck.Enabled = true;
-                    CheckEvery.Enabled = true;
-                    TimeON.Enabled = true;
-                    TimeOff.Enabled = true;
-                    Sunday.Enabled = true;
-                    Monday.Enabled = true;
-                    Tuesday.Enabled = true;
-                    Wednesday.Enabled = true;
-                    Thursday.Enabled = true;
-                    Fryday.Enabled = true;
-                    Saturday.Enabled = true;
-                    GroupsChoose.Enabled = true;
-                }
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -139,20 +149,7 @@ namespace TNetworkAdministrator.SubFormas
             }
         }
 
-        private void GroupsChoose_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if(GroupsChoose.Text != "")
-                {
-                    UseDefaultGroup.Enabled = true;
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+       
+        
     }
 }

@@ -235,6 +235,7 @@
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\InputBox.cs" />
     <Compile Include="Classes\Location.cs" />
+    <Compile Include="Classes\Monitoring.cs" />
     <Compile Include="Classes\Priority.cs" />
     <Compile Include="Classes\Service.cs" />
     <Compile Include="Classes\Settings.cs" />
@@ -355,6 +356,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitoring.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Priority.cs">
       <DependentUpon>Model1.tt</DependentUpon>

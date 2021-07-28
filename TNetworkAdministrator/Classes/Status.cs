@@ -7,10 +7,10 @@ namespace TNetworkAdministrator.Classes
 {
     public  enum  Status
     {
-        Good ,
-        Slow ,
-        Unreacheable,
-        NotTested,
+        Good=1 ,
+        Slow=2 ,
+        Unreacheable=3,
+        NotTested=4,
 
     }
 }

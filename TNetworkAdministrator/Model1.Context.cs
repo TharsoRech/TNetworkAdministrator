@@ -37,5 +37,6 @@ namespace TNetworkAdministrator
         public virtual DbSet<WarningType> WarningType { get; set; }
         public virtual DbSet<DaysToCheck> DaysToCheck { get; set; }
         public virtual DbSet<Log> Log { get; set; }
+        public virtual DbSet<Monitoring> Monitoring { get; set; }
     }
 }

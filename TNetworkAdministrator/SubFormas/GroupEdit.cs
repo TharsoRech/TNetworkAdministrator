@@ -25,5 +25,18 @@ namespace TNetworkAdministrator.SubFormas
         {
             this.Close();
         }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
     }
 }

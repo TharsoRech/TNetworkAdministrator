@@ -292,6 +292,11 @@
             <End Role="Device" EntitySet="Device" />
             <End Role="DaysToCheck" EntitySet="DaysToCheck" />
           </AssociationSet>
+          <EntitySet Name="Monitoring" EntityType="Model1.Monitoring" />
+          <AssociationSet Name="DeviceMonitoring" Association="Model1.DeviceMonitoring">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="Monitoring" EntitySet="Monitoring" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Device">
           <Key>
@@ -316,6 +321,7 @@
           <Property Name="Warnings" Type="Int32" Nullable="true" />
           <Property Name="Location" Type="Int32" Nullable="true" />
           <Property Name="Services" Type="Int32" Nullable="true" />
+          <Property Name="Monitoring" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Group">
           <Key>
@@ -498,6 +504,28 @@
             </Principal>
             <Dependent Role="Device">
               <PropertyRef Name="DaysToCheck" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Monitoring">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CheckStatus" Type="Int32" Nullable="false" />
+          <Property Name="LostingPackage" Type="Int32" Nullable="false" />
+          <Property Name="NetworkUsingExtreme" Type="Int32" Nullable="false" />
+          <Property Name="ProcessUsingExtreme" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="DeviceMonitoring">
+          <End Type="Model1.Device" Role="Device" Multiplicity="*" />
+          <End Type="Model1.Monitoring" Role="Monitoring" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Monitoring">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="Monitoring" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

@@ -18,6 +18,10 @@ namespace TNetworkAdministrator.Controls
     {
 
         private bool Checked { get; set; }
+        public int TypeDevice { get; set; }
+
+        public int StatusDevice { get; set; }
+
 
         public bool check()
         {
@@ -59,6 +63,8 @@ namespace TNetworkAdministrator.Controls
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Computador:" + pc; }));
                     this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(1); }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
+                    TypeDevice =  1;
+                    StatusDevice = 1;
                     return;
                 }
                 string Printer1 = CheckifisPrinter(ip1);
@@ -68,6 +74,8 @@ namespace TNetworkAdministrator.Controls
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Impressora:" + Printer1; }));
                     this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(2); }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
+                    TypeDevice = 2;
+                    StatusDevice = 1;
                     return;
                 }
                 //  string Switch1 = CheckifisSwitch(ip1);
@@ -78,6 +86,8 @@ namespace TNetworkAdministrator.Controls
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Switch:" + Switch1; }));
                     this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(3); ; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
+                    TypeDevice = 3;
+                    StatusDevice = 1;
                     return;
                 }
  
@@ -86,10 +96,15 @@ namespace TNetworkAdministrator.Controls
                     this.Invoke(new MethodInvoker(delegate { DeviceText.Text = "Camera:" + ip1; }));
                     this.Invoke(new MethodInvoker(delegate { DeviceImage.Image = Form1.instance.GetImage(4); ; }));
                     this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Coletado com sucesso"; }));
+                    TypeDevice = 4;
+                    StatusDevice = 1;
                     return;
                 }
                 this.Invoke(new MethodInvoker(delegate { Status.Text = "Status:Dispositivo desconhecido"; }));
                 this.Invoke(new MethodInvoker(delegate { Application.DoEvents(); }));
+                TypeDevice = 5;
+                StatusDevice = 4;
+                return;
             }
             catch (Exception ex)
             {
@@ -298,8 +313,18 @@ namespace TNetworkAdministrator.Controls
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Parent.Controls.Remove(this);
+            }
+            catch (Exception)
+            {
 
-
+                
+            }
+        }
     }
 
     }

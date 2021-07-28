@@ -268,7 +268,7 @@ namespace TNetworkAdministrator.Controls
                 {
                     if (n1.check() == true)
                     {
-
+                        Form1.addnewDevice(n1.DeviceText.Text, n1.Ip.Text, n1.StatusDevice,n1.TypeDevice);
                     }
                 }
             }

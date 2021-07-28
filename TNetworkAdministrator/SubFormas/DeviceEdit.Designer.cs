@@ -39,7 +39,6 @@ namespace TNetworkAdministrator.SubFormas
             this.label4 = new System.Windows.Forms.Label();
             this.Description = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Status = new Wisder.W3Common.WMetroControl.Controls.MetroTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.GroupsChoose = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,13 +69,13 @@ namespace TNetworkAdministrator.SubFormas
             this.Saturday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.TimeON = new System.Windows.Forms.DateTimePicker();
             this.TimeOff = new System.Windows.Forms.DateTimePicker();
-            this.UseDefaultGroup = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.TypeDevice = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.metroButton1 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
             this.metroButton3 = new Wisder.W3Common.WMetroControl.Controls.MetroButton();
+            this.StatusDevice = new Wisder.W3Common.WMetroControl.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.CheckEvery)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,21 +191,6 @@ namespace TNetworkAdministrator.SubFormas
             this.label6.TabIndex = 20;
             this.label6.Text = "Status:";
             // 
-            // Status
-            // 
-            this.Status.Lines = new string[0];
-            this.Status.Location = new System.Drawing.Point(128, 228);
-            this.Status.MaxLength = 32767;
-            this.Status.Name = "Status";
-            this.Status.PasswordChar = '\0';
-            this.Status.ReadOnly = true;
-            this.Status.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Status.SelectedText = "";
-            this.Status.Size = new System.Drawing.Size(189, 24);
-            this.Status.TabIndex = 19;
-            this.Status.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
-            this.Status.UseSelectable = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -230,7 +214,6 @@ namespace TNetworkAdministrator.SubFormas
             this.GroupsChoose.TabIndex = 22;
             this.GroupsChoose.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
             this.GroupsChoose.UseSelectable = true;
-            this.GroupsChoose.SelectedIndexChanged += new System.EventHandler(this.GroupsChoose_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -251,7 +234,7 @@ namespace TNetworkAdministrator.SubFormas
             "Baixa",
             "Média",
             "Alta",
-            "Critica"});
+            "Crítica"});
             this.PriorityChoose.Location = new System.Drawing.Point(128, 279);
             this.PriorityChoose.Name = "PriorityChoose";
             this.PriorityChoose.Size = new System.Drawing.Size(189, 29);
@@ -389,7 +372,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(383, 228);
+            this.label9.Location = new System.Drawing.Point(380, 217);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(303, 46);
             this.label9.TabIndex = 43;
@@ -423,7 +406,7 @@ namespace TNetworkAdministrator.SubFormas
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(381, 162);
+            this.label10.Location = new System.Drawing.Point(381, 168);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(202, 31);
             this.label10.TabIndex = 61;
@@ -465,8 +448,6 @@ namespace TNetworkAdministrator.SubFormas
             // Sunday
             // 
             this.Sunday.AutoSize = true;
-            this.Sunday.Checked = true;
-            this.Sunday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Sunday.Location = new System.Drawing.Point(598, 389);
             this.Sunday.Name = "Sunday";
             this.Sunday.Size = new System.Drawing.Size(73, 15);
@@ -479,8 +460,6 @@ namespace TNetworkAdministrator.SubFormas
             // Monday
             // 
             this.Monday.AutoSize = true;
-            this.Monday.Checked = true;
-            this.Monday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Monday.Location = new System.Drawing.Point(384, 421);
             this.Monday.Name = "Monday";
             this.Monday.Size = new System.Drawing.Size(99, 15);
@@ -493,8 +472,6 @@ namespace TNetworkAdministrator.SubFormas
             // Tuesday
             // 
             this.Tuesday.AutoSize = true;
-            this.Tuesday.Checked = true;
-            this.Tuesday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Tuesday.Location = new System.Drawing.Point(488, 421);
             this.Tuesday.Name = "Tuesday";
             this.Tuesday.Size = new System.Drawing.Size(80, 15);
@@ -507,8 +484,6 @@ namespace TNetworkAdministrator.SubFormas
             // Fryday
             // 
             this.Fryday.AutoSize = true;
-            this.Fryday.Checked = true;
-            this.Fryday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Fryday.Location = new System.Drawing.Point(487, 455);
             this.Fryday.Name = "Fryday";
             this.Fryday.Size = new System.Drawing.Size(81, 15);
@@ -521,8 +496,6 @@ namespace TNetworkAdministrator.SubFormas
             // Thursday
             // 
             this.Thursday.AutoSize = true;
-            this.Thursday.Checked = true;
-            this.Thursday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Thursday.Location = new System.Drawing.Point(384, 453);
             this.Thursday.Name = "Thursday";
             this.Thursday.Size = new System.Drawing.Size(89, 15);
@@ -535,8 +508,6 @@ namespace TNetworkAdministrator.SubFormas
             // Wednesday
             // 
             this.Wednesday.AutoSize = true;
-            this.Wednesday.Checked = true;
-            this.Wednesday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Wednesday.Location = new System.Drawing.Point(594, 421);
             this.Wednesday.Name = "Wednesday";
             this.Wednesday.Size = new System.Drawing.Size(89, 15);
@@ -549,8 +520,6 @@ namespace TNetworkAdministrator.SubFormas
             // Saturday
             // 
             this.Saturday.AutoSize = true;
-            this.Saturday.Checked = true;
-            this.Saturday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Saturday.Location = new System.Drawing.Point(598, 455);
             this.Saturday.Name = "Saturday";
             this.Saturday.Size = new System.Drawing.Size(62, 15);
@@ -575,22 +544,6 @@ namespace TNetworkAdministrator.SubFormas
             this.TimeOff.Name = "TimeOff";
             this.TimeOff.Size = new System.Drawing.Size(48, 20);
             this.TimeOff.TabIndex = 75;
-            // 
-            // UseDefaultGroup
-            // 
-            this.UseDefaultGroup.AutoSize = true;
-            this.UseDefaultGroup.BackColor = System.Drawing.Color.Transparent;
-            this.UseDefaultGroup.Enabled = false;
-            this.UseDefaultGroup.ForeColor = System.Drawing.Color.White;
-            this.UseDefaultGroup.Location = new System.Drawing.Point(387, 210);
-            this.UseDefaultGroup.Name = "UseDefaultGroup";
-            this.UseDefaultGroup.Size = new System.Drawing.Size(355, 15);
-            this.UseDefaultGroup.TabIndex = 123;
-            this.UseDefaultGroup.Text = "Usar Monitoramento padrão obedecendo ao grupo pertecente:";
-            this.UseDefaultGroup.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
-            this.UseDefaultGroup.UseSelectable = true;
-            this.UseDefaultGroup.UseVisualStyleBackColor = false;
-            this.UseDefaultGroup.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
             // 
             // button1
             // 
@@ -672,18 +625,34 @@ namespace TNetworkAdministrator.SubFormas
             this.metroButton3.UseSelectable = true;
             this.metroButton3.UseVisualStyleBackColor = false;
             // 
+            // StatusDevice
+            // 
+            this.StatusDevice.FormattingEnabled = true;
+            this.StatusDevice.ItemHeight = 23;
+            this.StatusDevice.Items.AddRange(new object[] {
+            "Bom",
+            "Lento",
+            "Não Acessível",
+            "Não Testado"});
+            this.StatusDevice.Location = new System.Drawing.Point(129, 228);
+            this.StatusDevice.Name = "StatusDevice";
+            this.StatusDevice.Size = new System.Drawing.Size(189, 29);
+            this.StatusDevice.TabIndex = 130;
+            this.StatusDevice.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
+            this.StatusDevice.UseSelectable = true;
+            // 
             // DeviceEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 576);
+            this.Controls.Add(this.StatusDevice);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.TypeDevice);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.UseDefaultGroup);
             this.Controls.Add(this.TimeOff);
             this.Controls.Add(this.TimeON);
             this.Controls.Add(this.Saturday);
@@ -715,7 +684,6 @@ namespace TNetworkAdministrator.SubFormas
             this.Controls.Add(this.label5);
             this.Controls.Add(this.GroupsChoose);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.Status);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Manufacturer);
             this.Controls.Add(this.label4);
@@ -751,7 +719,6 @@ namespace TNetworkAdministrator.SubFormas
         public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Ip;
         public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Manufacturer;
         public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Description;
-        public Wisder.W3Common.WMetroControl.Controls.MetroTextBox Status;
         public Wisder.W3Common.WMetroControl.Controls.MetroComboBox GroupsChoose;
         public Wisder.W3Common.WMetroControl.Controls.MetroComboBox PriorityChoose;
         public Wisder.W3Common.WMetroControl.Controls.MetroTextBox ImageText;
@@ -776,7 +743,6 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Saturday;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        public Wisder.W3Common.WMetroControl.Controls.MetroCheckBox UseDefaultGroup;
         public Wisder.W3Common.WMetroControl.Controls.MetroComboBox TypeDevice;
         private System.Windows.Forms.Label label15;
         public System.Windows.Forms.DateTimePicker TimeON;
@@ -784,5 +750,6 @@ namespace TNetworkAdministrator.SubFormas
         public System.Windows.Forms.NumericUpDown CheckEvery;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton1;
         private Wisder.W3Common.WMetroControl.Controls.MetroButton metroButton3;
+        public Wisder.W3Common.WMetroControl.Controls.MetroComboBox StatusDevice;
     }
 }

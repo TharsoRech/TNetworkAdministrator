@@ -33,5 +33,6 @@ namespace TNetworkAdministrator
         public Nullable<int> Warnings { get; set; }
         public Nullable<int> Location { get; set; }
         public Nullable<int> Services { get; set; }
+        public int Monitoring { get; set; }
     }
 }

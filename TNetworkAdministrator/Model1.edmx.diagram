@@ -20,9 +20,11 @@
         <AssociationConnector Association="Model1.Location_ID" />
         <AssociationConnector Association="Model1.Service_ID" />
         <EntityTypeShape EntityType="Model1.DaysToCheck" Width="1.5" PointX="0.75" PointY="2.75" />
-        <EntityTypeShape EntityType="Model1.Log" Width="1.5" PointX="10.75" PointY="7.875" />
+        <EntityTypeShape EntityType="Model1.Log" Width="1.5" PointX="10.625" PointY="4.375" />
         <AssociationConnector Association="Model1.Log_Id" />
         <AssociationConnector Association="Model1.DaysToCheck_Id" />
+        <EntityTypeShape EntityType="Model1.Monitoring" Width="1.5" PointX="10.625" PointY="6.75" />
+        <AssociationConnector Association="Model1.DeviceMonitoring" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

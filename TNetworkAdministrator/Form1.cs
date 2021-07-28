@@ -278,7 +278,7 @@ namespace TNetworkAdministrator
             }
         }
 
-        public static void RemoveDevice(String Table, string columnName, string value)
+        public static void Remove(String Table, string columnName, string value)
         {
             try
             {
@@ -312,7 +312,7 @@ namespace TNetworkAdministrator
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        public static void UpdateDevice(String Table, string columnName,String valueID, string Newvalue)
+        public static void Update(String Table, string columnName,String valueID, string Newvalue)
         {
             try
             {
@@ -329,7 +329,6 @@ namespace TNetworkAdministrator
                     comando.ExecuteNonQuery();
                     conn.Close();
 
-                    MessageBox.Show("comando executado com sucesso");
                 }
                 catch (Exception ex)
                 {
@@ -493,6 +492,53 @@ namespace TNetworkAdministrator
 
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        public static int GetCount(String Table)
+        {
+            int values = 0;
+            try
+            {
+
+                SqlDataReader reader = null;
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+                //definição do comando sql
+                string sql = "select * from" + new string(' ', 2) + Table;
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    conn.Open();
+                    reader = comando.ExecuteReader();
+
+                    // Exibindo os registros e retornando valor
+                    while (reader.Read())
+                    {
+                        values = values +1;
+                    }
+                    conn.Close();
+                    return values;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    return values;
+                }
+                finally
+                {
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+            return values;
         }
 
 

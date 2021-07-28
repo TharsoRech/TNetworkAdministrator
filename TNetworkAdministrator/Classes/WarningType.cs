@@ -7,10 +7,10 @@ namespace TNetworkAdministrator.Classes
 {
    public  enum WarningType
     {
-        Offline,
-        LostingPackage,
-        NetworkUsingExtreme,
-        ProcessUsingExtreme,
-        DiskUtilization,
+        Offline=1,
+        LostingPackage=2,
+        NetworkUsingExtreme=3,
+        ProcessUsingExtreme=4,
+        DiskUtilization=5,
     }
 }
