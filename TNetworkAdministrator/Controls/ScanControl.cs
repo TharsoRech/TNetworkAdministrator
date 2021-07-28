@@ -1,4 +1,5 @@
-﻿using SnmpSharpNet;
+﻿using MetroFramework;
+using SnmpSharpNet;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -268,7 +269,9 @@ namespace TNetworkAdministrator.Controls
                 {
                     if (n1.check() == true)
                     {
-                        Form1.addnewDevice(n1.DeviceText.Text, n1.Ip.Text, n1.StatusDevice,n1.TypeDevice);
+                        Form1.addnew("Device", new List<string>() { "Name", "Ip", "status", "Type","AddIn" }, new List<object>() { n1.DeviceText.Text, n1.Ip.Text, n1.StatusDevice, n1.TypeDevice,DateTime.Now });
+                        MetroMessageBox.Show(TNetworkAdministrator.Form1.ActiveForm, "Item(s) adicionado com sucesso", "Concluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
                 }
             }

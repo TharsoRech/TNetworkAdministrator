@@ -180,6 +180,7 @@ namespace TNetworkAdministrator
             this.ConfigButton.StrokeColor = System.Drawing.Color.Gray;
             this.ConfigButton.TabIndex = 12;
             this.ConfigButton.Transparency = false;
+            this.ConfigButton.Click += new System.EventHandler(this.ConfigButton_Click);
             // 
             // altoButton11
             // 

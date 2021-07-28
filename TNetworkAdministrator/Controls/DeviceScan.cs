@@ -325,6 +325,19 @@ namespace TNetworkAdministrator.Controls
                 
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Checked = checkBox1.Checked;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 
     }

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Data.SqlClient;
 using Org.BouncyCastle.Utilities;
+using MetroFramework;
 
 namespace TNetworkAdministrator
 {
@@ -238,7 +239,10 @@ namespace TNetworkAdministrator
         {
             this.Close();
         }
-        public static void addnewDevice(string name, string ip, int status, int type)
+
+
+
+        public static void addnew(string table,List<string> Columns, List<object> values)
         {
             try
             {
@@ -246,21 +250,36 @@ namespace TNetworkAdministrator
 
                 SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
                 //definição do comando sql
-                string sql = "INSERT INTO Device(Name, Ip, status, Type,Addin )VALUES(@Name, @Ip, @status, @Type,@Addin)";
+                string sql = "INSERT INTO" + new string(' ', 2) + table + "(";
+                string sql1 = ")VALUES(";
+                int last = Columns.Count - 1;
+                for (int i = 0; i < Columns.Count; i++)
+                {
+                    if (i == last)
+                    {
+                        sql = sql + Columns[i];
+                        sql1 = sql1 + "@" + Columns[i] + ")";
+                    }
+                    else
+                    {
+                        sql = sql + Columns[i] + ",";
+                        sql1 = sql1 + "@" + Columns[i] + ",";
+                    }
+                }
+                sql = sql + sql1;
                 try
                 {
-
                     SqlCommand comando = new SqlCommand(sql, conn);
-                    comando.Parameters.Add(new SqlParameter("@Name", name));
-                    comando.Parameters.Add(new SqlParameter("@Ip", ip));
-                    comando.Parameters.Add(new SqlParameter("@status", status));
-                    comando.Parameters.Add(new SqlParameter("@Type", type));
-                    comando.Parameters.Add(new SqlParameter("@Addin", DateTime.Now));
+                    for (int i = 0; i < Columns.Count; i++)
+                    {
+                        comando.Parameters.Add(new SqlParameter("@" + Columns[i],values[i]));
+                    }
+
                     conn.Open();
                     comando.ExecuteNonQuery();
                     conn.Close();
 
-                    MessageBox.Show("comando executado com sucesso");
+
                 }
                 catch (Exception ex)
                 {
@@ -277,6 +296,7 @@ namespace TNetworkAdministrator
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
 
         public static void Remove(String Table, string columnName, string value)
         {
@@ -445,54 +465,7 @@ namespace TNetworkAdministrator
             return values;
         }
 
-        public static void addnewDevice(string name, string Description ,string Manufacturer,string ip, int status,string Image,int priority,int Group,int Type,DateTime Addin,DateTime TimeOn,DateTime TimeOF,int DaysToCheck,int CheckEvery)
-        {
-            try
-            {
 
-
-                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
-                //definição do comando sql
-                string sql = "INSERT INTO Device(Name, Ip, status, Type,Addin )VALUES(@Name,@Description,@Manufacturer,@Ip, @status,@Image,@Priority,@Group,@Type,@Addin,@TimeON,@TimeOF,@DaysToCheck,@CheckEvery)";
-                try
-                {
-
-                    SqlCommand comando = new SqlCommand(sql, conn);
-                    comando.Parameters.Add(new SqlParameter("@Name", name));
-                    comando.Parameters.Add(new SqlParameter("@Description", Description));
-                    comando.Parameters.Add(new SqlParameter("@Manufacturer", Manufacturer));
-                    comando.Parameters.Add(new SqlParameter("@Ip", ip));
-                    comando.Parameters.Add(new SqlParameter("@Status", status));
-                    comando.Parameters.Add(new SqlParameter("@Image", Image));
-                    comando.Parameters.Add(new SqlParameter("@Priority", Type));
-                    comando.Parameters.Add(new SqlParameter("@Group", Group));
-                    comando.Parameters.Add(new SqlParameter("@Type", Type));
-                    comando.Parameters.Add(new SqlParameter("@Addin", Addin));
-                    comando.Parameters.Add(new SqlParameter("@TimeON", TimeOn));
-                    comando.Parameters.Add(new SqlParameter("@TimeOF", TimeOF));
-                    comando.Parameters.Add(new SqlParameter("@DaysToCheck", DaysToCheck));
-                    comando.Parameters.Add(new SqlParameter("@CheckEvery", CheckEvery));
-                    conn.Open();
-                    comando.ExecuteNonQuery();
-                    conn.Close();
-
-                    MessageBox.Show("comando executado com sucesso");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + ex.StackTrace);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
 
         public static int GetCount(String Table)
         {
@@ -541,7 +514,19 @@ namespace TNetworkAdministrator
             return values;
         }
 
+        private void ConfigButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+        }
     }
 }
 
