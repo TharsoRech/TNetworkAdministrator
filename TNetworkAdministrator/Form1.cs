@@ -332,6 +332,55 @@ namespace TNetworkAdministrator
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
+        public static int GetLastId(String Table)
+        {
+           int values = 0;
+            try
+            {
+
+                SqlDataReader reader = null;
+
+                SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
+                //definição do comando sql
+                string sql = "SELECT MAX(Id) FROM" + new string(' ', 2) + Table;
+                try
+                {
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    conn.Open();
+                    reader = comando.ExecuteReader();
+
+                    // Exibindo os registros e retornando valor
+                    while (reader.Read())
+                    {
+
+                            values = Convert.ToInt32(reader[0]);
+                      
+                    }
+                    conn.Close();
+                    return values;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    return values;
+                }
+                finally
+                {
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+            return values;
+        }
         public static void Update(String Table, string columnName,String valueID, string Newvalue)
         {
             try

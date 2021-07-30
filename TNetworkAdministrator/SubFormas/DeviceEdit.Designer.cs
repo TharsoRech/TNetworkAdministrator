@@ -63,7 +63,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Sunday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.Monday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.Tuesday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
-            this.Fryday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
+            this.Friday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.Thursday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.Wednesday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
             this.Saturday = new Wisder.W3Common.WMetroControl.Controls.MetroCheckBox();
@@ -481,17 +481,17 @@ namespace TNetworkAdministrator.SubFormas
             this.Tuesday.UseSelectable = true;
             this.Tuesday.UseVisualStyleBackColor = true;
             // 
-            // Fryday
+            // Friday
             // 
-            this.Fryday.AutoSize = true;
-            this.Fryday.Location = new System.Drawing.Point(487, 455);
-            this.Fryday.Name = "Fryday";
-            this.Fryday.Size = new System.Drawing.Size(81, 15);
-            this.Fryday.TabIndex = 72;
-            this.Fryday.Text = "Sexta-Feira";
-            this.Fryday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
-            this.Fryday.UseSelectable = true;
-            this.Fryday.UseVisualStyleBackColor = true;
+            this.Friday.AutoSize = true;
+            this.Friday.Location = new System.Drawing.Point(487, 455);
+            this.Friday.Name = "Friday";
+            this.Friday.Size = new System.Drawing.Size(81, 15);
+            this.Friday.TabIndex = 72;
+            this.Friday.Text = "Sexta-Feira";
+            this.Friday.Theme = Wisder.W3Common.WMetroControl.MetroThemeStyle.Dark;
+            this.Friday.UseSelectable = true;
+            this.Friday.UseVisualStyleBackColor = true;
             // 
             // Thursday
             // 
@@ -656,7 +656,7 @@ namespace TNetworkAdministrator.SubFormas
             this.Controls.Add(this.TimeOff);
             this.Controls.Add(this.TimeON);
             this.Controls.Add(this.Saturday);
-            this.Controls.Add(this.Fryday);
+            this.Controls.Add(this.Friday);
             this.Controls.Add(this.Thursday);
             this.Controls.Add(this.Wednesday);
             this.Controls.Add(this.Tuesday);
@@ -737,7 +737,7 @@ namespace TNetworkAdministrator.SubFormas
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Sunday;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Monday;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Tuesday;
-        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Fryday;
+        private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Friday;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Thursday;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Wednesday;
         private Wisder.W3Common.WMetroControl.Controls.MetroCheckBox Saturday;

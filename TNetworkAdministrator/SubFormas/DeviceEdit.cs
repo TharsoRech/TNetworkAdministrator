@@ -90,7 +90,9 @@ namespace TNetworkAdministrator.SubFormas
 
                 if (metroButton1.Text == "Salvar")
                 {
-              //   Form1.addnewDevice(NameText.Text,Description.Text,Manufacturer.Text,Ip.Text,)
+                    Form1.addnew("Monitoring", new List<string>() { "CheckStatus", "LostingPackage", "NetworkingUsingExtreme", "ProcessUsingExtreme" }, new List<object> { Returnzeroone(StatusCheck.Checked), Returnzeroone(LostPackageCheck.Checked), Returnzeroone(NetworkUseCheckl.Checked), Returnzeroone(ProcessorUseCheck.Checked) });
+                    Form1.addnew("DaysToCheck", new List<string>() { "Sunday", "Monday", "Tuesday", "wednesday" ,"Thursday","Friday","Saturday"}, new List<object> { Returnzeroone(Sunday.Checked), Returnzeroone(Monday.Checked), Returnzeroone(Tuesday.Checked), Returnzeroone(Wednesday.Checked), Returnzeroone(Thursday.Checked), Returnzeroone(Friday.Checked), Returnzeroone(Saturday.Checked) });
+               
 
                 }
                 else
@@ -111,6 +113,29 @@ namespace TNetworkAdministrator.SubFormas
             {
                 ImageChoose imp = new ImageChoose();
                 imp.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        private int Returnzeroone(bool b)
+        {
+            try
+            {
+                int value = 0;
+                if (b == true)
+                {
+                    value = 1;
+                }
+                else
+                {
+                    value = 0;
+                }
+                return value;
             }
             catch (Exception)
             {

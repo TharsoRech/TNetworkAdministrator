@@ -18,16 +18,25 @@ namespace TNetworkAdministrator.Controls
             InitializeComponent();
             try
             {
-
-                if (Form1.GetCount("Device") > 0)
+                int count = Form1.GetCount("Device");
+                if (count > 0)
                 {
+                    
                     List<string> values = Form1.GetInfoFrom("Device", new List<string>() { "Id", "Ip", "Name", "Group" });
-
-                    Controls.Device dev1 = new Controls.Device();
-                    dev1.ID = values[0];
-                    dev1.Ip.Text = values[1];
-                    dev1.DeviceText.Text = values[2];
-                    ListofDevices.Controls.Add(dev1);
+                    int i = 0;
+                 while( i < 4 * count)
+                    {
+                        Controls.Device dev1 = new Controls.Device();
+                        dev1.ID = values[i];
+                        i = i + 1;
+                        dev1.Ip.Text = values[i];
+                        i = i + 1;
+                        dev1.DeviceText.Text = values[i];
+                        i = i + 1;
+                        dev1.Group.Text = values[i];
+                        i = i + 1;
+                        ListofDevices.Controls.Add(dev1);
+                    }
                 }
 
             }
