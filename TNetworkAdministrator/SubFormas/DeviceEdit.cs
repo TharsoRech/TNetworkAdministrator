@@ -12,6 +12,7 @@ namespace TNetworkAdministrator.SubFormas
     public partial class DeviceEdit : Wisder.W3Common.WMetroControl.Forms.MetroForm
     {
         public string Id { get; set; }
+        public int ImageIndex = 0;
         public DeviceEdit()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace TNetworkAdministrator.SubFormas
                 int StatusDev = 0;
                 int PriorityDev = 0;
                 int TypeDev = 0;
+                int ImageIndex = 0;
                 switch (StatusDevice.Text)
                 {
                     case "Bom":
@@ -92,13 +94,14 @@ namespace TNetworkAdministrator.SubFormas
                 {
                     Form1.addnew("Monitoring", new List<string>() { "CheckStatus", "LostingPackage", "NetworkingUsingExtreme", "ProcessUsingExtreme" }, new List<object> { Returnzeroone(StatusCheck.Checked), Returnzeroone(LostPackageCheck.Checked), Returnzeroone(NetworkUseCheckl.Checked), Returnzeroone(ProcessorUseCheck.Checked) });
                     Form1.addnew("DaysToCheck", new List<string>() { "Sunday", "Monday", "Tuesday", "wednesday" ,"Thursday","Friday","Saturday"}, new List<object> { Returnzeroone(Sunday.Checked), Returnzeroone(Monday.Checked), Returnzeroone(Tuesday.Checked), Returnzeroone(Wednesday.Checked), Returnzeroone(Thursday.Checked), Returnzeroone(Friday.Checked), Returnzeroone(Saturday.Checked) });
-               
+              Form1.addnew("Device",new List<string>() {"Name","Description","Manufacturer","Ip","status","Image","Priority","Group","Type","AddIn","DaysToCheck","CheckEvery","Monitoring" }, new List<object>() { NameText.Text, Description.Text, Manufacturer.Text, Ip.Text, StatusDev, ImageIndex, PriorityDev, GroupsChoose.Text, TypeDev, DateTime.Now, Form1.GetLastId("DaysToCheck").ToString(), CheckEvery.Value, Form1.GetLastId("Monitoring").ToString() });
 
                 }
                 else
                 {
                   
                 }
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -112,6 +115,7 @@ namespace TNetworkAdministrator.SubFormas
             try
             {
                 ImageChoose imp = new ImageChoose();
+                imp.DEdit = this;
                 imp.Show();
             }
             catch (Exception)

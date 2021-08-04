@@ -138,6 +138,7 @@ namespace TNetworkAdministrator.SubFormas
             this.SaveButton.UseCustomBackColor = true;
             this.SaveButton.UseSelectable = true;
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // LinkCheck
             // 
